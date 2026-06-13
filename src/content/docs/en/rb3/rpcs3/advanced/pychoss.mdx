@@ -1,0 +1,78 @@
+---
+title: "[OBS] Automatic Scene Switching"
+slug: "en/rb3pc/advanced/pychoss"
+description: "How to set up scene switching in RB3DX with PyCHOSS."
+---
+import pychossdl from '@assets/rb3/rpcs3/advanced/pychoss/pychossdl.png';
+import pychossopen from '@assets/rb3/rpcs3/advanced/pychoss/pychossopen.png';
+import pychossbrowse from '@assets/rb3/rpcs3/advanced/pychoss/pychossbrowse.png';
+import findcurrentsong from '@assets/rb3/rpcs3/advanced/pychoss/findcurrentsong.png';
+import pychossscene from '@assets/rb3/rpcs3/advanced/pychoss/pychossscene.png';
+import obstoolsweb from '@assets/rb3/rpcs3/advanced/pychoss/obstoolsweb.png';
+import obswebset from '@assets/rb3/rpcs3/advanced/pychoss/obswebset.png';
+import obswebinfo from '@assets/rb3/rpcs3/advanced/pychoss/obswebinfo.png';
+import pychosspassport from '@assets/rb3/rpcs3/advanced/pychoss/pychosspassport.png';
+import pychossconnect from '@assets/rb3/rpcs3/advanced/pychoss/pychossconnect.png';
+import pychossconnected from '@assets/rb3/rpcs3/advanced/pychoss/pychossconnected.png';
+import pychosswork from '@assets/rb3/rpcs3/advanced/pychoss/pychosswork.png';
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Do you regularly stream Rock Band 3 and want a more elaborate setup, such as switching scenes when you enter song?  
+This is easily done with PyCHOSS, an automatic scene switching program for OBS.
+
+PyCHOSS is designed to be used with Clone Hero, YARG, and with Rock Band 3 Deluxe running on RPCS3.
+
+## Initial Setup
+<Aside type="caution">Do NOT stream the setup process!</Aside>
+
+<Steps>
+1. <a href="https://github.com/YoShibyl/PyCHOSS/releases" target="_blank" rel="noopener noreferrer">[Download the latest release of PyCHOSS for your platform]</a>.
+	> <a href="https://github.com/YoShibyl/PyCHOSS/releases" target="_blank" rel="noopener noreferrer"><Image src={pychossdl} alt="GitHub page page for the latest version of PyCHOSS." /></a>
+
+2. Open PyCHOSS.
+	> <Image src={pychossopen} alt="Opening the PyCHOSS application." />
+
+3. Swap to the `RB3DX` tab then click on `Browse currentsong.txt`.
+	> <Image src={pychossbrowse} alt="Clicking on 'Browse currentsong.txt' under the 'RB3DX' tab." />
+
+4. Find the `currentsong.txt` file.  
+It will be located within `dev_hdd0/game/BLUS30463/USRDIR`.  
+By default, this is located in RPCS3's install folder on Windows and `~/.cache/rpcs3` on Linux.
+	> <Image src={findcurrentsong} alt="Locating 'currentsong.txt'." />
+
+5. Open OBS and leave it open.
+
+6. Back in PyCHOSS, match `Gameplay`, `Menu`, and `(Global) AFK Scene`'s names in PyCHOSS with the ones in OBS.  
+	* Gameplay's scene should be when you're playing a song.
+	* Menu's scene should be when you're outside of a song.
+	* The AFK scene is the scene for when you step away from the computer or need privacy. Scene switching will be disabled until you swap back to the Gameplay or Menu scenes.
+
+	You can name them whatever you want.
+	> <Image src={pychossscene} alt="A diagram showing how the scenes are mapped in relation to PyCHOSS." />
+
+7. Switch to OBS and go to `Tools > WebSocket Server Settings`.
+	> <Image src={obstoolsweb} alt="Opening 'WebSocket Server Settings' under 'Tools'." />
+
+8. Tick `Enable WebSocket server` then click `Apply` at the bottom.  
+Afterwards, click on `Show Connect Info`
+	> <Image src={obswebset} alt="'WebSocket Server Settings' showing various options. The ones pointed out are highlighted." />
+
+9. Take note of the server port and password.
+	> <Image src={obswebinfo} alt="'WebSocket Connect Info' with the Server Port and Server Password highlighted." />
+
+10. Copy this info into PyCHOSS under the `Websocket Connection` section.
+	> <Image src={pychosspassport} alt="Copying the password and port from OBS into PyCHOSS." />
+
+11. Click `Connect` in PyCHOSS.
+		> <Image src={pychossconnect} alt="Hovering over the 'Connect' button in PyCHOSS." />
+	If it connects successfully, you can close out the `WebSocket Connect Info` and `WebSocket Server Settings` in OBS.
+		> <Image src={pychossconnected} alt="PyCHOSS connected to OBS." />
+
+</Steps>
+## Usage
+After initial setup, all you need to do is click `Connect` in PyCHOSS afterwards.  
+It will automatically swap scenes in OBS for you!
+> <Image src={pychosswork} alt="PyCHOSS connected to OBS." />

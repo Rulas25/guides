@@ -1,0 +1,78 @@
+---
+title: "[OBS] Cambiando escenas automáticamente"
+slug: "es/rb3pc/advanced/pychoss"
+description: "Como cambiar escenas automáticamente durante directos de RB3DX con PyCHOSS."
+---
+import pychossdl from '@assets/rb3/rpcs3/advanced/pychoss/pychossdl.png';
+import pychossopen from '@assets/rb3/rpcs3/advanced/pychoss/pychossopen.png';
+import pychossbrowse from '@assets/rb3/rpcs3/advanced/pychoss/pychossbrowsees.png';
+import findcurrentsong from '@assets/rb3/rpcs3/advanced/pychoss/findcurrentsong.png';
+import pychossscene from '@assets/rb3/rpcs3/advanced/pychoss/pychossscenees.png';
+import obstoolsweb from '@assets/rb3/rpcs3/advanced/pychoss/obstoolswebes.png';
+import obswebset from '@assets/rb3/rpcs3/advanced/pychoss/obswebsetes.png';
+import obswebinfo from '@assets/rb3/rpcs3/advanced/pychoss/obswebinfoes.png';
+import pychosspassport from '@assets/rb3/rpcs3/advanced/pychoss/pychosspassportes.png';
+import pychossconnect from '@assets/rb3/rpcs3/advanced/pychoss/pychossconnectes.png';
+import pychossconnected from '@assets/rb3/rpcs3/advanced/pychoss/pychossconnectedes.png';
+import pychosswork from '@assets/rb3/rpcs3/advanced/pychoss/pychossworkes.png';
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Haces directos de Rock Band 3 y quieres algo un poco mas elaborado, ¿como cambiando escenas cuando entras a una canción automáticamente?  
+Esto se puede hacer fácilmente con PyCHOSS, una utilidad que automáticamente cambia escenas dentro de OBS.
+
+PyCHOSS esta diseñado para ser usado con Clone Hero, YARG y con Rock Band 3 Deluxe dentro de RPCS3.
+
+## Configuración inicial
+<Aside type="caution">¡Por favor no transmitas el proceso de configuración!</Aside>
+
+<Steps>
+1. <a href="https://github.com/YoShibyl/PyCHOSS/releases" target="_blank" rel="noopener noreferrer">[Descarga la versión mas actual de PyCHOSS para tu plataforma]</a>.
+	> <a href="https://github.com/YoShibyl/PyCHOSS/releases" target="_blank" rel="noopener noreferrer"><Image src={pychossdl} alt="La pagina de GitHub para la versión mas actual de PyCHOSS." /></a>
+
+2. Abre PyCHOSS.
+	> <Image src={pychossopen} alt="Abriendo la aplicación de PyCHOSS." />
+
+3. Cambia a la pestaña de `RB3DX` y haz click en <span title="Encontrar 'currentsong.txt'">"`Browse currentsong.txt`"</span> .
+	> <Image src={pychossbrowse} alt="Haciendo click en 'Browse currentsong.txt' bajo la pestaña de 'RB3DX'." />
+
+4. Encuentra el archivo de `currentsong.txt`.  
+Estará dentro de `dev_hdd0/game/BLUS30463/USRDIR`.  
+Por defecto, esto esta en la carpeta de RPCS3 en Windows y `~/.cache/rpcs3` en Linux.
+	> <Image src={findcurrentsong} alt="Encontrando 'currentsong.txt'." />
+
+5. Abre OBS y déjalo abierto.
+
+6. Regresando a PyCHOSS, haz que <span title="Dentro de partida">"`Gameplay`"</span>, <span title="Menú">"`Menu`"</span> y <span title="(Global) Escena para ausencia">"`(Global) AFK Scene`"</span> coinciden con los nombres de tus escenas en OBS. .  
+	* La escena de <span title="Dentro de partida">"`Gameplay`"</span> es para cuando estés tocando una canción.
+	* La escena de <span title="Menú">"`Menu`"</span> es para cuando no estés en una canción.
+	* La escena de <span title="(Global) Escena para ausencia">"`(Global) AFK Scene`"</span> es para cuando necesitas retirarte del teclado temporalmente o cuando necesites privacidad. El cambio de escenas automático sera deshabilitado hasta que cambies manualmente a las escenas de <span title="Dentro de partida">"`Gameplay`"</span> o <span title="Menú">"`Menu`"</span>.
+
+	Puedes nombrar las escenas lo que tu quieras.
+	> <Image src={pychossscene} alt="Un diagrama mostrando como necesitan coincidir las escenas dentro de OBS y PyCHOSS." />
+
+7. Regresa a OBS y entra a `Herramientas > Ajustes del servidor WebSocket`.
+	> <Image src={obstoolsweb} alt="Entrando a 'Ajustes del servidor WebSocket' bajo 'Herramientas'." />
+ 
+8. Activa `Habilitar servidor WebSocket` y luego haz click en `Aplicar` hacia abajo.  
+Después, haz click en `Mostrar información de conexión`
+	> <Image src={obswebset} alt="'Ajustes del servidor WebSocket' mostrando varias opciones. Las opciones que fueron notadas están resaltadas." />
+
+9. Toma cuenta del puerto y la contraseña del servidor.
+	> <Image src={obswebinfo} alt="'Información de la conexión de WebSocket' con el puerto de servidor y contraseña de servidor resaltadas." />
+
+10. Copia esta información a PyCHOSS bajo la sección de <span title="Conexión de Websocket">"`Websocket Connection`"</span>.
+	> <Image src={pychosspassport} alt="Copiando la contraseña y puerto de OBS a PyCHOSS." />
+ 
+11. Haz click en <span title="Conectar">"`Connect`"</span> en PyCHOSS.
+		> <Image src={pychossconnect} alt="El cursor sobre el botón de 'Connect' en PyCHOSS." />
+	Si se conecta, puedes cerrar las ventanas de `Información de la conexión de WebSocket` y `Ajustes del servidor WebSocket` en OBS.
+		> <Image src={pychossconnected} alt="PyCHOSS conectado a OBS." />
+
+</Steps>
+## Uso
+A partir de de la configuración inicial, solo necesitas hacer click en <span title="Conectar">"`Connect`"</span> en PyCHOSS.  
+¡Automáticamente cambiara escenas dentro de OBS!
+> <Image src={pychosswork} alt="PyCHOSS conectado a OBS." />
