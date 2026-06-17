@@ -1,15 +1,15 @@
 ---
-title: Teclado por adaptador MIDI PRO de Rock Band para PlayStation 3
-slug: "es/rb3pc/controllers/keys/ps3mpa"
-description: "Como configurar tu teclado con un Adaptador MIDI PRO de PS3 en RPCS3."
+title: Teclado por adaptador MIDI PRO de Rock Band para Nintendo Wii
+slug: "es/rb3pc/controllers/keys/wiimpa"
+description: "Como configurar tu teclado con un Adaptador MIDI PRO de Nintendo Wii en RPCS3."
 tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 2
-  label: PS3 MPA
+  order: 5
+  label: Wii MPA
 ---
-import ps3mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ps3mpadrmscontroller.png';
+import wiimpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiimpadrmscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
 import mpakey from '@assets/rb3/rpcs3/instruments/setup/mpa/mpakey.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
@@ -38,8 +38,8 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-<center><img src="/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={ps3mpadrmscontroller} alt="Controller" /></center>
+<center><img src="/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={wiimpadrmscontroller} alt="Controller" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
 ¡NO mapeés este instrumento por el menú de `Mandos`!
@@ -124,9 +124,9 @@ Cuando desconectes y vuelvas a conectar el instrumento, regresara al controlador
     > <Image src={dolps3rules} alt="Nombrando el archivo." />
 
 3. Abre el archivo dentro de un editor de texto.  
-    Agrega la entrada de para tu batería:  
+    Agrega la entrada de para tu adaptador MIDI PRO de RB3:  
     ```
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2338", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3338", MODE="0666"
     ```
     En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
     Cuando termines, guarda tus cambios.
@@ -135,13 +135,13 @@ Cuando desconectes y vuelvas a conectar el instrumento, regresara al controlador
 4. Ejecuta `sudo udevadm control --reload-rules` en una terminal o reinicia tu sistema.
     > <Image src={termreloadrules} alt="Una terminal abierta con el comando escrito." />
 
-5. Abre Rock Band 3 en RPCS3 y conecta tu batería.  
+5. Abre Rock Band 3 en RPCS3 y conecta tu adaptador MIDI PRO de RB3.  
     Deberías de ver que automáticamente se le asigna un número de jugador.  
-    Del mismo modo, en Rock Band 3, verás tu batería listo para unirse.  
+    Del mismo modo, en Rock Band 3, verás tu adaptador MIDI PRO de RB3 listo para unirse.  
 </Steps>
 </TabItem>
   <TabItem label="macOS">
-Por defecto, macOS cargara sus propios controladores cuando intentas tu batería con conexión directa en RPCS3.  
+Por defecto, macOS cargara sus propios controladores cuando intentas tu adaptador MIDI PRO de RB3 con conexión directa en RPCS3.  
 Por suerte, ¡esto es fácil de corregir!
 
 <Steps>
@@ -166,9 +166,9 @@ Por suerte, ¡esto es fácil de corregir!
 
 6. Ahora, activa el control deslizante de GCAdapterDriver en la barra de menús.
     > <Image src={macgcen} alt="GCAdapterDriver esta activo." />
-    Abre Rock Band 3 en RPCS3 y conecta tu batería.  
+    Abre Rock Band 3 en RPCS3 y conecta tu adaptador MIDI PRO de RB3.  
     Deberías de ver que automáticamente se le asigna un número de jugador.  
-    Del mismo modo, en Rock Band 3, verás tu batería listo para unirse.  
+    Del mismo modo, en Rock Band 3, verás tu adaptador MIDI PRO de RB3 listo para unirse.  
 </Steps>
 </TabItem>
 </Tabs>

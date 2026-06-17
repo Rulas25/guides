@@ -12,6 +12,7 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import midikeyscontroller from '@assets/rb3/rpcs3/instruments/controller/midikeyscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
+import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpades.png';
 import usbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/usbkeys.png';
 import midikeys from '@assets/rb3/rpcs3/instruments/setup/midi/midikeys.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
@@ -46,6 +47,11 @@ import { Image } from 'astro:assets';
 	Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 
 * **Necesitas un teclado 37 teclas a lo mínimo** o 27 teclas y 11 'pads' de batería.
+	* Alternativamente, puedes mapear <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un mando dedicado para navegación]</a>. Puedes usar un teclado de PC o un mando estándar.
+		* Puedes activar esto en `[Menú] > [Opciones] > [Configuración Deluxe] > [Controlador] > [Mando de Nav.]`  
+		**Para iniciar sesión con un teclado, pulsar la tecla de A♯2 (La♯)**.  
+		Si estas en un teclado de 25 teclas, necesitas bajar la octava del teclado y luego subir de vuelta.  
+		><Image src={navpad} alt="El menú de mando de navegación dentro de los menús de Rock Band 3." />
 * Tu teclado MIDI necesita:
 	* **estar en canal MIDI 1.**
 	* **tener una manera de controlar modulación y tono.**

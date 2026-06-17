@@ -15,15 +15,27 @@ import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
 import crkdlpcontroller from '@assets/rb3/rpcs3/instruments/controller/crkdlpcontroller.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
-import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/ogneck.png';
-import platpc from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platpc.png';
-import mode8 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/mode8.png';
-import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm81.png';
-import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm82.png';
-import gtrcrkdlp8mapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdlp8mapping.png';
+import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkd/ogneck.png';
+import lpplatpc from '@assets/rb3/rpcs3/instruments/setup/crkd/lpplatpc.png';
+import lpmode1 from '@assets/rb3/rpcs3/instruments/setup/crkd/lpmode1.png';
+import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkd/lppcm81.png';
+import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkd/lppcm82.png';
+import gtrcrkdmpsdlmapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdmpsdlmapping.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/soloneck.png';
-import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platp3.png';
+import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkd/soloneck.png';
+import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkd/lpplatp3.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludev.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfile.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3rules.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadrules.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusb.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdl.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddnd.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysex.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauth.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
@@ -34,15 +46,15 @@ import { Image } from 'astro:assets';
 
 <Aside>**Make sure your guitar and receiver are on <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[the latest firmware]</a>!**</Aside>
 * CRKD Les Paul guitars can be connected wirelessly via its respective dongle, Bluetooth, and wired via USB. For Bluetooth, you need a Bluetooth receiver to connect to your computer.
-	* Dongle or wired USB are the recommended methods.
-* The guitar subtype is set to Rock Band which means tilt will work but flanger FX WILL BE FORCED!
+  * Dongle and wired USB are the recommended methods.
+
 There are two ways to configure this guitar. Pick depending on whichever neck you have.
 
 <Tabs>
   <TabItem label="OG Fret Neck">
-<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
-* This is the recommended configuration for users with the stock "OG" neck.  
-<Image src={ogneck} alt="The 'OG' neck for CRKD guitars. There are no solo buttons and the buttons extrude from the neck." />
+* This is the recommended configuration for users with the stock "OG" neck.
+* There is no input profile as all controls are default.
+> <Image src={ogneck} alt="The 'OG' neck for CRKD guitars. There are no solo buttons and the buttons extrude from the neck." />
 
 <details>
 <summary>How do I map my guitar?</summary>
@@ -58,59 +70,23 @@ This is so you can change configuration profiles in case you want to play other 
 
 | Handlers | Devices |
 |:--------:|:-------:|
-| XInput | XInput Pad |
+| SDL | Licensed by Sony Computer Entertainment CRKD Guitar LM |
 
 | Device Class | Device Subtype |
 |:------------:|:--------------:|
-| Guitar | Rock Band |
+| Guitar | Guitar Hero |
 
 <Steps>
-1. After connecting your guitar, switch the "Platform" selector to the "PC" mode.  
-	> <Image src={platpc} alt="The platform selector on a CRKD Les Paul. It is set to 'PC'." />
+1. After connecting your guitar, switch the "Platform" selector to the `P3`.  
+    > <Image src={platp3} alt="The platform selector on a CRKD Les Paul. It is set to 'P3'." />
 
-2. Set the "Mode" switch to "Mode 8".  
-	> <Image src={mode8} alt="The mode selector on a CRKD Les Paul. It is set to '8'." />
-
-3. Map your guitar.
+2. Map your guitar.
 </Steps>
 
-#### CRKD App Setup
-
-<Image src={pcm81} alt="The first page of the CRKD CTRL application. The guitar is configured for PC and it's set to Mode 8." />  
-
-<Image src={pcm82} alt="The second page of the CRKD CTRL application." />  
-
 #### Mapping
+**By default, everything is bound correctly. You don’t need to remap anything or download a profile.**
 
-By default, XInput has most things bound correctly. You only need to remap the following:
-
-* **Map** the following:
-
-| **RPCS3** | **XInput** | **Guitar** |
-|:--------:|:-----------:|:-----------:|
-| R1 | ![Right Stick](/assets/instruments/buttons/360/rs.png "Right Stick") | ![Tilt](/assets/instruments/buttons/guitars/ts.gif "Tilt") | 
-
-<center><Image src={gtrcrkdlp8mapping} alt="Mapping" /></center>
-
-## Profile
-[[Download Profile]](/../downloads/rb3/rpcs3//instrument-repo/CRKD%20Les%20Paul%20Guitar.7z)
-
-<details>
-<summary>How do I use profiles?</summary>
-
-<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
-
-After downloading the profile,
-
-1. Extract the .7z file.
-2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
-> <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
-
-3. After that, you can select the profile in the **“Pads”** menu.  
-> <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
-
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
-</details>
+<center><Image src={gtrcrkdmpsdlmapping} alt="Mapping" style="width:941px;"/></center>
 </TabItem>
   <TabItem label="Solo Fret Neck">
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
@@ -121,13 +97,86 @@ Do NOT map this instrument via the `Pads` menu!
 <Image src={soloneck} alt="The 'Solo' neck for CRKD guitars. It has solo buttons closer to the body and the buttons are flush within the neck." />
 
 <Steps>
-1. After connecting your guitar, switch the "Platform" selector to the "P3" mode.
-	> <Image src={platp3} alt="The platform selector on a CRKD Les Paul. It is set to 'P3'." />
-2. Enjoy!
+1. After connecting your guitar, switch the "Platform" selector to the "P3".
+    > <Image src={platp3} alt="The platform selector on a CRKD Les Paul. It is set to 'P3'." />
 </Steps>
+<Tabs>
+  <TabItem label="Windows">
+<Steps>
+2. Boot up RPCS3 and enjoy. You don't have to set up anything else!
+</Steps>
+  </TabItem>
+  <TabItem label="Linux">
+<Aside>This requires admin/sudo permissions.</Aside>
+<Steps>
+1. Navigate to `/etc/udev/` in your file browser.  
+  Enter the `rules.d` folder.  
+  If it doesn't exist, make it.
+    > <Image src={doludev} alt="A file browser in the 'udev' folder, with a cursor highlighting and clicking on a folder called 'rules.d'." />
+
+2. Create a new file.
+    > <Image src={dolnewfile} alt="Creating a new empty file within the 'rules.d' folder." />
+    Name it `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Naming the new file." />
+
+3. Open the file in a text editor.  
+    Add an entry for your guitar:
+      ```
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
+      ```
+    In this example, a PS3 Mustang and PS3 Keyboard are being added.  
+    When you're done, save your edits to the file.
+    > <Image src={kateps3} alt="A text editor showing the '.rules' file open. There are two entries in the text file." />
+
+4. Run `sudo udevadm control --reload-rules` in a terminal or reboot your system.
+    > <Image src={termreloadrules} alt="A terminal with the command typed in." />
+
+5. Disconnect your guitar, then reconnect it.
+
+6. Open up Rock Band 3 in RPCS3 and sync your guitar.  
+    You should see it automatically assign a player number.  
+    Likewise, in Rock Band 3, you will see your guitar ready to join.
+</Steps>
+  </TabItem>
+  <TabItem label="macOS">
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+By default, macOS will attempt to load its own drivers when trying to use passthrough instruments on RPCS3.  
+Luckily, this is easy to fix!
+
+<Steps>
+1. First, [[click here download the GCAdapterDriver 1.8 beta]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="A '.zip' file of GCAdapterDriver being downloaded." />
+
+2. Drag the extracted `GCAdapterDriver-1.8-beta` application to the `Applications` folder.
+    > <Image src={macfnddnd} alt="Dragging GCAdapterDriver to the Applications folder." />
+
+3. In the menu bar, click on the new GCAdapterDriver icon.  
+    Click on the slider to try to activate it.
+    > <Image src={macgcdis} alt="GCAdapterDriver is disabled." />
+
+4. It will initially block the system extension.  
+    Click on `Open Security Preferences`.
+    > <Image src={macsysex} alt="A popup alerting that the GCAdapterDriver system extension was blocked. The cursor is over 'Open Security Preferences.'" />
+
+5. Unlock the page by click on the lock icon on the bottom left.  
+    Click on `Allow` after this.  
+    Don't forget to lock the page again when you're done.
+    > <Image src={macauth} alt="The 'Security & Privacy' page in System Preferences. The lock has been clicked on to unlock the page and the cursor hovers over 'Allow.'" />
+
+6. Now, activate GCAdapterDriver's slider in the menu bar now.
+    > <Image src={macgcen} alt="GCAdapterDriver is enabled." />
+    Open up Rock Band 3 in RPCS3 and connect your guitar.  
+    You should see it automatically assign a player number.  
+    Likewise, in Rock Band 3, you will see your guitar ready to join.  
+</Steps>
+  </TabItem>
+  </Tabs>
 </TabItem>
 </Tabs>
 
 [[Back to Controllers]](../../main/)
 
-Research by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gona]</a>
+Research by <a href="https://www.youtube.com/@Rulas025" target="_blank" rel="noopener noreferrer">[Rulas25]</a>  
+Previous research by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gona]</a>

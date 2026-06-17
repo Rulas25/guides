@@ -36,6 +36,75 @@ Model#: `PGTSELEA2B`
 ![Receptor de guitarra de The Beatles: Rock Band para PlayStation 3](/assets/instruments/adapters/ps3guitarbeatles.png "Receptor de guitarra de The Beatles: Rock Band para PlayStation 3")
 Model#: `PGTSELEA3B`
 
-No necesitas configurar nada para usar este instrumento. Simplemente conecta el receptor a tu computadora ¡y es todo!
+<Tabs>
+  <TabItem label="Windows">
+No necesitas configurar nada para usar este instrumento. Simplemente conecta el receptor a tu computadora, ¡y es todo!
+</TabItem>
+  <TabItem label="Linux">
+<Aside>Esto requiere permisos de admin/sudo.</Aside>
 
+<Steps>
+1. Navega a `/etc/udev/` en tu explorador de archivos.  
+    Entra a la carpeta de `rules.d`.  
+    Si no existe, créala.
+    > <Image src={doludev} alt="Un navegador de archivos dentro de la carpeta de 'udev', con el cursor resaltando la carpeta de 'rules.d'." />
+
+2. Crea un archivo nuevo.
+    > <Image src={dolnewfile} alt="Creando un archivo vació nuevo dentro de la carpeta de 'rules.d'." />
+    Nómbralo `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Nombrando el archivo." />
+
+3. Abre el archivo dentro de un editor de texto.  
+    Agrega la entrada de para tu guitarra:  
+    * Guitarra de RB1/2
+      ```
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
+      ```
+    En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
+    Cuando termines, guarda tus cambios.
+    > <Image src={kateps3} alt="Un editor de texto mostrando el archivo de 'rules.d' abierto. Hay dos entradas en el archivo." />
+
+4. Ejecuta `sudo udevadm control --reload-rules` en una terminal o reinicia tu sistema.
+    > <Image src={termreloadrules} alt="Una terminal abierta con el comando escrito." />
+
+5. Desconecta el receptor de tu guitarra y reconéctalo.
+
+5. Abre Rock Band 3 en RPCS3 y sincroniza tu guitarra.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu guitarra listo para unirse.  
+</Steps>
+</TabItem>
+  <TabItem label="macOS">
+Por defecto, macOS cargara sus propios controladores cuando intentas tu guitarra con conexión directa en RPCS3.  
+Por suerte, ¡esto es fácil de corregir!
+
+<Steps>
+1. Primero, [[haz click aquí para descargar la versión beta 1.8 de GCAdapterDriver]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="Un archivo '.zip' de GCAdapterDriver descargando." />
+
+2. Arrastra la aplicación de `GCAdapterDriver-1.8-beta` extraída a la carpeta de Aplicaciones.
+    > <Image src={macfnddnd} alt="Arrastrando la aplicación de GCAdapterDriver a la carpeta de Aplicaciones." />
+
+3. En la barra de menús, haz click en el icono de GCAdapterDriver.  
+    Haz click en el control deslizante para intentar activarlo.
+    > <Image src={macgcdis} alt="GCAdapterDriver esta desactivado." />
+
+4. Inicialmente, el sistema va a bloquear la extensión de sistema.  
+    Haz click en `Abrir el panel de preferencias Seguridad`.
+    > <Image src={macsysex} alt="Una alerta que dice que la extensión de GCAdapterDriver fue bloqueada. El cursor esta sobre 'Abrir el panel de preferencias Seguridad'" />
+
+5. Desbloquea la pagina haciendo click al candado hacia abajo en la izquierda.  
+    Haz click en `Permitir` ahora.  
+    No te olvides de bloquear la pagina cuando termines.
+    > <Image src={macauth} alt="La pagina de 'Seguridad y privacidad' dentro de las preferencias del sistema. El candado esta abierto y el cursor esta sobre 'Permitir'" />
+
+6. Ahora, activa el control deslizante de GCAdapterDriver en la barra de menús.
+    > <Image src={macgcen} alt="GCAdapterDriver esta activo." />
+    Abre Rock Band 3 en RPCS3 y conecta tu guitarra.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu guitarra listo para unirse.  
+</Steps>
+</TabItem>
+</Tabs>
+[[Regresar a la lista de instrumentos]](../../main/)
 [[Regresar a la lista de instrumentos]](../../main/)

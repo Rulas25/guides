@@ -25,6 +25,18 @@ import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player
 import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
 import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
 import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludev.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfile.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3rules.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadrules.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusb.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdl.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddnd.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysex.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauth.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
 import rbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeys.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
@@ -45,6 +57,7 @@ import midictrlmidioxinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictr
 import midictrlmidioxopts from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxopts.png';
 import midictrlmidioxcombo from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxcombo.png';
 import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs3.png';
+import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpad.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
@@ -66,64 +79,130 @@ This is the recommended method because the keyboard will work as expected.
 **You will need:**
 
 * a PlayStation 3 Wireless Keyboard Receiver to connect to your computer.  
-> ![PlayStation 3 Wireless Receiver](/assets/instruments/buttons/ps3/reckeys.png "PlayStation 3 Wireless Keyboard Receiver")  
-
+> ![PlayStation 3 Wireless Receiver](/assets/instruments/buttons/ps3/reckeys.png "PlayStation 3 Wireless Keyboard Receiver")
+FCC ID: `P25M797161Y2310R`
+<Tabs>
 ## Setup
+    <TabItem label="Windows">
+## Installing
 <Steps>
-1. Connect your Rock Band Keyboard Receiver for PlayStation 3 to your computer.
+1. First, [**[go to Zadig's website]**](https://zadig.akeo.ie/) and **download the latest version, then open it** up.
 
-2. Now, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[go to Zadig's website]</a>** and **download the latest version, then open it** up.
+2. Click on **`Options`** then **`List All Devices`**.  
+    > <Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
 
-3. Click on `Options` then `List All Devices`.  
-    <Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
+3. You should now see devices listed. **Switch it to your RB3 Keyboard for PS3**.  
+In this example, we're using the Mustang Pro Guitar, which shows up as `Harmonix RB3 Mustang Guitar for PlayStation® 3`.  
+    > <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
 
-4. You should now see devices listed. **Switch it to your Rock Band 3 Wireless Keyboard Receiver**.  
-In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStation® 3`).  
-    <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
+4. **After selecting the right device, you should see the option to replace the driver.  
+_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR YOUR KEYBOARD!!_**  
+Click `Replace Driver`.
+    > <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-5. **After selecting the right device, you should see the option to replace the driver.  
-_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE RB3 WIRELESS KEYBOARD RECEIVER!!_**  
-Click `Replace Driver`.  
-    <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
+5. A warning will appear.  
+**Again, make sure you have selected your RB3 Keyboard for PS3.**  
+After you have made sure, **click** **`Yes`**.  
+    > <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
 
-6. A warning will appear. **Again, make sure you have selected your RB3 Wireless Keyboard receiver.** After you have made sure, **click** **`Yes`**.  
-    <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
+6. It will then install the driver. As the program says, it may take a few minutes.  
+    > <Image src={zadigprogress} alt="Zadig in the middle of a driver install." />
 
-7. It will then install the driver. As the program says, it may take a few minutes.  
-    <Image src={zadigprogress} alt="Zadig in the middle of a driver install." />
+7. If everything goes well, you will get this message:  
+    > <Image src={zadigdone} alt="Zadig telling the user that the driver was installed successfully with 'Close' highlighted." />
 
-8. If everything goes well, you will get this message:  
-    <Image src={zadigdone} alt="Zadig telling the user that the driver was installed successfully with 'Close' highlighted." />
+8. **Close Zadig**.
 
-9. **Close Zadig** and, **with the dongle** still **connected**, **open up RPCS3** and **open Rock Band 3**.
-Turn your controller on and you should see it automatically assign a player number.  
-    <Image src={protaron} alt="A Mustang Pro Guitar with the second player LED lit up." />
+9. Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Keyboard for PS3.  
+You should see it automatically assign a player number.  
+    Likewise, in Rock Band 3, you will see the instrument ready to join.
 </Steps>
-
-You will see the instrument ready to join in Rock Band 3, .  
-<Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
-
-
-From this point, you can just connect your Rock Band 3 Wireless Keyboard receiver whenever you want without having to repeat this setup process!
 
 <details>
 <summary>Uninstalling</summary>
-Applying a Zadig driver on a device will make it only work on applications with passthrough. Thankfully, reverting this is very easy.  
+Applying a Zadig driver on your RB3 Keyboard for PS3 will make it only work on applications with passthrough. This may cause issues with Clone Hero or YARG.  
+Thankfully, reverting this is very easy!
 <Steps>
-1. Open the Start menu and search for `Device Manager`. Open it.  
-    <Image src={startdevman} alt="Windows' Start menu, with a result of 'Device Manager'." />
+1. Open the Start menu and search for `Device Manager`. Open it.
+    > <Image src={startdevman} alt="Windows' Start menu, with a result of 'Device Manager'." />
 
 2. Scroll down until you find the `Universal Serial Bus devices` category.  
-Expand it and right click the instrument you applied the Zadig driver on and then select `Uninstall device`.  
-In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStation® 3`).  
-    <Image src={devman} alt="Device Manager, with a right click menu that popped up. The cursor is over 'Uninstall Device.'" />
+Expand it and right click on your RB3 Keyboard for PS3 you applied the Zadig driver on and then select `Uninstall device`.  
+In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStation® 3`).
+    > <Image src={devman} alt="Device Manager, with a right click menu that popped up. The cursor is over 'Uninstall Device.'" />
 
 3. In the next window that pops up, make sure to tick `Attempt to remove the driver for this device.`  
-4. After that, click `Uninstall` and that's it!  
-    <Image src={devmanun} alt="The device uninstall prompt. 'Attempt to remove the driver for this device' is ticked and the cursor is over 'Uninstall.'" />
+After that, click `Uninstall` and that's it!  
+    > <Image src={devmanun} alt="The device uninstall prompt. 'Attempt to remove the driver for this device' is ticked and the cursor is over 'Uninstall.'" />
 </Steps>
-When you disconnect then reconnect the device, it will revert back to the original driver.
+When you disconnect then reconnect the receiver for your RB3 Keyboard for PS3, it will revert back to the original driver.
 </details>
+    </TabItem>
+  <TabItem label="Linux">
+<Aside>This requires admin/sudo permissions.</Aside>
+
+<Steps>
+1. Navigate to `/etc/udev/` in your file browser.  
+Enter the `rules.d` folder.  
+If it doesn't exist, make it.
+    > <Image src={doludev} alt="A file browser in the 'udev' folder, with a cursor highlighting and clicking on a folder called 'rules.d'." />
+
+2. Create a new file.
+    > <Image src={dolnewfile} alt="Creating a new empty file within the 'rules.d' folder." />
+    Name it `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Naming the new file." />
+
+3. Open the file in a text editor.  
+Add an entry for your RB3 Keyboard for PS3:  
+    ```
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2330", MODE="0666"
+    ```
+    In the example below, a PS3 Mustang and PS3 Keyboard are being added.  
+    When you're done, save your edits to the file.
+    > <Image src={kateps3} alt="A text editor showing the '99-ps3-peripherals.rules' file open. There are two entries in the text file." />
+
+4. Run `sudo udevadm control --reload-rules` in a terminal or reboot your system.
+    > <Image src={termreloadrules} alt="A terminal with the command typed in." />
+
+5. Disconnect the receiver for your RB3 Keyboard for PS3.
+
+6. Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Keyboard for PS3.  
+You should see it automatically assign a player number.  
+    Likewise, in Rock Band 3, you will see your RB3 Keyboard for PS3 ready to join.  
+</Steps>
+    </TabItem>
+  <TabItem label="macOS">
+By default, macOS will attempt to load its own drivers when trying to use passthrough instruments on RPCS3.  
+Luckily, this is easy to fix!
+
+<Steps>
+1. First, [[click here download the GCAdapterDriver 1.8 beta]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="A '.zip' file of GCAdapterDriver being downloaded." />
+
+2. Drag the extracted `GCAdapterDriver-1.8-beta` application to the `Applications` folder.
+    > <Image src={macfnddnd} alt="Dragging GCAdapterDriver to the Applications folder." />
+
+3. In the menu bar, click on the new GCAdapterDriver icon.  
+Click on the slider to try to activate it.
+    > <Image src={macgcdis} alt="GCAdapterDriver is disabled." />
+
+4. It will initially block the system extension.  
+Click on `Open Security Preferences`.
+    > <Image src={macsysex} alt="A popup alerting that the GCAdapterDriver system extension was blocked. The cursor is over 'Open Security Preferences.'" />
+
+5. Unlock the page by click on the lock icon on the bottom left.  
+Click on `Allow` after this.  
+Don't forget to lock the page again when you're done.
+    > <Image src={macauth} alt="The 'Security & Privacy' page in System Preferences. The lock has been clicked on to unlock the page and the cursor hovers over 'Allow.'" />
+
+6. Now, activate GCAdapterDriver's slider in the menu bar now.
+    > <Image src={macgcen} alt="GCAdapterDriver is enabled." />
+    Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Keyboard for PS3.  
+    You should see it automatically assign a player number.  
+    Likewise, in Rock Band 3, you will see your RB3 Keyboard for PS3 ready to join.  
+</Steps>
+    </TabItem>
+    </Tabs>
 </TabItem>
   <TabItem label="MIDI to USB interface">
 <Aside>None of the controller buttons will work as intended as the keyboard will be in MIDI mode.</Aside>
@@ -147,106 +226,13 @@ After that, go to the `I/O` tab.
     * 🎹 **Leave your `Emulated MIDI type` on `Keyboard` and select your MIDI interface in the drop-down menu next to it.**
 
 ### Additional Information
-Since the keyboard controller buttons don't function like they do when connected with a dongle, you will have to shift octaves to control the menus.  
-You can shift octaves with the X and B buttons.  
-> <Image src={rbkeysoctshift} alt="A Rock Band 3 keyboard. When X is pressed, a yellow highlight, showing which notes are being used, shifts down to C2 to C4. When B is pressed, it shifts up to C3 to C5." /> 
-
-| **Note** | **Button** |
-|:--------:|:-------------------:|
-| C2 | ![Select](/assets/instruments/buttons/ps3/sel.png "Select") |
-| D2 | ![D-Pad Left](/assets/instruments/buttons/ps3/dl.png "D-Pad Left") |
-| E2 | ![D-Pad Right](/assets/instruments/buttons/ps3/dr.png "D-Pad Right") |
-| F2 | ![D-Pad Up](/assets/instruments/buttons/ps3/du.png "D-Pad Up") |
-| G2 | ![D-Pad Down](/assets/instruments/buttons/ps3/dd.png "D-Pad Down") |
-| A2 | Deploy Overdrive |
-| C#2 | ![Triangle](/assets/instruments/buttons/ps3/t.png "Triangle") |
-| D#2 | ![Square](/assets/instruments/buttons/ps3/s.png "Square") |
-| F#2 | ![Circle](/assets/instruments/buttons/ps3/o.png "Circle") |
-| G#2 | ![Cross](/assets/instruments/buttons/ps3/x.png "Cross") |
-| A#2 | ![Start](/assets/instruments/buttons/ps3/sta.png "Start") |
-| Modwheel | Deploy Overdrive |
-| Sustain | Deploy Overdrive |
-| Pitch Wheel | Whammy/Touch Strip |
-
-<details>
-<summary>[Using a computer keyboard along with a 25 key keyboard]</summary>
-
-<Aside>**This requires advanced setup!**</Aside>
-
-You can use your regular computer keyboard and convert its key presses to the MIDI notes that correspond to the game buttons in case you want to avoid swapping octaves constantly.
-
-First, <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer">[download loopMIDI]</a>.  
-> <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer"><Image src={midictrlloopMIDIdl} alt="loopMIDI's download page. The cursor is over 'download loopMIDI.'" /></a>
-
-Install loopMIDI.  
-**Launch it after it finishes.**  
-> <Image src={midictrlloopMIDIinst} alt="loopMIDI's installer." />
-
-Add two new ports by clicking on the `+` button in the bottom. You should name the ports, too. They’ve been named “Pro Keys” and “Gamepad” in this example.  
-> <Image src={midictrlloopMIDIaddport} alt="loopMIDI with a mouse cursor over the Plus symbol for 'Add Port'. Additionally, 'New port name' is highlighted in blue with a dotted outline, with 'Pro Keys' typed out in the text field." />
-
-Now, download <a href="https://freepiano.tiwb.com/en/" target="_blank" rel="noopener noreferrer">[the `.zip` archive that contains the win64 version of FreePiano]</a>.  
-> <a href="https://freepiano.tiwb.com/en" target="_blank" rel="noopener noreferrer"><Image src={midictrlfreepnodl} alt="FreePiano's download page'" /></a>
-
-Extract the `.zip` archive somewhere you can easily find it.  
-It was extracted to `C:\Games\freepiano` in this example.
-
-Go to where you extracted FreePiano and run the `freepiano` executable.  
-> <Image src={midictrlfreepnodir} alt="The FreePiano executable highlighted in a folder." />
-
-Assign the keys to your liking as shown in the [**[#Additional Information]**](#additional-information) section above.  
-There is also a premade profile if you’d like, which you can [**[download here]**](/../../downloads/rb3/rpcs3/instrument-repo/rb3gamekeys.map). 
-
-To use the preset, place the `rb3gamekeys.map` file in the `keymap` folder located where you extracted FreePiano.  
-> <Image src={midictrlfreepnopreset} alt="A highlighted profile named rb3gamekeys.map in the keymap folder." />
-
-Select `rb3gamekeys.map` in the `Keymap` dropdown button to load the premade profile.  
-Likewise, if you made your own profile or edited the premade profile, you can click on **`Save`** to save your profile.  
-> <Image src={midictrlfreepnoselpres} alt="FreePiano with the rb3gamekeys.map profile selected." />
-
-The premade profile is mapped like this:
-| **Key** | **Action** |
-|:---:|:---:|
-| `Enter` | ![Start](/assets/instruments/buttons/ps3/sta.png "Start") |
-| `Shift` | ![Select](/assets/instruments/buttons/ps3/sel.png "Select") |
-| `Up` | ![D-Pad Up](/assets/instruments/buttons/ps3/du.png "D-Pad Up") |
-| `Down` | ![D-Pad Down](/assets/instruments/buttons/ps3/dd.png "D-Pad Down") |
-| `Left` | ![D-Pad Left](/assets/instruments/buttons/ps3/dl.png "D-Pad Left") |
-| `Right` | ![D-Pad Right](/assets/instruments/buttons/ps3/dr.png "D-Pad Right") |
-| `A` | ![Cross](/assets/instruments/buttons/ps3/x.png "Cross") |
-| `S` | ![Circle](/assets/instruments/buttons/ps3/o.png "Circle") |
-| `D` | ![Square](/assets/instruments/buttons/ps3/s.png "Square") |
-| `F` | ![Triangle](/assets/instruments/buttons/ps3/t.png "Triangle") |
-
-Once you are done mapping, click on `Instrument` at the top of Freepiano’s window and select the `Gamepad` MIDI output, which you made with loopMIDI earlier.  
-> <Image src={midictrlfreepnoout} alt="FreePiano's Instrument dropdown menu with 'Gamepad MIDI' selected." />
-
-It’s suggested you enable `Background input mode`, located within the `Options` tab which is accessed by pressing the Wrench icon in the top right side of FreePiano.  
-> <Image src={midictrlfreepnoback} alt="FreePiano with the 'Background input mode' enabled." />
-
-Now, <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer">[download MIDI-OX]</a>.  
-> <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer"><Image src={midictrlmidioxdl} alt="MIDI-OX's website with the proper download highlighted in blue with a dotted outline" /></a>
-
-Install MIDI-OX.  
-> <Image src={midictrlmidioxinst} alt="MIDI-OX's installer." />
-
-Open MIDI-OX then navigate to **`Options` > `MIDI Devices`**  
-> <Image src={midictrlmidioxopts} alt="MIDI-OX with the mouse hovering over the MIDI Devices menu, under the Options menu." />
-
-In the `MIDI Devices` menu, select your keyboard and the port you made in loopMIDI (“Gamepad”) for FreePiano in the `MIDI Inputs` section.  
-Select the other port you made in loopMIDI (“Pro Keys”) in `MIDI Outputs`. This will combine both MIDI inputs into a single output.  
-> <Image src={midictrlmidioxcombo} alt="MIDI-OX's MIDI Devices with a keyboard and the Gamepad selected in the MIDI Inputs section and Pro Keys selected in the MIDI Outputs section." />
-
-Finally, in RPCS3, go to Rock Band 3’s Custom Configuration then go to the `I/O` tab.  
-Select the port that you selected as your output in MIDI-OX (“Pro Keys”).  
-> <Image src={midictrlrpcs3} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline. It is set to 'Keyboard - Pro Keys 3.'" />
-
-That’s it. Remember to close all **three different programs** when you’re not using them because they may cause issues with certain shortcuts on Windows.  
-You will have to reopen these programs every time you want to play.
-</details>
+Since you can't use the buttons on the keyboard to control the game, you will need to map <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[a dedicated gamepad for navigation]</a>. You can use a typing keyboard or a gamepad.
+    * You can enable this in `[Menu] > [Options] > [Deluxe Settings] > [Controller] > [Navigation Pad]`  
+    > <Image src={navpad} alt="Rock Band 3 Deluxe's Navigation Pad menu." />
+**To sign in on a 25 key keyboard, you need to lower the octave with Square and press the A♯2 key. After that, raise your octave back up with Circle.**
+> <Image src={rbkeysoctshift} alt="A Rock Band 3 keyboard. When Square is pressed, a yellow highlight, showing which notes are being used, shifts down to C2 to C4. When Circle is pressed, it shifts up to C3 to C5." /> 
 </TabItem>
 </Tabs>
-
 
 [[Back to Controllers]](../../main/)
 

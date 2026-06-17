@@ -9,9 +9,6 @@ sidebar:
   order: 3
   label: PS3
 ---
-import { Aside } from '@astrojs/starlight/components';
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-import { Steps } from '@astrojs/starlight/components';
 import ps3rbkeyscontroller from '@assets/rb3/rpcs3/instruments/controller/ps3rbkeyscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
@@ -20,11 +17,21 @@ import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigr
 import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
 import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
 import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
-import protaron from '@assets/rb3/rpcs3/instruments/setup/passthrough/protaron.png';
-import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player.png';
 import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
 import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
 import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludeves.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfilees.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3ruleses.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3es.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadruleses.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusbes.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdles.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddndes.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysexes.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauthes.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
 import rbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeys.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
@@ -45,7 +52,11 @@ import midictrlmidioxinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictr
 import midictrlmidioxopts from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxopts.png';
 import midictrlmidioxcombo from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxcombo.png';
 import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs3.png';
+import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpades.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 <center><img src="/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={ps3rbkeyscontroller} alt="Control" /></center>
@@ -57,7 +68,7 @@ import { Image } from 'astro:assets';
   Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 
 ## Instrucciones
-Hay dos maneras para conectar este teclado. Si no tienes el receptor para el teclado inalámbrico de PS3, necesitas usar una interfaz de MIDI a USB.  
+Hay dos maneras para conectar este teclado. Si no tienes el receptor para tu teclado inalámbrico de PS3, necesitas usar una interfaz de MIDI a USB.  
 Elige la que es mas conveniente para ti:
 
 <Tabs>
@@ -65,20 +76,21 @@ Elige la que es mas conveniente para ti:
 Esto se recomienda porque el teclado se comportara como debe de ser.
 
 **Vas a necesitar:**
-
-* un receptor para el teclado inalámbrico de PS3 para conectar a tu computadora.  
-> ![Receptor para el teclado inalámbrico para PS3](/assets/instruments/buttons/ps3/reckeys.png "Receptor para el teclado inalámbrico para PS3")  
-
-## Configuración
+* un receptor para tu teclado inalámbrico de PS3 para conectar a tu computadora.  
+> ![Receptor para el teclado inalámbrico para PS3](/assets/instruments/buttons/ps3/reckeys.png "Receptor para el teclado inalámbrico para PS3")
+FCC ID: `P25M797161Y2310R`
+<Tabs>
+## Configurando
+  <TabItem label="Windows">
 <Steps>
-1. Conecta el receptor para el teclado inalámbrico de PS3 a tu computadora.
+1. Conecta el receptor para tu teclado inalámbrico de PS3 a tu computadora.
 
 2. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
 
 3. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
     <Image src={zadiglistall} alt="Zadig mostrando 'List All Devices' resaltado bajo 'Options'." />
 
-4. Deberías ver una lista de dispositivos ahora. **Elige el receptor para el teclado inalámbrico de PS3**.  
+4. Deberías ver una lista de dispositivos ahora. **Elige el receptor para tu teclado inalámbrico de PS3**.  
 En este ejemplo, sale la Guitarra Mustang Pro (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
     <Image src={zadigsel} alt="Zadig mostrando 'Harmonix RB3 Mustang Guitar for PlayStation® 3' resaltado en la lista de dispositivos." />
 
@@ -87,7 +99,7 @@ _¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR DEL INSTRUMENTO PRO
 Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"</span>.  
     <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-6. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu receptor para el teclado inalámbrico de PS3.** Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
+6. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu receptor para tu teclado inalámbrico de PS3.** Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
     <Image src={zadigwarning} alt="Zadig advirtiendo al usuario que está a punto de modificar un controlador del sistema, con 'Yes' resaltado." />
 
 7. Se instalará el controlador. Como dice el programa, esto puede llevar algunos minutos.  
@@ -96,19 +108,14 @@ Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"<
 8. Si todo sale bien, verás este mensaje:  
     <Image src={zadigdone} alt="Zadig indicando que el controlador se instaló correctamente, con 'Close' resaltado." />
 
-9. **Cierra Zadig** y, con el adaptador todavía conectado, **abre RPCS3** y **abre Rock Band 3**.
+9. **Cierra Zadig** y, con el adaptador todavía conectado, **abre RPCS3** y **abre Rock Band 3**.  
 Enciende tu instrumento y deberías ver que automáticamente se le asigna un número de jugador.  
-    <Image src={protaron} alt="Una Mustand con el LED del segundo jugador activado" />
 </Steps>
-
 Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.  
-<Image src={rb3player} alt="Rock Band 3 con una Guitarra Pro lista para unirse." />
-
-Ahora, puedes conectar tu receptor para el teclado inalámbrico de PS3 cuando quieras sin tener que repetir este este proceso.
-
+Ahora, puedes conectar tu receptor para tu teclado inalámbrico de PS3 cuando quieras sin tener que repetir este este proceso.
 <details>
 <summary>Desinstalando</summary>
-Aplicando un controlador de Zadig restringirá a aplicaciones que usen Passthrough. Lo bueno es que es fácil revertir esto.
+Aplicando un controlador de Zadig restringirá tu teclado inalámbrico de PS3 a aplicaciones que usen Passthrough. Lo bueno es que es fácil revertir esto.
 <Steps>
 1. Abre el menú de Inicio y busca el `Administrador de dispositivos`.  
 Ábrelo.  
@@ -123,9 +130,75 @@ En el ejemplo abajo, se uso la Guitarra Pro (`Harmonix RB3 Mustang Guitar for Pl
 4. Después de eso, haz click en `Desinstalar` y eso es todo.  
     <Image src={devmanun} alt="La pantalla para Desinstalar el dispositivo. 'Intenta quitar el controlador para este dispositivo' esta activado y el cursor esta sobre 'Desinstalar'." />
 </Steps>
-Cuando desconectes y vuelvas a conectar el instrumento, regresara al controlador original.
-
+Cuando desconectes y vuelvas a conectar el receptor para tu teclado inalámbrico de PS3, regresara al controlador original.
 </details>
+    </TabItem>
+  <TabItem label="Linux">
+<Aside>Esto requiere permisos de admin/sudo.</Aside>
+
+<Steps>
+1. Navega a `/etc/udev/` en tu explorador de archivos.  
+ Entra a la carpeta de `rules.d`.  
+ Si no existe, créala.
+    > <Image src={doludev} alt="Un navegador de archivos dentro de la carpeta de 'udev', con el cursor resaltando la carpeta de 'rules.d'." />
+
+2. Crea un archivo nuevo.
+    > <Image src={dolnewfile} alt="Creando un archivo vació nuevo dentro de la carpeta de 'rules.d'." />
+    Nómbralo `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Nombrando el archivo." />
+
+3. Abre el archivo dentro de un editor de texto.  
+Agrega la entrada de para tu teclado inalámbrico de PS3:  
+    ```
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2330", MODE="0666"
+    ```
+    En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
+    Cuando termines, guarda tus cambios.
+    > <Image src={kateps3} alt="Un editor de texto mostrando el archivo de 'rules.d' abierto. Hay dos entradas en el archivo." />
+
+4. Ejecuta `sudo udevadm control --reload-rules` en una terminal o reinicia tu sistema.
+    > <Image src={termreloadrules} alt="Una terminal abierta con el comando escrito." />
+
+5. Desconecta el receptor de tu teclado inalámbrico de PS3.
+
+6. Abre Rock Band 3 en RPCS3 y conecta tu teclado inalámbrico de PS3.  
+Deberías de ver que automáticamente se le asigna un número de jugador.  
+Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.
+</Steps>
+    </TabItem>
+  <TabItem label="macOS">
+Por defecto, macOS cargara sus propios controladores cuando intentas usar instrumentos con conexión directa en RPCS3.  
+Por suerte, ¡esto es fácil de corregir!
+
+<Steps>
+1. Primero, [[haz click aquí para descargar la versión beta 1.8 de GCAdapterDriver]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="Un archivo '.zip' de GCAdapterDriver descargando." />
+
+2. Arrastra la aplicación de `GCAdapterDriver-1.8-beta` extraída a la carpeta de Aplicaciones.
+    > <Image src={macfnddnd} alt="Arrastrando la aplicación de GCAdapterDriver a la carpeta de Aplicaciones." />
+
+3. En la barra de menús, haz click en el icono de GCAdapterDriver.  
+Haz click en el control deslizante para intentar activarlo.
+    > <Image src={macgcdis} alt="GCAdapterDriver esta desactivado." />
+
+4. Inicialmente, el sistema va a bloquear la extensión de sistema.  
+Haz click en `Abrir el panel de preferencias Seguridad`.
+    > <Image src={macsysex} alt="Una alerta que dice que la extensión de GCAdapterDriver fue bloqueada. El cursor esta sobre 'Abrir el panel de preferencias Seguridad'" />
+
+5. Desbloquea la pagina haciendo click al candado hacia abajo en la izquierda.  
+Haz click en `Permitir` ahora.  
+No te olvides de bloquear la pagina cuando termines.
+    > <Image src={macauth} alt="La pagina de 'Seguridad y privacidad' dentro de las preferencias del sistema. El candado esta abierto y el cursor esta sobre 'Permitir'" />
+
+6. Ahora, activa el control deslizante de GCAdapterDriver en la barra de menús.
+    > <Image src={macgcen} alt="GCAdapterDriver esta activo." />
+    
+    Abre Rock Band 3 en RPCS3 y conecta el receptor de tu teclado inalámbrico de PS3.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu teclado inalámbrico de PS3 listo para unirse.
+</Steps>
+    </TabItem>
+    </Tabs>
 </TabItem>
   <TabItem label="Interfaz de MIDI a USB">
 <Aside>Ningún botón funcionara normalmente porque el teclado estará en modo MIDI.</Aside>
@@ -155,109 +228,13 @@ Ahora, ve a la pestaña de `E/S`.
     * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige tu teclado o interfaz MIDI en el menú desplegable junto a él.**
 
 ### Información adicional
-Los botones del teclado no van a funcionar como funcionan cuando esta conectado a su consola propia. Por eso vas a tener que cambiar de octava para acceder a los botones de control.  
-Puedes cambiar de octava con los botones de `Square (Cuadro)` y `Circle (Circulo)`.  
-> <Image src={rbkeysoctshift} alt="Un teclado de Rock Band 3. Cuando se presiona el botón que seria Square, un resaltado amarillo, que muestra el rango de notas activas, cambia a C2-C4. Cuando se presiona el botón que seria Circle, cambia a C3-C5." /> 
-
-| **Nota** | **Botón** |
-|:--------:|:-------------------:|
-| C2 | ![Botón Select](/assets/instruments/buttons/ps3/sel.png "Botón Select") |
-| D2 | ![D-Pad (Cruceta) Izquierda](/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
-| E2 | ![D-Pad (Cruceta) Derecha](/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
-| F2 | ![D-Pad (Cruceta) Arriba](/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
-| G2 | ![D-Pad (Cruceta) Abajo](/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
-| A2 | Sobrecarga |
-| C#2 | ![Botón Triangle (Triangulo)](/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
-| D#2 | ![Botón Square (Cuadro)](/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
-| F#2 | ![Botón Circle (Circulo)](/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
-| G#2 | ![Botón Cross (Cruz)](/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
-| A#2 | ![Botón Start](/assets/instruments/buttons/ps3/sta.png "Botón Start") |
-| Modwheel | Sobrecarga |
-| Pedal de resonancia | Sobrecarga |
-| Perilla de Pitch | Franja táctil |
-
-<details>
-<summary>[Usando un teclado de computadora al lado de un teclado MIDI]</summary>
-
-<Aside>**¡Esto requiere configuración avanzada!**</Aside>
-
-Puedes usar tu teclado de computadora y convertir las teclas a notas MIDI que corresponden a los botones del juego.  
-Esto es para poder control el juego sin cambiar octava en el teclado.
-
-Primero, <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer">[descarga loopMIDI]</a>.  
-> <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer"><Image src={midictrlloopMIDIdl} alt="La pagina de descarga de loopMIDI. El cursor esta sobre 'download loopMIDI'." /></a>
-
-Instala loopMIDI.  
-**Ábrelo cuando termine de instalar.**  
-> <Image src={midictrlloopMIDIinst} alt="El instalador de loopMIDI." />
-
-Usa el botón de `+` abajo para agregar dos puertos nuevos. Nombra los puertos. En este ejemplo, se nombraron como "Pro Keys" y "Gamepad".  
-> <Image src={midictrlloopMIDIaddport} alt="loopMIDI con el cursor sobre el botón + que agrega mas puertos. También, 'New port name' esta resaltado en azul con 'Pro Keys' escrito en el cuadro de texto." />
-
-Ahora, <a href="https://freepiano.tiwb.com/en/" target="_blank" rel="noopener noreferrer">[descarga el archivo `.zip` de FreePiano que tiene la versión de win64]</a>.  
-> <a href="https://freepiano.tiwb.com/en" target="_blank" rel="noopener noreferrer"><Image src={midictrlfreepnodl} alt="La pagina de descargas de FreePiano." /></a>
-
-Extrae el archivo `.zip` donde puedas encontrarlo fácilmente.  
-En este ejemplo, fue extraído a `C:\Games\freepiano`.
-
-Ve a donde extrajiste el archivo `.zip` y abre la aplicación de freepiano.  
-> <Image src={midictrlfreepnodir} alt="Una captura con la aplicación de freepiano resaltada." />
-
-Puedes configurar las teclas a tu gusto usando la sección de [**[#Información adicional]**](#información-adicional-1) hacia arriba.  
-También existe un perfil pre-hecho que puedes [**[descargar aquí]**](/../../downloads/rb3/rpcs3/instrument-repo/rb3gamekeys.map). 
-
-Para usar el perfil, coloca el archivo `rb3gamekeys.map` en la carpeta llamada `keymap` donde esta la aplicación de freepiano.  
-> <Image src={midictrlfreepnopreset} alt="Un perfil llamado rb3gamekeys.map resaltado, dentro de la carpeta llamada 'keymap'." />
-
-Selecciona el archivo `rb3gamekeys.map` en el menú despegable de `Keymap` para cargar el perfil.  
-También, si existe creaste tu propio perfil o editaste el perfil pre-hecho, puedes hacer click en **<span title="Guardar">"<code>Save</code>"</span>** para guardarlo.  
-> <Image src={midictrlfreepnoselpres} alt="FreePiano con el perfil de rb3gamekeys.map seleccionado." />
-
-El perfil pre-hecho esta configurado así:
-| **Tecla** | **Acción** |
-|:---:|:---:|
-| `Enter` | ![Botón Start](/assets/instruments/buttons/ps3/sta.png "Botón Start") |
-| `Shift (Mayús) Izq.` | ![Botón Select](/assets/instruments/buttons/ps3/sel.png "Botón Select") |
-| `Arriba` | ![D-Pad (Cruceta) Arriba](/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
-| `Abajo` | ![D-Pad (Cruceta) Abajo](/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
-| `Izquierda` | ![D-Pad (Cruceta) Izquierda](/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
-| `Derecha` | ![D-Pad (Cruceta) Derecha](/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
-| `A` | ![Botón Cross (Cruz)](/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
-| `S` | ![Botón Circle (Circulo)](/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
-| `D` | ![Botón Square (Cuadro)](/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
-| `F` | ![Botón Triangle (Triangulo)](/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
-
-Cuando termines de mapear, haz click en <span title="Instrumento">"<code>Instrument</code>"</span> en la parte de arriba de la pantalla FreePiano y selecciona la salida MIDI "Gamepad" que creaste con loopMIDI anteriormente.  
-> <Image src={midictrlfreepnoout} alt="El menú despegable de Instrumento dentro de Freepiano, con 'Gamepad MIDI' seleccionado." />
-
-Es recomendado que actives <span title="Modo de entrada en segundo plano">"<code>Background input mode</code>"</span>, dentro la pestaña de <span title="Opciones">"<code>Options</code>"</span>. Se puede acceder con el icono de llave.  
-> <Image src={midictrlfreepnoback} alt="FreePiano con la opción de 'Background input mode' activada." />
-
-Ahora, <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer">[descarga MIDI-OX]</a>.  
-> <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer"><Image src={midictrlmidioxdl} alt="El sitio de MIDI-OX con en enlace correcto resaltado en un cuadro azul con contorno punteado." /></a>
-
-Instala MIDI-OX.  
-> <Image src={midictrlmidioxinst} alt="El instalador de MIDI-OX." />
-
-Abre MIDI-OX y ve a <span title="Opciones">"<code>Options</code>"</span> `>` <span title="Dispositivos de MIDI">"<code>MIDI Devices</code>"</span>.  
-> <Image src={midictrlmidioxopts} alt="MIDI-OX con el cursor sobre el menú despegable de Options, en MIDI Devices." />
-
-En el menú de <span title="Dispositivos de MIDI">"<code>MIDI Devices</code>"</span>, elige tu teclado y el puerto que creaste con loopMIDI (“Gamepad”) para FreePiano en la sección de <span title="Entradas de MIDI">"<code>MIDI Inputs</code>"</span>.  
-Elige el otro puerto que creaste en loopMIDI ("Pro Keys") en la sección de <span title="Salidas de MIDI">"<code>MIDI Outputs</code>"</span>. Esto combinara las entradas de MIDI a una sola salida.  
-> <Image src={midictrlmidioxcombo} alt="MIDI Devices dentro de MIDI-OX, que muestra un teclado y el puerto de Gamepad seleccionado en la sección de MIDI Inputs y Pro Keys seleccionada en la sección de MIDI Outputs." />
-
-Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `E/S`.  
-> <Image src={midictrlrpcs3} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
-
-* ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
-    * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**
-
-Eso es todo. Recuerda que tienes que cerrar los **tres programas distintos** cuando no los estés usando, porque pueden causar problemas con los atajos de Windows.  
-Tienes que abrirlos cada vez que quieras jugar.
-</details>
+Como no puedes usar los botones para controlar el juego, necesitas <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un mando dedicado para navegación]</a>. Puedes usar un teclado de PC o un mando estándar.
+    * Puedes activar esto en `[Menú] > [Opciones] > [Configuración Deluxe] > [Controlador] > [Mando de Nav.]` 
+    > <Image src={navpad} alt="El menú de mando de navegación dentro de los menús de Rock Band 3." />
+**Para iniciar sesión, necesitas bajar la octava con `Square (Cuadro)` y pulsar A♯2 (La♯). Después, sube de octava con `Circle (Circulo)`**.
+> <Image src={rbkeysoctshift} alt="Un teclado de Rock Band 3. Cuando se presiona el botón que seria Square, un resaltado amarillo, que muestra el rango de notas activas, cambia a C2-C4. Cuando se presiona el botón que seria Circle, cambia a C3-C5." />
 </TabItem>
 </Tabs>
-
 
 [[Regresar a la lista de instrumentos]](../../main/)
 

@@ -1,23 +1,25 @@
 ---
-title: Nintendo Wii Rock Band MIDI PRO Adapter Drums
-slug: "en/rb3pc/controllers/drums/wiimpa"
-description: "How to connect and configure a drum kit connected with a Wii MPA on RPCS3."
+title: PlayStation 3 Rock Band MIDI PRO Adapter Keyboard
+slug: "en/rb3pc/controllers/keys/wiimpa"
+description: "How to connect and configure a keyboard connected with a PS3 MPA on RPCS3."
 tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 12
-  label: Wii Rock Band MPA
+  order: 5
+  label: Wii MPA
 ---
 import wiimpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiimpadrmscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import mpadrm from '@assets/rb3/rpcs3/instruments/setup/mpa/mpadrm.png';
+import mpakey from '@assets/rb3/rpcs3/instruments/setup/mpa/mpakey.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
 import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
 import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
 import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
 import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
+import protaron from '@assets/rb3/rpcs3/instruments/setup/passthrough/protaron.png';
+import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player.png';
 import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
 import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
 import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
@@ -38,22 +40,22 @@ import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-<div align="center"> ![Nintendo Wii](/assets/instruments/logos/wii.png "Nintendo Wii")</div>
 
+<center><img src="/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={wiimpadrmscontroller} alt="Controller" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+<Tabs>
 
 ### Setup
-<Tabs>
   <TabItem label="Windows">
 <Steps>
-1. Connect your RB3 MIDI PRO Adapter and switch it to Drum mode. Simply set the middle switch to left-most `D` position.  
+1. Connect your RB3 MIDI PRO Adapter and switch it to Keyboard mode. Simply set the middle switch to center `K` position.  
 Please note that you need to do this even if you already did it for the other two modes.  
-    > <Image src={mpadrm} alt="A MIDI PRO Adapter with the middle switch set to 'D'." />
+    <Image src={mpakey} alt="A MIDI PRO Adapter with the middle switch set to 'K'." />
 
 2. Now, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[go to Zadig's website]</a>** and **download the latest version, then open it** up.
 
@@ -62,7 +64,7 @@ Please note that you need to do this even if you already did it for the other tw
 
 4. You should now see devices listed. **Switch it to your Rock Band 3 Pro Instrument**.  
 In this example, we're using the Mustang Pro Guitar, which shows up as `Harmonix RB3 Mustang Guitar for PlayStation® 3`.  
-    > <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
+    > <Image src={zadigsel} alt="A screenshot of Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
 
 5. **After selecting the right device, you should see the option to replace the driver.  
 _MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE PRO GUITAR/KEYBOARD/MIDI PRO ADAPTER!!_**  
@@ -72,10 +74,10 @@ Click `Replace Driver`.
 6. A warning will appear.  
 **Again, make sure you have selected your RB3 Pro instrument's receiver or adapter.**  
 After you have made sure, **click** **`Yes`**.  
-    > <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
+    > <Image src={zadigwarning} alt="A screenshot of Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
 
 7. It will then install the driver. As the program says, it may take a few minutes.  
-    > <Image src={zadigprogress} alt="Zadig in the middle of a driver install." />
+    > <Image src={zadigprogress} alt="A screenshot of Zadig in the middle of a driver install." />
 
 8. If everything goes well, you will get this message:  
     > <Image src={zadigdone} alt="Zadig telling the user that the driver was installed successfully with 'Close' highlighted." />
@@ -124,7 +126,7 @@ If it doesn't exist, make it.
 3. Open the file in a text editor.  
     Add an entry for your MIDI Pro Adapter:  
     ```
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3430", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3338", MODE="0666"
     ```
     In this example, a PS3 Mustang and PS3 Keyboard are being added.  
     When you're done, save your edits to the file.
@@ -172,4 +174,4 @@ Luckily, this is easy to fix!
 </Tabs>
 [[Back to Controllers]](../../main/)
 
-Research by <a href="https://bsky.app/profile/shny-scott.is.sqrk.ing" target="_blank" rel="noopener noreferrer">[scott0852]</a>
+Research by <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>
