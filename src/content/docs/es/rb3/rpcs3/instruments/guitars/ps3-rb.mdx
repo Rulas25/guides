@@ -9,9 +9,23 @@ sidebar:
   order: 6
   label: PS3 Rock Band
 ---
-import { Aside } from '@astrojs/starlight/components';
 import rbgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rbgtrscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludeves.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfilees.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3ruleses.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3es.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadruleses.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusbes.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdles.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddndes.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysexes.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauthes.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
@@ -56,7 +70,6 @@ No necesitas configurar nada para usar este instrumento. Simplemente conecta el 
 
 3. Abre el archivo dentro de un editor de texto.  
     Agrega la entrada de para tu guitarra:  
-    * Guitarra de RB1/2
       ```
       SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
       ```
@@ -106,5 +119,5 @@ Por suerte, ¡esto es fácil de corregir!
 </Steps>
 </TabItem>
 </Tabs>
-[[Regresar a la lista de instrumentos]](../../main/)
+
 [[Regresar a la lista de instrumentos]](../../main/)
