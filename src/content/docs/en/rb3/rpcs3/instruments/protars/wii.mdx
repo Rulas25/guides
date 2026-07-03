@@ -6,22 +6,42 @@ tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 3
-  label: Nintendo Wii
+  order: 5
+  label: Wii
 ---
-import { Aside } from '@astrojs/starlight/components';
-import { Tabs, TabItem } from '@astrojs/starlight/components';
 import rbmustangpro from '@assets/rb3/rpcs3/instruments/controller/rbmustangpro.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarn.png';
-import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmust.png';
-import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmust.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
+import protaron from '@assets/rb3/rpcs3/instruments/setup/passthrough/protaron.png';
+import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player.png';
+import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
+import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
+import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludev.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfile.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3rules.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadrules.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusb.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdl.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddnd.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysex.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauth.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
 import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
 import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
 import iog from '@assets/rb3/rpcs3/config/iog.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 
@@ -34,54 +54,144 @@ Do NOT map this instrument via the `Pads` menu!
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
 ## Instructions
-There are two different ways to connect this Pro Guitar. Pick whichever is the most convenient for you:
+There are two different ways to connect this Pro Guitar. If you don't have the Rock Band Mustang Receiver for PlayStation 3, you will need to use MIDI to USB.  
+Pick whichever is the most convenient for you:
+
 <Tabs>
-  <TabItem label="Santroller Adapter + RB3 Keyboard Receiver for Wii (Recommended)">
+  <TabItem label="RB3 Mustang Receiver for Nintendo Wii (Recommended)">
 This is the recommended method because the guitar will work as expected and will be wireless.
 
 **You will need:**
+* a Nintendo Wii Wireless Pro Guitar receiver to connect to your computer.  
+> ![Nintendo Wii Wireless Receiver](/assets/instruments/adapters/wiimustang.png "Nintendo Wii Wireless Pro Guitar Receiver")
+FCC ID: `P25SU96563Y3010R`
 
-* a Santroller based adapter to connect to your computer.  
-    > ![MiniHost USB Adapter by RetroCultMods](/assets/instruments/adapters/minihost.png "MiniHost")
-    Need one?  
-        * <a href="https://shop.retrocultmods.com/products/minihost-usb-adapter-by-retrocultmods" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods here! (RCM Shop)]</a>
-        * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (Etsy)]</a>
-        * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Buy one from AliExpress (as a last resort)]</a>
-
-* a Nintendo Wii Wireless Pro Guitar receiver to connect to the Santroller based adapter.  
-> ![Nintendo Wii Wireless Receiver](/assets/instruments/adapters/wiimustang.png "Nintendo Wii Wireless Pro Guitar Receiver")  
-
+<Tabs>
 ## Setup
-<Aside type="caution">Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
+    <TabItem label="Windows">
+## Installing
+<Steps>
+1. First, [**[go to Zadig's website]**](https://zadig.akeo.ie/) and **download the latest version, then open it** up.
 
-Connect the Nintendo Wii Wireless Pro Guitar receiver to your Santroller based adapter, then connect the Santroller based adapter to your computer.
+2. Click on **`Options`** then **`List All Devices`**.  
+    > <Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
 
-Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
-After that, start up Santroller.
+3. You should now see devices listed. **Switch it to your RB3 Mustang Guitar for PS3**.  
+    > <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
 
-If you're using a premade adapter (like the RetroCultMods MiniHost), you may receive a warning from Santroller in the start screen.   
-All this means is that you can't ask for support on the official Santroller Discord.  
-You can tick the checkbox and focus on the rest of the configuration.  
-> <Image src={sanwarn} alt="Santroller warning the user that their device is not designed to be programmed with it." />
+4. **After selecting the right device, you should see the option to replace the driver.  
+_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY MUSTANG GUITAR!!_**  
+Click `Replace Driver`.
+    > <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-Select your `Device to program`, `Connection Method`, and `Device to Emulate`.  
-This will usually be `Raspberry Pi Pico`, `USB Adapter`, and `Pro Keys` respectively.  
-After selecting your options, click on `Configure`.  
-> <Image src={initmust} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Pro Keys'" />
+5. A warning will appear.  
+**Again, make sure you have selected your RB3 Mustang Guitar for PS3.**  
+After you have made sure, **click** **`Yes`**.  
+    > <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
 
-In `Controller Settings`, change the following:
-* Set `Device to Emulate` to `Pro Keys`
-* Enable `Use USB Passthrough with RPCS3`
-> <Image src={consetmust} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
+6. It will then install the driver. As the program says, it may take a few minutes.  
+    > <Image src={zadigprogress} alt="Zadig in the middle of a driver install." />
 
-**MAKE SURE YOU CLICK ON `Save Settings` before closing the program or you will lose progress!**  
-> <Image src={savesan} alt="Santroller with a cursor is hovering over 'Save Settings'." />
+7. If everything goes well, you will get this message:  
+    > <Image src={zadigdone} alt="Zadig telling the user that the driver was installed successfully with 'Close' highlighted." />
 
-When you're done, close Santroller.
+8. **Close Zadig**.
 
-You can now launch Rock Band 3 and don't need to touch this anymore!
+9. Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Mustang Guitar for PS3.  
+You should see it automatically assign a player number.
+    > <Image src={protaron} alt="A Mustang Pro Guitar with the second player LED lit up." />
+    Likewise, in Rock Band 3, you will see your RB3 Mustang Guitar ready to join.
+    > <Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
+</Steps>
 
-<Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your Pro Guitar will not connect!!!</Aside>
+<details>
+<summary>Uninstalling</summary>
+Applying a Zadig driver on your RB3 Mustang Guitar for PS3 will make it only work on applications with passthrough. This may cause issues with Clone Hero or YARG.  
+Thankfully, reverting this is very easy!
+<Steps>
+1. Open the Start menu and search for `Device Manager`. Open it.
+    > <Image src={startdevman} alt="Windows' Start menu, with a result of 'Device Manager'." />
+
+2. Scroll down until you find the `Universal Serial Bus devices` category.  
+Expand it and right click on your RB3 Mustang Guitar for PS3 you applied the Zadig driver on and then select `Uninstall device`.
+    > <Image src={devman} alt="Device Manager, with a right click menu that popped up. The cursor is over 'Uninstall Device.'" />
+
+3. In the next window that pops up, make sure to tick `Attempt to remove the driver for this device.`  
+After that, click `Uninstall` and that's it!  
+    > <Image src={devmanun} alt="The device uninstall prompt. 'Attempt to remove the driver for this device' is ticked and the cursor is over 'Uninstall.'" />
+</Steps>
+When you disconnect then reconnect the receiver for your RB3 Mustang Guitar for PS3, it will revert back to the original driver.
+</details>
+    </TabItem>
+  <TabItem label="Linux">
+<Aside>This requires admin/sudo permissions.</Aside>
+
+<Steps>
+1. Navigate to `/etc/udev/` in your file browser.  
+Enter the `rules.d` folder.  
+If it doesn't exist, make it.
+    > <Image src={doludev} alt="A file browser in the 'udev' folder, with a cursor highlighting and clicking on a folder called 'rules.d'." />
+
+2. Create a new file.
+    > <Image src={dolnewfile} alt="Creating a new empty file within the 'rules.d' folder." />
+    Name it `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Naming the new file." />
+
+3. Open the file in a text editor.  
+Add an entry for your RB3 Mustang Guitar for PS3:  
+    ```
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3430", MODE="0666"
+    ```
+    In the example below, a PS3 Mustang and PS3 Keyboard are being added.  
+    When you're done, save your edits to the file.
+    > <Image src={kateps3} alt="A text editor showing the '99-ps3-peripherals.rules' file open. There are two entries in the text file." />
+
+4. Run `sudo udevadm control --reload-rules` in a terminal or reboot your system.
+    > <Image src={termreloadrules} alt="A terminal with the command typed in." />
+
+5. Disconnect the receiver for your RB3 Mustang Guitar for PS3.
+
+6. Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Mustang Guitar for PS3.  
+You should see it automatically assign a player number.
+    > <Image src={protaron} alt="A Mustang Pro Guitar with the second player LED lit up." />
+    Likewise, in Rock Band 3, you will see your RB3 Mustang Guitar for PS3 ready to join.
+    > <Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
+</Steps>
+    </TabItem>
+  <TabItem label="macOS">
+By default, macOS will attempt to load its own drivers when trying to use passthrough instruments on RPCS3.  
+Luckily, this is easy to fix!
+
+<Steps>
+1. First, [[click here download the GCAdapterDriver 1.8 beta]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="A '.zip' file of GCAdapterDriver being downloaded." />
+
+2. Drag the extracted `GCAdapterDriver-1.8-beta` application to the `Applications` folder.
+    > <Image src={macfnddnd} alt="Dragging GCAdapterDriver to the Applications folder." />
+
+3. In the menu bar, click on the new GCAdapterDriver icon.  
+Click on the slider to try to activate it.
+    > <Image src={macgcdis} alt="GCAdapterDriver is disabled." />
+
+4. It will initially block the system extension.  
+Click on `Open Security Preferences`.
+    > <Image src={macsysex} alt="A popup alerting that the GCAdapterDriver system extension was blocked. The cursor is over 'Open Security Preferences.'" />
+
+5. Unlock the page by click on the lock icon on the bottom left.  
+Click on `Allow` after this.  
+Don't forget to lock the page again when you're done.
+    > <Image src={macauth} alt="The 'Security & Privacy' page in System Preferences. The lock has been clicked on to unlock the page and the cursor hovers over 'Allow.'" />
+
+6. Now, activate GCAdapterDriver's slider in the menu bar now.
+    > <Image src={macgcen} alt="GCAdapterDriver is enabled." />
+    Open up Rock Band 3 in RPCS3 and connect the receiver for your RB3 Mustang Guitar for PS3.  
+    You should see it automatically assign a player number.
+    > <Image src={protaron} alt="A Mustang Pro Guitar with the second player LED lit up." />
+    Likewise, in Rock Band 3, you will see your RB3 Mustang Guitar for PS3 ready to join.
+     > <Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
+</Steps>
+    </TabItem>
+    </Tabs>
 </TabItem>
   <TabItem label="MIDI to USB interface">
 ## SYSEX Notice
@@ -120,6 +230,5 @@ After that, **right click on Rock Band 3** in RPCS3, **then click on `Change Cus
 
 [[Back to Controllers]](../../main/)
 
-Research by <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>  
-Santroller screenshots by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gona]</a>  
-Implementation by <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>
+Investigated by <a href="https://www.twitch.tv/carlmylo" target="_blank" rel="noopener noreferrer">[Carl Mylo]</a>  
+MIDI Implementation by <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>

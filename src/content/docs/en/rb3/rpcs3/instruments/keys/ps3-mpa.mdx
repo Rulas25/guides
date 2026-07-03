@@ -1,5 +1,5 @@
 ---
-title: Nintendo Wii Rock Band MIDI PRO Adapter Keyboard
+title: PlayStation 3 Rock Band MIDI PRO Adapter Keyboard
 slug: "en/rb3pc/controllers/keys/ps3mpa"
 description: "How to connect and configure a keyboard connected with a PS3 MPA on RPCS3."
 tableOfContents: false
@@ -62,17 +62,17 @@ Please note that you need to do this even if you already did it for the other tw
 3. Click on **`Options`** then **`List All Devices`**.  
     > <Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
 
-4. You should now see devices listed. **Switch it to your Rock Band 3 Pro Instrument**.  
+4. You should now see devices listed. **Switch it to your RB3 MIDI Pro Adapter**.  
 In this example, we're using the Mustang Pro Guitar, which shows up as `Harmonix RB3 Mustang Guitar for PlayStation® 3`.  
     > <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
 
 5. **After selecting the right device, you should see the option to replace the driver.  
-_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE PRO GUITAR/KEYBOARD/MIDI PRO ADAPTER!!_**  
+_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR YOUR MIDI PRO ADAPTER!!_**  
 Click `Replace Driver`.
     > <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
 6. A warning will appear.  
-**Again, make sure you have selected your RB3 Pro instrument's receiver or adapter.**  
+**Again, make sure you have selected your RB3 MIDI Pro Adapter.**  
 After you have made sure, **click** **`Yes`**.  
     > <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
 
@@ -124,7 +124,7 @@ If it doesn't exist, make it.
     > <Image src={dolps3rules} alt="Naming the new file." />
 
 3. Open the file in a text editor.  
-    Add an entry for your MIDI Pro Adapter:  
+    Add an entry for your MIDI Pro Adapter's keyboard mode:  
     ```
     SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2338", MODE="0666"
     ```

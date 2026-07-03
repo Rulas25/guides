@@ -49,17 +49,17 @@ Si te mandaron a esta pagina, es muy probable que necesitas seguir estos pasos p
 2. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
     > <Image src={zadiglistall} alt="Zadig mostrando 'List All Devices' resaltado bajo 'Options'." />
 
-3. Deberías ver una lista de dispositivos ahora. **Elige el Adaptador MIDI PRO de RB3**.  
+3. Deberías ver una lista de dispositivos ahora. **Elige el instrumento que requiera conexión directa/passthrough**.  
 En este ejemplo, sale la Guitarra Mustang Pro (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
     > <Image src={zadigsel} alt="Zadig mostrando 'Harmonix RB3 Mustang Guitar for PlayStation® 3' resaltado en la lista de dispositivos." />
 
-4. **Después de seleccionar el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
-_¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR DEL INSTRUMENTO PRO DE ROCK BAND 3!_**  
+4. **Después de elegir el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
+_¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR DEL INSTRUMENTO QUE REQUIERA CONEXIÓN DIRECTA/PASSTHROUGH!_**  
 Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"</span>.  
     > <Image src={zadigreplace} alt="Zadig con 'Replace Driver' resaltado." />
 
 5. Va a parecer una advertencia.  
-**Otra vez, asegúrate que solo estés eligiendo tu Adaptador MIDI PRO de RB3.**  
+**Otra vez, asegúrate que solo estés eligiendo el instrumento que requiera conexión directa/passthrough).**  
 Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
     > <Image src={zadigwarning} alt="Zadig advirtiendo al usuario que está a punto de modificar un controlador del sistema, con 'Yes' resaltado." />
 
@@ -79,7 +79,7 @@ Deberías de ver que automáticamente se le asigna un número de jugador.
 </Steps>
 
 ## Desinstalando
-Aplicando un controlador de Zadig restringirá a aplicaciones que usen Passthrough. Esto puede causar problemas con Clone Hero o YARG.  
+Aplicando un controlador de Zadig restringirá a aplicaciones que usen conexión directa/Passthrough. Esto puede causar problemas con Clone Hero o YARG.  
 Lo bueno es que es fácil revertir esto.
 <Steps>
 1. Abre el menú de Inicio y busca el `Administrador de dispositivos`.  
@@ -148,8 +148,8 @@ Deberías de ver el ID de vendedor y el ID de producto en la lista.
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="2882", MODE="0666"
 	```
-
-#### PS3
+<details>
+<summary>PS3</summary>
 * Guitarra de RB1/2
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
@@ -182,8 +182,10 @@ Deberías de ver el ID de vendedor y el ID de producto en la lista.
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2538", MODE="0666"
 	```
+</details>
 
-#### Wii
+<details>
+<summary>Wii</summary>
 * Guitarra de RB1
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="0004", MODE="0666"
@@ -224,6 +226,7 @@ Deberías de ver el ID de vendedor y el ID de producto en la lista.
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3538", MODE="0666"
 	```
+</details>
 </TabItem>
   <TabItem label="macOS">
 Por defecto, macOS cargara sus propios controladores cuando intentas usar instrumentos con conexión directa en RPCS3.  

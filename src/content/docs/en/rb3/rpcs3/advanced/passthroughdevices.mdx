@@ -147,7 +147,8 @@ You should see the vendor ID and product ID for your controller(s) in the list.
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="2882", MODE="0666"
 	```
 
-#### PS3
+<details>
+<summary>PS3</summary>
 * RB1/2 Guitar
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
@@ -180,8 +181,10 @@ You should see the vendor ID and product ID for your controller(s) in the list.
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="2538", MODE="0666"
 	```
+</details>
 
-#### Wii
+<details>
+<summary>Wii</summary>
 * RB1 Guitar
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="0004", MODE="0666"
@@ -222,6 +225,7 @@ You should see the vendor ID and product ID for your controller(s) in the list.
 	```
 	SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3538", MODE="0666"
 	```
+</details>
 </TabItem>
   <TabItem label="macOS">
 By default, macOS will attempt to load its own drivers when trying to use passthrough instruments on RPCS3.  

@@ -6,23 +6,43 @@ tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 3
-  label: Nintendo Wii
+  order: 5
+  label: Wii
 ---
-import { Aside } from '@astrojs/starlight/components';
-import { Tabs, TabItem } from '@astrojs/starlight/components';
 import rbmustangpro from '@assets/rb3/rpcs3/instruments/controller/rbmustangpro.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
-import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarnes.png';
-import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmustes.png';
-import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmustes.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
+import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
+import protaron from '@assets/rb3/rpcs3/instruments/setup/passthrough/protaron.png';
+import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player.png';
+import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevmanes.png';
+import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanes.png';
+import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanunes.png';
+import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludeves.png';
+import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfilees.png';
+import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3ruleses.png';
+import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3es.png';
+import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadruleses.png';
+import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusbes.png';
+import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdles.png';
+import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddndes.gif';
+import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysexes.png';
+import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauthes.png';
+import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
 import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
 import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchangees.png';
 import iog from '@assets/rb3/rpcs3/config/ioges.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 
 <center><img src="/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
@@ -35,54 +55,140 @@ import { Image } from 'astro:assets';
   Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 
 ## Instrucciones
-Hay dos maneras para conectar esta guitarra. Elige la que es mas conveniente para ti:
+Hay dos maneras para conectar esta guitarra. Si no tienes el receptor para la guitarra inalámbrica de Nintendo Wii, necesitas usar una interfaz de MIDI a USB.  
+Elige la que es mas conveniente para ti:
+
 <Tabs>
-  <TabItem label="Adaptador de Santroller + receptor para la guitarra PRO inalámbrica de Wii (Recommendado)">
-Esto se recomienda porque la guitarra se mantiene inalámbrica.
-
+  <TabItem label="Receptor para la guitarra inalámbrica de Nintendo Wii (recomendado)">
 **Vas a necesitar:**
+* un receptor para la guitarra inalámbrica de Nintendo Wii para conectar a tu computadora.  
+> ![Receptor para la guitarra inalámbrica de Nintendo Wii](/assets/instruments/adapters/wiimustang.png "Receptor para la guitarra inalámbrica de Nintendo Wii")
+FCC ID: `P25SU96563Y3010R`
 
-* un adaptador que usa Santroller para conectar a tu computadora.  
-    > ![Adaptador de USB MiniHost de RetroCultMods](/assets/instruments/adapters/minihost.png "MiniHost")
-    ¿Necesitas uno?  
-        * <a href="https://shop.retrocultmods.com/products/minihost-usb-adapter-by-retrocultmods" target="_blank" rel="noopener noreferrer">[Compra uno de la tienda de RetroCultMods (RCM)]</a>
-        * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
-        * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Compra uno de AliExpress (como último recurso)]</a>
+<Tabs>
+## Configurando
+  <TabItem label="Windows">
+<Steps>
+1. Conecta el receptor para tu Mustang PRO de PS3 a tu computadora.
 
-* un receptor para la guitarra PRO inalámbrica de Wii para conectarse al adaptador que usa Santroller.  
-> ![Receptor para la guitarra PRO inalámbrica de Nintendo Wii](/assets/instruments/adapters/wiimustang.png "Receptor para la guitarra PRO inalámbrica de Nintendo Wii")  
+2. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
 
-## Configuración
-<Aside>Antes de empezar, **termina la emulación de Rock Band 3 en RPCS3**.</Aside>
+3. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
+    > <Image src={zadiglistall} alt="Zadig mostrando 'List All Devices' resaltado bajo 'Options'." />
 
-Conecta el receptor para la guitarra PRO inalámbrica de Wii al adaptador con Santroller y luego conecta el adaptador con Santroller a tu computadora.
+4. Deberías ver una lista de dispositivos ahora. **Elige el receptor para tu Mustang PRO de PS3**.
+    > <Image src={zadigsel} alt="Zadig mostrando 'Harmonix RB3 Mustang Guitar for PlayStation® 3' resaltado en la lista de dispositivos." />
 
-Asegúrate de <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[descargar la versión actual de Santroller]</a>.  
-Después de eso, abre Santroller.
+5. **Después de seleccionar el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
+_¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR TU MUSTANG PRO DE PS3!_**  
+Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"</span>.  
+    > <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-Si estas usando un adaptador preconstruido (como el MiniHost de RetroCultMods), puede que Santroller te advierte en la pantalla de inicio.  
-Esto solo significa que no podrás pedir ayuda del Discord de Santroller oficial.  
-Activa la casilla y continua con el resto de la configuración.  
-> <Image src={sanwarn} alt="Santroller advirtiendo que el adaptador no esta diseñado para usarse con Santroller." />
+6. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu receptor para tu Mustang PRO de PS3.**  
+Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
+    > <Image src={zadigwarning} alt="Zadig advirtiendo al usuario que está a punto de modificar un controlador del sistema, con 'Yes' resaltado." />
 
-Elije el `Dispositivo a programar`, `Método de Conexión` y `Control a Emular` depende de que tipo de modificación tienes.  
-En las capturas, fue un `Raspberry Pi Pico`, `Adaptador USB` y `Guitarra Pro (Mustang)`.  
-Después de eso, haz click en `Configurar`.  
-> <Image src={initmust} alt="La pantalla inicial de Santroller. 'Dispositivo a programar' esta en 'Raspberry Pi Pico', 'Método de Conexión' esta en 'Adaptador USB' y 'Control a Emular' esta en 'Guitarra Pro (Mustang)'." />
+7. Se instalará el controlador. Como dice el programa, esto puede llevar algunos minutos.  
+    > <Image src={zadigprogress} alt="Zadig en medio de una instalando un controlador." />
 
-Haz estos cambios a `Ajustes de Control`:
-* Cambia `Control a Emular` a `Guitarra Pro (Mustang)`
-* Activa `Usar 'Passthrough' por USB con RPCS3`
-> <Image src={consetmust} alt="Los ajustes de control en Santroller. Tiene los ajustes de arriba aplicados." />
+8. Si todo sale bien, verás este mensaje:  
+    > <Image src={zadigdone} alt="Zadig indicando que el controlador se instaló correctamente, con 'Close' resaltado." />
 
-**¡ASEGÚRATE DE HACER CLICK EN `Guardar Ajustes` ANTES DE CERRAR EL PROGRAMA O PERDERÁS TUS CAMBIOS!**  
-> <Image src={savesan} alt="Santroller con el cursor sobre 'Guardar Ajustes'." />
+9. **Cierra Zadig** y, con el adaptador todavía conectado, **abre RPCS3** y **abre Rock Band 3**.  
+Enciende tu instrumento y deberías ver que automáticamente se le asigna un número de jugador.
 
-Cuando termines, cierra Santroller.
+10. Abre Rock Band 3 en RPCS3 y conecta y conecta el receptor de tu Mustang Pro de PS3. Deberías de ver que automáticamente se le asigna un número de jugador.  
+    > <Image src={protaron} alt="Una Mustang con el LED del segundo jugador activado." />
+    Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.  
+    > <Image src={rb3player} alt="Rock Band 3 con una Guitarra Pro lista para unirse." />
+</Steps>
+Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.  
+Ahora, puedes conectar tu receptor para tu Mustang PRO de PS3 cuando quieras sin tener que repetir este este proceso.
+<details>
+<summary>Desinstalando</summary>
+Aplicando un controlador de Zadig restringirá tu Mustang PRO de PS3 a aplicaciones que usen Passthrough. Lo bueno es que es fácil revertir esto.
+<Steps>
+1. Abre el menú de Inicio y busca el `Administrador de dispositivos`.  
+Ábrelo.  
+    > <Image src={startdevman} alt="El menú de Inicio con un resultado de 'Administrador de dispositivos'." />
 
-¡Ahora puedes abrir Rock Band 3!
+2. Baja a la categoría de `Dispositivos de bus seria universal (USB)` y haz click para expandirla.  
+Haz click derecho en `Harmonix RB3 Mustang Guitar for PlayStation 3®` y luego a `Desinstalar dispositivo`.
+    > <Image src={devman} alt="El Administrador de dispositivos con un menú despegable abierto. El cursor esta sobre 'Desinstalar dispositivo'." />
 
-<Aside type="caution">**¡¡¡Asegúrate que Santroller no este abierto cuando inicies Rock Band 3!!! Si esta abierto Santroller cuando inicies Rock Band 3, ¡el modo 'Passthrough' no se activara y tu guitarra PRO no funcionara!!!**</Aside>
+3. En la pantalla que se abre, asegúrate de hacer click en `Intenta quitar el controlador para este dispositivo.`  
+4. Después de eso, haz click en `Desinstalar` y eso es todo.  
+    > <Image src={devmanun} alt="La pantalla para Desinstalar el dispositivo. 'Intenta quitar el controlador para este dispositivo' esta activado y el cursor esta sobre 'Desinstalar'." />
+</Steps>
+Cuando desconectes y vuelvas a conectar el receptor para tu Mustang PRO de PS3, regresara al controlador original.
+</details>
+    </TabItem>
+  <TabItem label="Linux">
+<Aside>Esto requiere permisos de admin/sudo.</Aside>
+
+<Steps>
+1. Navega a `/etc/udev/` en tu explorador de archivos.  
+ Entra a la carpeta de `rules.d`.  
+ Si no existe, créala.
+    > <Image src={doludev} alt="Un navegador de archivos dentro de la carpeta de 'udev', con el cursor resaltando la carpeta de 'rules.d'." />
+
+2. Crea un archivo nuevo.
+    > <Image src={dolnewfile} alt="Creando un archivo vació nuevo dentro de la carpeta de 'rules.d'." />
+    Nómbralo `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Nombrando el archivo." />
+
+3. Abre el archivo dentro de un editor de texto.  
+Agrega la entrada de tu Mustang PRO de PS3:  
+    ```
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3430", MODE="0666"
+    ```
+    En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
+    Cuando termines, guarda tus cambios.
+    > <Image src={kateps3} alt="Un editor de texto mostrando el archivo de 'rules.d' abierto. Hay dos entradas en el archivo." />
+
+4. Ejecuta `sudo udevadm control --reload-rules` en una terminal o reinicia tu sistema.
+    > <Image src={termreloadrules} alt="Una terminal abierta con el comando escrito." />
+
+5. Desconecta el receptor de tu Mustang PRO de PS3.
+
+6. Abre Rock Band 3 en RPCS3 y conecta tu Mustang PRO de PS3.  
+Deberías de ver que automáticamente se le asigna un número de jugador.  
+Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.
+</Steps>
+    </TabItem>
+  <TabItem label="macOS">
+Por defecto, macOS cargara sus propios controladores cuando intentas usar instrumentos con conexión directa en RPCS3.  
+Por suerte, ¡esto es fácil de corregir!
+
+<Steps>
+1. Primero, [[haz click aquí para descargar la versión beta 1.8 de GCAdapterDriver]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="Un archivo '.zip' de GCAdapterDriver descargando." />
+
+2. Arrastra la aplicación de `GCAdapterDriver-1.8-beta` extraída a la carpeta de Aplicaciones.
+    > <Image src={macfnddnd} alt="Arrastrando la aplicación de GCAdapterDriver a la carpeta de Aplicaciones." />
+
+3. En la barra de menús, haz click en el icono de GCAdapterDriver.  
+Haz click en el control deslizante para intentar activarlo.
+    > <Image src={macgcdis} alt="GCAdapterDriver esta desactivado." />
+
+4. Inicialmente, el sistema va a bloquear la extensión de sistema.  
+Haz click en `Abrir el panel de preferencias Seguridad`.
+    > <Image src={macsysex} alt="Una alerta que dice que la extensión de GCAdapterDriver fue bloqueada. El cursor esta sobre 'Abrir el panel de preferencias Seguridad'" />
+
+5. Desbloquea la pagina haciendo click al candado hacia abajo en la izquierda.  
+Haz click en `Permitir` ahora.  
+No te olvides de bloquear la pagina cuando termines.
+    > <Image src={macauth} alt="La pagina de 'Seguridad y privacidad' dentro de las preferencias del sistema. El candado esta abierto y el cursor esta sobre 'Permitir'" />
+
+6. Ahora, activa el control deslizante de GCAdapterDriver en la barra de menús.
+    > <Image src={macgcen} alt="GCAdapterDriver esta activo." />
+    
+    Abre Rock Band 3 en RPCS3 y conecta el receptor de tu Mustang PRO de PS3.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu Mustang PRO de PS3 listo para unirse.
+</Steps>
+    </TabItem>
+    </Tabs>
 </TabItem>
   <TabItem label="Interfaz de MIDI a USB">
 ## Advertencia de SYSEX
@@ -124,7 +230,7 @@ Ahora, ve a la pestaña de `E/S`.
 > <Image src={iog} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />
 
 * ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
-    * 🎸 **Cambia el `Dispositivo MIDI emulado` de `Teclado` a `Guitarra (17 trastes)` si tienes una guitarra PRO Mustang, o `Guitarra (22 trastes)` si tienes una guitarra PRO Squier, luego elige tu la interfaz MIDI con cual la tienes conectada en el menú desplegable junto a él**.
+    * 🎸 **Cambia el `Dispositivo MIDI emulado` de `Teclado` a `Guitarra (17 trastes)`. Despues, elige tu la interfaz MIDI con cual la tienes conectada en el menú desplegable junto a él**.
 </TabItem>
 </Tabs>
 

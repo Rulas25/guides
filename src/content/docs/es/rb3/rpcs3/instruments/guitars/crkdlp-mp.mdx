@@ -47,6 +47,7 @@ import { Image } from 'astro:assets';
 <Aside>**Asegúrate que guitarra y receptor estén en <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[la firmware mas actual]</a>!**</Aside>
 * Guitarras CRKD Les Pauls pueden ser conectadas por USB o su propio receptor receptor inalámbrico o Bluetooth. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora.
     * Se recomienda usar el receptor inalámbrico o cable de USB.
+* [Deluxe] Calibración de controles: Inst. Modeados
 
 Hay dos maneras para configurar esta guitarra. Elige depende de cual mástil tienes.
 
@@ -124,7 +125,7 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
     > <Image src={dolps3rules} alt="Nombrando el archivo." />
 
 3. Abre el archivo dentro de un editor de texto.  
-    Agrega la entrada de para tu guitarra:  
+    Agrega la entrada de tu guitarra:  
       ```
       SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
       ```
