@@ -1,8 +1,8 @@
 // @ts-check
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
-import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import starlightAutoSidebar from 'starlight-auto-sidebar'
+import starlightSidebarTopics from 'starlight-sidebar-topics'
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
@@ -16,6 +16,7 @@ export default defineConfig({
     starlight({
       title: 'MiloHax Guides',
       components: {
+        Sidebar: './src/components/Sidebar.astro',
         Search: './src/components/Search.astro',
       },
       logo: {
@@ -27,28 +28,39 @@ export default defineConfig({
       lastUpdated: true,
       social: [
         { icon: 'information', label: 'Website', href: 'https://milohax.org/' },
-        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/milohax' },
+        { icon: 'blueSky', label: 'Bluesky', href: 'https://bsky.app/profile/milohax.org' },
         { icon: 'github', label: 'GitHub', href: 'https://github.com/hmxmilohax' },
+        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/milohax' },
         { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@MiloHax' },
-        { icon: 'twitter', label: 'GitLab', href: 'https://twitter.com/hmxmilohax' },
       ],
       plugins: [
         starlightAutoSidebar(),
-        starlightUtils({ multiSidebar: { switcherStyle: 'hidden' }}),
-      ],
-      sidebar: [
-        {
-          label: 'PS3 Customs',
-          autogenerate: { directory: 'rb3/ps3customs', },
-        },
-        {
-          label: 'Rock Band 3 + RPCS3',
-          autogenerate: { directory: 'rb3/rpcs3', },
-        },
-        {
-          label: 'Charting',
-          autogenerate: { directory: 'charting/reaper', },
-        },
+        starlightSidebarTopics([
+          {
+            label: 
+            {en: 'RB3: RPCS3 Setup',
+            es: 'RB3: Configurando RPCS3'},
+            link: '/rb3pc/intro/disclaimers/',
+            items: [ { autogenerate: { directory: 'rb3/rpcs3', },},
+            ]
+          },
+          {
+            label: 
+            {en: 'RB3: PS3/RPCS3 Customs',
+            es: 'RB3: Customs en PS3/RPCS3'},
+            link: '/rb3/ps3customs/intro',
+            items: [ { autogenerate: { directory: 'rb3/ps3customs', },},
+            ]
+          },
+          {
+            label: 
+            {en: 'Charting: REAPER',
+            es: 'Charteando: REAPER'},
+            link: '/charting/reaper/intro/',
+            items: [ { autogenerate: { directory: 'charting/reaper', },},
+            ]
+          },
+        ]),
       ],
 
       customCss: ['./src/styles/custom.css'],

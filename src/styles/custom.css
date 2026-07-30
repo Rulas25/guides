@@ -99,3 +99,32 @@ table tr:nth-child(even) td {
   display: block;
 }
 
+/* this fixes some stupid firefox shit. ripped from https://github.com/apathetic-tools/recipes/tree/main/docs/astro-starlight/theme-selector-firefox-windows-fix*/
+
+[data-theme='dark'] starlight-theme-select {
+  & select,
+  & select option,
+  & select option:checked {
+    background-color: var(--sl-color-gray-6);
+    color: var(--sl-color-text);
+  }
+  
+  & select option:hover {
+    background-color: var(--sl-color-accent-high);
+    color: var(--sl-color-text-invert);
+  }
+}
+
+[data-theme='dark'] starlight-lang-select {
+  & select,
+  & select option,
+  & select option:checked {
+    background-color: var(--sl-color-gray-6);
+    color: var(--sl-color-text);
+  }
+  
+  & select option:hover {
+    background-color: var(--sl-color-accent-high);
+    color: var(--sl-color-text-invert);
+  }
+}

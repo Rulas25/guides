@@ -1,23 +1,26 @@
 ---
-title: What do you want to learn?
+title: MiloHax Guide
 description: Index page for various guides written up by MiloHax.
 template: splash
 pagefind: false
 sidebar:
   hidden: true
+head:
+  - tag: title
+    content: "MiloHax Guides"
 ---
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 # Rock Band 3
 <CardGrid stagger>
 	<a href="/en/rb3pc/intro/disclaimers/" class="no-underline">
-  <Card title="Rock Band 3 on PC" icon="laptop">
+  <Card title="Rock Band 3 on PC" icon="desktop">
     Play Rock Band 3 on your PC with RPCS3!
   </Card>
 </a>
 	<a href="/en/rb3/ps3customs/intro/" class="no-underline">
   <Card title="Installing customs on PS3/RPCS3" icon="download">
-    CON? .song? .pkg? Let's learn about it!
+    CON? .song? .PKG? Let's learn about it!
   </Card>
 </a>
 </CardGrid>
@@ -25,8 +28,8 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 # Charting
 <CardGrid stagger>
   <a href="/en/charting/reaper/intro" class="no-underline">
-  <Card title="Setting REAPER up for RB3 charts" icon="seti:audio">
-    Moonscraper? I hardly know her!
+  <Card title="REAPER Setup" icon="seti:audio">
+    Ditch that old 4.22 install and enjoy the future.
   </Card>
 </a>
 </CardGrid>
