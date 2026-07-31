@@ -1,0 +1,6 @@
+patchedDependencies:
+  # Approach to custom icons taken directly from https://github.com/PaperMC/docs
+  '@astrojs/starlight': patches/@astrojs__starlight.patch
+
+allowBuilds: 
+  esbuild: true
