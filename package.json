@@ -13,8 +13,10 @@
   "dependencies": {
     "@astrojs/mdx": "^7.0.5",
     "@astrojs/starlight": "^0.41.5",
+    "@pagefind/default-ui": "^1.5.2",
     "astro": "^7.1.6",
     "astro-icon": "^1.1.5",
+    "pagefind": "^1.5.2",
     "pnpm": "^11.18.0",
     "sharp": "^0.35.3",
     "starlight-auto-sidebar": "^0.4.0",

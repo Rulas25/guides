@@ -38,29 +38,31 @@ export default defineConfig({
         starlightSidebarTopics([
           {
             label: 
-            {en: 'RB3: RPCS3 Setup',
-            es: 'RB3: Configurando RPCS3'},
+            {en: 'RPCS3 Setup',
+            es: 'Configurando RPCS3'},
             link: '/rb3pc/intro/disclaimers/',
+            icon: 'rb3',
             items: [ { autogenerate: { directory: 'rb3/rpcs3', },},
             ]
           },
           {
             label: 
-            {en: 'RB3: PS3/RPCS3 Customs',
-            es: 'RB3: Customs en PS3/RPCS3'},
+            {en: 'PS3/RPCS3 Customs',
+            es: 'Customs en PS3/RPCS3'},
             link: '/rb3/ps3customs/intro',
+            icon: 'rb3',
             items: [ { autogenerate: { directory: 'rb3/ps3customs', },},
             ]
           },
           {
             label: 
-            {en: 'Charting: REAPER',
-            es: 'Charteando: REAPER'},
+            {en: 'Charting Setup',
+            es: 'Configurando para chartear'},
             link: '/charting/reaper/intro/',
-            items: [ { autogenerate: { directory: 'charting/reaper', },},
-            ]
+            icon: 'reaper',
+            items: [ { autogenerate: { directory: 'charting/reaper', },},]
           },
-        ]),
+        ], ),
       ],
 
       customCss: ['./src/styles/custom.css'],
