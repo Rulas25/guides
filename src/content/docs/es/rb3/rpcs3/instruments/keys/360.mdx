@@ -11,34 +11,34 @@ sidebar:
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import x360rbkeyscontroller from '@assets/rb3/rpcs3/instruments/controller/360rbkeyscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
-import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarnes.png';
-import initkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/initkeyses.png';
-import consetkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/consetkeyses.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
-import midictrlloopMIDIdl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIdl.png';
-import midictrlloopMIDIinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIinst.png';
-import x360ctrlloopMIDI from '@assets/rb3/rpcs3/instruments/setup/midi/360ctrlloopMIDI.png';
-import x360ctrlkeysappdl from '@assets/rb3/rpcs3/instruments/setup/midi/360ctrlkeysappdl.png';
-import x360ctrlkeysappopen from '@assets/rb3/rpcs3/instruments/setup/midi/360ctrlkeysappopen.png';
-import x360ctrlkeysapp1 from '@assets/rb3/rpcs3/instruments/setup/midi/360ctrlkeysapp1.png';
-import rbkeysoctshift from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeysoctshift.gif';
-import midictrlloopMIDIaddport from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIaddport.png';
-import midictrlfreepnodl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnodl.png';
-import midictrlfreepnodir from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnodir.png';
-import midictrlfreepnopreset from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnopreset.png';
-import midictrlfreepnoselpres from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoselpres.png';
-import midictrlfreepnoout from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoout.png';
-import midictrlfreepnoback from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoback.png';
-import midictrlmidioxdl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxdl.png';
-import midictrlmidioxinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxinst.png';
-import midictrlmidioxopts from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxopts.png';
-import midictrlmidioxcombo from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxcombo.png';
-import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs3.png';
-import rbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeys.png';
-import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
-import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import x360rbkeyscontroller from '@assets/instruments/controller/360rbkeyscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomapes.png';
+import sanwarn from '@assets/instruments/setup/santroller/sanwarnes.png';
+import initkeys from '@assets/instruments/setup/santroller/initkeyses.png';
+import consetkeys from '@assets/instruments/setup/santroller/consetkeyses.png';
+import savesan from '@assets/instruments/setup/santroller/savesanes.png';
+import midictrlloopMIDIdl from '@assets/instruments/setup/midi/midictrlloopMIDIdl.png';
+import midictrlloopMIDIinst from '@assets/instruments/setup/midi/midictrlloopMIDIinst.png';
+import x360ctrlloopMIDI from '@assets/instruments/setup/midi/360ctrlloopMIDI.png';
+import x360ctrlkeysappdl from '@assets/instruments/setup/midi/360ctrlkeysappdl.png';
+import x360ctrlkeysappopen from '@assets/instruments/setup/midi/360ctrlkeysappopen.png';
+import x360ctrlkeysapp1 from '@assets/instruments/setup/midi/360ctrlkeysapp1.png';
+import rbkeysoctshift from '@assets/instruments/setup/midi/rbkeysoctshift.gif';
+import midictrlloopMIDIaddport from '@assets/instruments/setup/midi/midictrlloopMIDIaddport.png';
+import midictrlfreepnodl from '@assets/instruments/setup/midi/midictrlfreepnodl.png';
+import midictrlfreepnodir from '@assets/instruments/setup/midi/midictrlfreepnodir.png';
+import midictrlfreepnopreset from '@assets/instruments/setup/midi/midictrlfreepnopreset.png';
+import midictrlfreepnoselpres from '@assets/instruments/setup/midi/midictrlfreepnoselpres.png';
+import midictrlfreepnoout from '@assets/instruments/setup/midi/midictrlfreepnoout.png';
+import midictrlfreepnoback from '@assets/instruments/setup/midi/midictrlfreepnoback.png';
+import midictrlmidioxdl from '@assets/instruments/setup/midi/midictrlmidioxdl.png';
+import midictrlmidioxinst from '@assets/instruments/setup/midi/midictrlmidioxinst.png';
+import midictrlmidioxopts from '@assets/instruments/setup/midi/midictrlmidioxopts.png';
+import midictrlmidioxcombo from '@assets/instruments/setup/midi/midictrlmidioxcombo.png';
+import rpcs3midictrl from '@assets/instruments/setup/midi/rpcs3midictrl.png';
+import rbkeys from '@assets/instruments/setup/midi/rbkeys.png';
+import miditousb from '@assets/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/instruments/setup/midi/midifs.png';
 import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchangees.png';
 import iok from '@assets/rb3/rpcs3/config/iokes.png';
 import { Image } from 'astro:assets';
@@ -46,6 +46,7 @@ import { Image } from 'astro:assets';
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={x360rbkeyscontroller} alt="Control" /></center>
 
+<Aside>**Esta pagina no tiene documentación para Linux o macOS, por ahora.**</Aside>
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
 ¡NO mapeés este instrumento por el menú de `Mandos`!
 </Aside>
@@ -235,7 +236,7 @@ Elige el otro puerto que creaste en loopMIDI ("Pro Keys") en la sección de <spa
 > <Image src={midictrlmidioxcombo} alt="MIDI Devices dentro de MIDI-OX, que muestra un teclado y el puerto de Gamepad seleccionado en la sección de MIDI Inputs y Pro Keys seleccionada en la sección de MIDI Outputs." />
 
 Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `E/S`.  
-> <Image src={midictrlrpcs3} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
+> <Image src={rpcs3midictrl} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
 
 * ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
     * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**
@@ -365,7 +366,7 @@ Elige el otro puerto que creaste en loopMIDI ("Pro Keys") en la sección de <spa
 > <Image src={midictrlmidioxcombo} alt="MIDI Devices dentro de MIDI-OX, que muestra un teclado y el puerto de Gamepad seleccionado en la sección de MIDI Inputs y Pro Keys seleccionada en la sección de MIDI Outputs." />
 
 Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `E/S`.  
-> <Image src={midictrlrpcs3} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
+> <Image src={rpcs3midictrl} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
 
 * ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
     * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**

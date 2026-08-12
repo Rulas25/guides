@@ -8,17 +8,19 @@ sidebar:
   order: 7
   label: Xbox 360
 ---
-import x360controller from '@assets/rb3/rpcs3/instruments/controller/360controller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
-import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpades.png';
-import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
-import padxboxmapping from '@assets/rb3/rpcs3/instruments/maps/padxboxmapping.png';
+import x360controller from '@assets/instruments/controller/360controller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofaddes.png';
+import navpad from '@assets/rb3/deluxe/navpades.png';
+import gamepadlegend from '@assets/instruments/rpcs3/gamepadlegend.png';
+import padxboxmapping from '@assets/instruments/rpcs3/maps/padxboxmapping.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={x360controller} alt="Control" /></center>
 
+<Aside>**Esta pagina no tiene documentación para Linux o macOS, por ahora.**</Aside>
 * Mandos de Xbox 360 inalámbricos **requieren un receptor USB Inalámbrico de Xbox 360 para Windows para conectarse a tu computadora.**   
 ![Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360](/assets/instruments/adapters/360.png "Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360")
 	¿Necesitas uno?

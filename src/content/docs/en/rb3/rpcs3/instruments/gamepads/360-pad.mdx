@@ -8,17 +8,19 @@ sidebar:
   order: 7
   label: Xbox 360
 ---
-import x360controller from '@assets/rb3/rpcs3/instruments/controller/360controller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpad.png';
-import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
-import padxboxmapping from '@assets/rb3/rpcs3/instruments/maps/padxboxmapping.png';
+import x360controller from '@assets/instruments/controller/360controller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import navpad from '@assets/rb3/deluxe/navpad.png';
+import gamepadlegend from '@assets/instruments/rpcs3/gamepadlegend.png';
+import padxboxmapping from '@assets/instruments/rpcs3/maps/padxboxmapping.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={x360controller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 * **Wireless Xbox 360 controllers require an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
 ![Xbox 360 Wireless Gaming Receiver for Windows](/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
 	Need one?

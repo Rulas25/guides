@@ -9,30 +9,30 @@ sidebar:
   order: 12
   label: Wii Rock Band MPA
 ---
-import wiimpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiimpadrmscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
-import mpadrm from '@assets/rb3/rpcs3/instruments/setup/mpa/mpadrm.png';
-import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
-import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
-import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
-import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
-import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
-import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
-import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevmanes.png';
-import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanes.png';
-import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanunes.png';
-import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludeves.png';
-import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfilees.png';
-import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3ruleses.png';
-import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3es.png';
-import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadruleses.png';
-import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusbes.png';
-import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdles.png';
-import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddndes.gif';
-import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
-import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysexes.png';
-import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauthes.png';
-import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
+import wiimpadrmscontroller from '@assets/instruments/controller/wiimpadrmscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomapes.png';
+import mpadrm from '@assets/instruments/setup/mpa/mpadrm.png';
+import zadiglistall from '@assets/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/instruments/setup/passthrough/zadigdone.png';
+import startdevman from '@assets/instruments/setup/passthrough/startdevmanes.png';
+import devman from '@assets/instruments/setup/passthrough/devmanes.png';
+import devmanun from '@assets/instruments/setup/passthrough/devmanunes.png';
+import doludev from '@assets/instruments/setup/passthrough/doludeves.png';
+import dolnewfile from '@assets/instruments/setup/passthrough/dolnewfilees.png';
+import dolps3rules from '@assets/instruments/setup/passthrough/dolps3ruleses.png';
+import kateps3 from '@assets/instruments/setup/passthrough/kateps3es.png';
+import termreloadrules from '@assets/instruments/setup/passthrough/termreloadruleses.png';
+import termlsusb from '@assets/instruments/setup/passthrough/termlsusbes.png';
+import macgcdl from '@assets/instruments/setup/passthrough/macgcdles.png';
+import macfnddnd from '@assets/instruments/setup/passthrough/macfnddndes.gif';
+import macgcdis from '@assets/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/instruments/setup/passthrough/macsysexes.png';
+import macauth from '@assets/instruments/setup/passthrough/macauthes.png';
+import macgcen from '@assets/instruments/setup/passthrough/macgcen.png';
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
@@ -125,7 +125,7 @@ Cuando desconectes y vuelvas a conectar el instrumento, regresara al controlador
 3. Abre el archivo dentro de un editor de texto.  
     Agrega la entrada para tu adaptador MIDI PRO de RB3:  
     ```
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3430", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3138", MODE="0666"
     ```
     En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
     Cuando termines, guarda tus cambios.

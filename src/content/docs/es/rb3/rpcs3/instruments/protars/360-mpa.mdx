@@ -11,24 +11,24 @@ sidebar:
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import x360mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/360mpadrmscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
-import mpagtr from '@assets/rb3/rpcs3/instruments/setup/mpa/mpagtr.png';
-import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarnes.png';
-import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmustes.png';
-import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmustes.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
+import x360mpadrmscontroller from '@assets/instruments/controller/360mpadrmscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomapes.png';
+import mpagtr from '@assets/instruments/setup/mpa/mpagtr.png';
+import sanwarn from '@assets/instruments/setup/santroller/sanwarnes.png';
+import initmust from '@assets/instruments/setup/santroller/initmustes.png';
+import consetmust from '@assets/instruments/setup/santroller/consetmustes.png';
+import savesan from '@assets/instruments/setup/santroller/savesanes.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={x360mpadrmscontroller} alt="Control" /></center>
 
+<Aside>**Esta pagina no tiene documentación para Linux o macOS, por ahora.**</Aside>
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
 ¡NO mapeés este instrumento por el menú de `Mandos`!
 </Aside>
 <Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
     Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
-<Aside>Tristemente, no existe documentación para Linux o macOS por ahora.</Aside>
 
 **Vas a necesitar:**
 

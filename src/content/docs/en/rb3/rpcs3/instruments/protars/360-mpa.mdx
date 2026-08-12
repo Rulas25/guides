@@ -11,23 +11,23 @@ sidebar:
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import x360mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/360mpadrmscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import mpagtr from '@assets/rb3/rpcs3/instruments/setup/mpa/mpagtr.png';
-import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarn.png';
-import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmust.png';
-import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmust.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import x360mpadrmscontroller from '@assets/instruments/controller/360mpadrmscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomap.png';
+import mpagtr from '@assets/instruments/setup/mpa/mpagtr.png';
+import sanwarn from '@assets/instruments/setup/santroller/sanwarn.png';
+import initmust from '@assets/instruments/setup/santroller/initmust.png';
+import consetmust from '@assets/instruments/setup/santroller/consetmust.png';
+import savesan from '@assets/instruments/setup/santroller/savesan.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={x360mpadrmscontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
-<Aside>Sadly, there is no Linux or macOS documentation, yet.</Aside>
 
 **You will need:**
 * a Santroller based adapter to connect to your computer.  

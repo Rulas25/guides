@@ -10,16 +10,17 @@ sidebar:
   label: Xbox 360 Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
-import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drms360ghmapping from '@assets/rb3/rpcs3/instruments/maps/drms360ghmapping.png';
+import ghdrmscontroller from '@assets/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import drms360ghmapping from '@assets/instruments/rpcs3/maps/drms360ghmapping.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={ghdrmscontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
 * This instrument **requires an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  

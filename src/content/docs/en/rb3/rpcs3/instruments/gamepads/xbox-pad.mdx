@@ -8,18 +8,20 @@ sidebar:
   order: 6
   label: Xbox One/Series
 ---
-import xbxcontroller from '@assets/rb3/rpcs3/instruments/controller/xbxcontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpad.png';
-import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
-import padxboxmapping from '@assets/rb3/rpcs3/instruments/maps/padxboxmapping.png';
+import xbxcontroller from '@assets/instruments/controller/xbxcontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import navpad from '@assets/rb3/deluxe/navpad.png';
+import gamepadlegend from '@assets/instruments/rpcs3/gamepadlegend.png';
+import padxboxmapping from '@assets/instruments/rpcs3/maps/padxboxmapping.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 
 <center><img src="/assets/instruments/logos/xbx.png" alt="Platform" title="Platform"></img></center>
 
 <center><Image src={xbxcontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 * Xbox One/Series controllers can be connected via USB or wirelessly via Bluetooth/Wireless Receiver. For Bluetooth, you need a Bluetooth receiver to connect to your computer. **Earlier** Xbox One controllers **require a Microsoft Xbox Wireless Adapter for Windows 10.**  
 ![Microsoft Xbox Wireless Adapter for Windows 10](/assets/instruments/adapters/xbone.png "Microsoft Xbox Wireless Adapter for Windows 10")
 Model#: `HK9-00001` or `6HN-00002`

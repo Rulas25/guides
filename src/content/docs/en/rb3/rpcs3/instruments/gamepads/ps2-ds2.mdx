@@ -8,17 +8,19 @@ sidebar:
   order: 5
   label: PS2 DualShock 2
 ---
-import ps2ds2controller from '@assets/rb3/rpcs3/instruments/controller/ps2ds2controller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import navpad from '@assets/rb3/rpcs3/instruments/setup/midi/navpad.png';
-import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import ps2ds2controller from '@assets/instruments/controller/ps2ds2controller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import navpad from '@assets/rb3/deluxe/navpad.png';
+import gamepadlegend from '@assets/instruments/rpcs3/gamepadlegend.png';
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 
 <center><img src="/assets/instruments/logos/ps2.png" alt="Platform" title="Platform"></img></center>
 
 <center><Image src={ps2ds2controller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 * There is no binding file as it varies too much per computer.
 * This was tested on an OSTENT PS1 PS2 To PC USB 2.0 Controller Adapter Converter For Sony PS2 Wired Controller (Model Number/SKU: 014800). Other adapters may have issues.
 * It is strongly recommended to get another adapter instead.

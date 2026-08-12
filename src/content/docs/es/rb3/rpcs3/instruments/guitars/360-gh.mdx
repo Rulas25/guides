@@ -9,13 +9,13 @@ sidebar:
   order: 11
   label: Xbox 360 Guitar Hero
 ---
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
-import ghgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/ghgtrscontroller.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
-import gtr360ghmapping from '@assets/rb3/rpcs3/instruments/maps/gtr360ghmapping.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofaddes.png';
+import padlegend from '@assets/instruments/rpcs3/padlegendes.png';
+import ghgtrscontroller from '@assets/instruments/controller/ghgtrscontroller.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofilees.png';
+import gtr360ghmapping from '@assets/instruments/rpcs3/maps/gtr360ghmapping.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
@@ -23,6 +23,7 @@ import { Image } from 'astro:assets';
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={ghgtrscontroller} alt="Control" /></center>
 
+<Aside>**Esta pagina no tiene documentación para Linux o macOS, por ahora.**</Aside>
 <Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
     Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 <Aside>El sensor de ladeo (Tilt) no funciona correctamente.</Aside>

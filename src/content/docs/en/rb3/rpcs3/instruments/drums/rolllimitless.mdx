@@ -12,40 +12,41 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
-import rolllimitlesscontroller from '@assets/rb3/rpcs3/instruments/controller/rolllimitlesscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import fwbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/fwbutton.png';
-import minifwbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/minifwbutton.png';
-import download from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/download.png';
-import settings1 from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/settings1.png';
-import settings2passthrough from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/settings2passthrough.png';
-import settings2xinput from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/settings2xinput.png';
-import startbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/startbutton.png';
-import ministartbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/ministartbutton.png';
-import windevice from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/windevice.png';
-import windrag from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/windrag.gif';
-import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
-import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
-import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
-import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
-import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
-import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
-import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player.png';
-import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
-import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
-import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
-import joycpl from '@assets/rb3/rpcs3/instruments/setup/gen/joycpl.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import rolllimitlesscontroller from '@assets/instruments/controller/rolllimitlesscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomap.png';
+import fwbutton from '@assets/instruments/setup/rolllimitless/fwbutton.png';
+import minifwbutton from '@assets/instruments/setup/rolllimitless/minifwbutton.png';
+import download from '@assets/instruments/setup/rolllimitless/download.png';
+import settings1 from '@assets/instruments/setup/rolllimitless/settings1.png';
+import settings2passthrough from '@assets/instruments/setup/rolllimitless/settings2passthrough.png';
+import settings2xinput from '@assets/instruments/setup/rolllimitless/settings2xinput.png';
+import startbutton from '@assets/instruments/setup/rolllimitless/startbutton.png';
+import ministartbutton from '@assets/instruments/setup/rolllimitless/ministartbutton.png';
+import windevice from '@assets/instruments/setup/rolllimitless/windevice.png';
+import windrag from '@assets/instruments/setup/rolllimitless/windrag.gif';
+import zadiglistall from '@assets/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/instruments/setup/passthrough/zadigdone.png';
+import rb3player from '@assets/instruments/setup/passthrough/rb3player.png';
+import startdevman from '@assets/instruments/setup/passthrough/startdevman.png';
+import devman from '@assets/instruments/setup/passthrough/devman.png';
+import devmanun from '@assets/instruments/setup/passthrough/devmanun.png';
+import joycpl from '@assets/instruments/setup/windows/joycpl.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import drmsxinputrbmapping from '@assets/instruments/rpcs3/maps/drmsxinputrbmapping.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofile.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/midi.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={rolllimitlesscontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Tabs>
   <TabItem label="Passthrough (Easiest)">
 This method uses Passthrough, which means you don't have to bind anything else. You may have to change the "`Universal Choice`" option to use it in other games or on other consoles.

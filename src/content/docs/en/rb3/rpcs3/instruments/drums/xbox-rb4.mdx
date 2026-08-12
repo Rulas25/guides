@@ -11,20 +11,21 @@ sidebar:
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
-import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import gameinput from '@assets/rb3/rpcs3/instruments/setup/rb4/gameinput.png';
-import drmsxomapping from '@assets/rb3/rpcs3/instruments/maps/drmsxomapping.png';
-import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import rb4drmscontroller from '@assets/instruments/controller/rb4drmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import gameinput from '@assets/instruments/setup/rb4/gameinput.png';
+import drmsxomapping from '@assets/instruments/rpcs3/maps/drmsxomapping.png';
+import drmsxinputrbmapping from '@assets/instruments/rpcs3/maps/drmsxinputrbmapping.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofile.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/xbx.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={rb4drmscontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 * Requires installing and running **<a href="https://github.com/TheNathannator/RB4InstrumentMapper/?tab=readme-ov-file#rb4instrumentmapper" target="_blank" rel="noopener noreferrer">[RB4InstrumentMapper]</a>** along with its dependencies.
 * **Linux** users can install <a href="https://github.com/dlundqvist/xone" target="_blank" rel="noopener noreferrer">[`xone` kernel drivers]</a> to use Xbox One peripherals.

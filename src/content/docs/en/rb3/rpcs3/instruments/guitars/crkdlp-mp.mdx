@@ -9,33 +9,29 @@ sidebar:
   order: 1
   label: CRKD Les Paul (Multiplat)
 ---
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import crkdlpcontroller from '@assets/rb3/rpcs3/instruments/controller/crkdlpcontroller.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
-import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkd/ogneck.png';
-import lpplatpc from '@assets/rb3/rpcs3/instruments/setup/crkd/lpplatpc.png';
-import lpmode1 from '@assets/rb3/rpcs3/instruments/setup/crkd/lpmode1.png';
-import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkd/lppcm81.png';
-import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkd/lppcm82.png';
-import gtrcrkdmpsdlmapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdmpsdlmapping.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkd/soloneck.png';
-import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkd/lpplatp3.png';
-import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludev.png';
-import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfile.png';
-import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3rules.png';
-import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3.png';
-import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadrules.png';
-import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusb.png';
-import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdl.png';
-import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddnd.gif';
-import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
-import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysex.png';
-import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauth.png';
-import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import crkdlpcontroller from '@assets/instruments/controller/crkdlpcontroller.png';
+import ogneck from '@assets/instruments/setup/crkd/ogneck.png';
+import lpmode1 from '@assets/instruments/setup/crkd/lpmode1.png';
+import gtrcrkdlmsdlmapping from '@assets/instruments/rpcs3/maps/gtrcrkdlmsdlmapping.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomap.png';
+import soloneck from '@assets/instruments/setup/crkd/soloneck.png';
+import platp3 from '@assets/instruments/setup/crkd/lpplatp3.png';
+import doludev from '@assets/instruments/setup/passthrough/doludev.png';
+import dolnewfile from '@assets/instruments/setup/passthrough/dolnewfile.png';
+import dolps3rules from '@assets/instruments/setup/passthrough/dolps3rules.png';
+import kateps3 from '@assets/instruments/setup/passthrough/kateps3.png';
+import termreloadrules from '@assets/instruments/setup/passthrough/termreloadrules.png';
+import termlsusb from '@assets/instruments/setup/passthrough/termlsusb.png';
+import macgcdl from '@assets/instruments/setup/passthrough/macgcdl.png';
+import macfnddnd from '@assets/instruments/setup/passthrough/macfnddnd.gif';
+import macgcdis from '@assets/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/instruments/setup/passthrough/macsysex.png';
+import macauth from '@assets/instruments/setup/passthrough/macauth.png';
+import macgcen from '@assets/instruments/setup/passthrough/macgcen.png';
+import DXIcon from '/src/components/DXIcon.astro';
 import { Steps } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
@@ -47,7 +43,7 @@ import { Image } from 'astro:assets';
 <Aside>**Make sure your guitar and receiver are on <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[the latest firmware]</a>!**</Aside>
 * CRKD Les Paul guitars can be connected wirelessly via its respective dongle, Bluetooth, and wired via USB. For Bluetooth, you need a Bluetooth receiver to connect to your computer.
   * Dongle and wired USB are the recommended methods.
-* [Deluxe] Controller Input Offset: Custom-Optimal
+* <DXIcon size="1em" style="margin-bottom: 0;"/> [Deluxe] Controller Input Offset: Custom-Optimal
 
 There are two ways to configure this guitar. Pick depending on whichever neck you have.
 
@@ -62,9 +58,10 @@ There are two ways to configure this guitar. Pick depending on whichever neck yo
 
 **Click on the Pads icon at the top of RPCS3**.
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
-It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window. 
-This is so you can change configuration profiles in case you want to play other games.
-<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />Follow the instructions and/or match the assignments below.
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
 <Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
 
 #### Pad Information
@@ -87,7 +84,7 @@ This is so you can change configuration profiles in case you want to play other 
 #### Mapping
 **By default, everything is bound correctly. You don’t need to remap anything or download a profile.**
 
-<center><Image src={gtrcrkdmpsdlmapping} alt="Mapping" style="width:941px;"/></center>
+<center><Image src={gtrcrkdlmsdlmapping} alt="Mapping" style="width:941px;"/></center>
 </TabItem>
   <TabItem label="Solo Fret Neck">
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  

@@ -10,17 +10,18 @@ sidebar:
   label: Xbox 360 Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
-import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drms360ghmapping from '@assets/rb3/rpcs3/instruments/maps/drms360ghmapping.png';
+import ghdrmscontroller from '@assets/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofaddes.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import drms360ghmapping from '@assets/instruments/rpcs3/maps/drms360ghmapping.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/360.png" alt="Sistema" title="Sistema"></img></center>
 
 <center><Image src={ghdrmscontroller} alt="Control" /></center>
 
+<Aside>**Esta pagina no tiene documentación para Linux o macOS, por ahora.**</Aside>
 <Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
     Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 

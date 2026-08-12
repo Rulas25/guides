@@ -9,13 +9,13 @@ sidebar:
   order: 5
   label: PS2 SG
 ---
-import ps2sgcontroller from '@assets/rb3/rpcs3/instruments/controller/ps2sgcontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
-import gtrps2ghsgmapping from '@assets/rb3/rpcs3/instruments/maps/gtrps2ghsgmapping.png';
+import ps2sgcontroller from '@assets/instruments/controller/ps2sgcontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofaddes.png';
+import padlegend from '@assets/instruments/rpcs3/padlegendes.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofilees.png';
+import gtrps2ghsgmapping from '@assets/instruments/rpcs3/maps/gtrps2ghsgmapping.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
@@ -23,6 +23,7 @@ import { Image } from 'astro:assets';
 <center><img src="/assets/instruments/logos/ps2.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={ps2sgcontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside>Tilt can range from unreliable to non-functional depending on your adapter.</Aside>
 <Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 * This has only been verified to work with an OSTENT PS1 PS2 To PC USB 2.0 Controller Adapter Converter For Sony PS2 Wired Controller (Model Number/SKU: 014800). Other adapters may have issues.

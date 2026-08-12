@@ -9,24 +9,24 @@ sidebar:
   order: 10
   label: Xbox 360 Xplorer
 ---
-import xplorercontroller from '@assets/rb3/rpcs3/instruments/controller/xplorercontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import joycpl from '@assets/rb3/rpcs3/instruments/setup/gen/joycpl.png';
-import joy1 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy1.png';
-import joy2 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy2.png';
-import joy3 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy3.png';
-import joy4 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy4.png';
-import joy5 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy5.png';
-import joy6 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy6.png';
-import joy7 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy7.png';
-import joy8 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy8.png';
-import gtr45 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr45.png';
-import gtr90 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr90.png';
-import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
-import gtr360ghxpmapping from '@assets/rb3/rpcs3/instruments/maps/gtr360ghxpmapping.png';
+import xplorercontroller from '@assets/instruments/controller/xplorercontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import joycpl from '@assets/instruments/setup/windows/joycpl.png';
+import joy1 from '@assets/instruments/setup/xplorer/joy1.png';
+import joy2 from '@assets/instruments/setup/xplorer/joy2.png';
+import joy3 from '@assets/instruments/setup/xplorer/joy3.png';
+import joy4 from '@assets/instruments/setup/xplorer/joy4.png';
+import joy5 from '@assets/instruments/setup/xplorer/joy5.png';
+import joy6 from '@assets/instruments/setup/xplorer/joy6.png';
+import joy7 from '@assets/instruments/setup/xplorer/joy7.png';
+import joy8 from '@assets/instruments/setup/xplorer/joy8.png';
+import gtr45 from '@assets/instruments/setup/xplorer/gtr45.png';
+import gtr90 from '@assets/instruments/setup/xplorer/gtr90.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofile.png';
+import gtr360ghxpmapping from '@assets/instruments/rpcs3/maps/gtr360ghxpmapping.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
@@ -34,6 +34,7 @@ import { Image } from 'astro:assets';
 <center><img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={xplorercontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
 * This controller requires advanced configuration.

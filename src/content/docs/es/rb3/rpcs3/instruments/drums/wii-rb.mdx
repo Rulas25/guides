@@ -9,24 +9,24 @@ sidebar:
   order: 11
   label: Wii Rock Band
 ---
-import wiirbdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbdrmscontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
-import doludev from '@assets/rb3/rpcs3/instruments/setup/passthrough/doludeves.png';
-import dolnewfile from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolnewfilees.png';
-import dolps3rules from '@assets/rb3/rpcs3/instruments/setup/passthrough/dolps3ruleses.png';
-import kateps3 from '@assets/rb3/rpcs3/instruments/setup/passthrough/kateps3es.png';
-import termreloadrules from '@assets/rb3/rpcs3/instruments/setup/passthrough/termreloadruleses.png';
-import termlsusb from '@assets/rb3/rpcs3/instruments/setup/passthrough/termlsusbes.png';
-import macgcdl from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdles.png';
-import macfnddnd from '@assets/rb3/rpcs3/instruments/setup/passthrough/macfnddndes.gif';
-import macgcdis from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcdis.png';
-import macsysex from '@assets/rb3/rpcs3/instruments/setup/passthrough/macsysexes.png';
-import macauth from '@assets/rb3/rpcs3/instruments/setup/passthrough/macauthes.png';
-import macgcen from '@assets/rb3/rpcs3/instruments/setup/passthrough/macgcen.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
-import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
-import drmswiirbmapping from '@assets/rb3/rpcs3/instruments/maps/drmswiirbmappinges.png';
+import wiirbdrmscontroller from '@assets/instruments/controller/wiirbdrmscontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomapes.png';
+import doludev from '@assets/instruments/setup/passthrough/doludeves.png';
+import dolnewfile from '@assets/instruments/setup/passthrough/dolnewfilees.png';
+import dolps3rules from '@assets/instruments/setup/passthrough/dolps3ruleses.png';
+import kateps3 from '@assets/instruments/setup/passthrough/kateps3es.png';
+import termreloadrules from '@assets/instruments/setup/passthrough/termreloadruleses.png';
+import termlsusb from '@assets/instruments/setup/passthrough/termlsusbes.png';
+import macgcdl from '@assets/instruments/setup/passthrough/macgcdles.png';
+import macfnddnd from '@assets/instruments/setup/passthrough/macfnddndes.gif';
+import macgcdis from '@assets/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/instruments/setup/passthrough/macsysexes.png';
+import macauth from '@assets/instruments/setup/passthrough/macauthes.png';
+import macgcen from '@assets/instruments/setup/passthrough/macgcen.png';
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofaddes.png';
+import padlegend from '@assets/instruments/rpcs3/padlegendes.png';
+import drmswiirbmapping from '@assets/instruments/rpcs3/maps/drmswiirbmappinges.png';
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
@@ -68,7 +68,7 @@ No necesitas configurar nada para usar este instrumento. Simplemente conecta el 
     Agrega la entrada de tu batería:  
 		* Batería de RB1
 			```
-			SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="3138", MODE="0666"
+			SUBSYSTEM=="usb", ATTRS{idVendor}=="1bad", ATTRS{idProduct}=="0005", MODE="0666"
 			```
 		* Batería de RB2
 			```

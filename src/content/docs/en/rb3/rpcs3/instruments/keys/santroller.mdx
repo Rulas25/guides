@@ -10,16 +10,17 @@ sidebar:
   label: Santroller
 ---
 import { Aside } from '@astrojs/starlight/components';
-import sancontroller from '@assets/rb3/rpcs3/instruments/controller/sancontroller.png';
-import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import initkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/initkeys.png';
-import consetkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/consetkeys.png';
-import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import sancontroller from '@assets/instruments/controller/sancontroller.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomap.png';
+import initkeys from '@assets/instruments/setup/santroller/initkeys.png';
+import consetkeys from '@assets/instruments/setup/santroller/consetkeys.png';
+import savesan from '@assets/instruments/setup/santroller/savesan.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/assets/instruments/logos/santroller.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={sancontroller} alt="Controller" /></center>
 
+<Aside>**This page is missing Linux and macOS documentation, for now.**</Aside>
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
