@@ -1,0 +1,180 @@
+---
+title: "CRKD SG"
+slug: "es/rb3pc/controllers/guitars/crkdsg"
+description: "Como configurar tu SG por CRKD en RPCS3 (versión multiplat)."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 1
+  label: CRKD SG
+---
+import rpcs3pad from '@assets/instruments/rpcs3/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/rpcs3/padlegend.png';
+import crkdsgcontroller from '@assets/instruments/controller/crkdsgcontroller.png';
+import instrepoinstall from '@assets/instruments/rpcs3/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3/padprofile.png';
+import ogneck from '@assets/instruments/setup/crkd/ogneck.png';
+import platlm from '@assets/instruments/setup/crkd/sgplatlm.png';
+import rpcs3nomap from '@assets/instruments/rpcs3/maps/rpcs3nomap.png';
+import soloneck from '@assets/instruments/setup/crkd/soloneck.png';
+import gtrcrkdlmsdlmapping from '@assets/instruments/rpcs3/maps/gtrcrkdlmsdlmapping.png';
+import doludev from '@assets/instruments/setup/passthrough/doludev.png';
+import dolnewfile from '@assets/instruments/setup/passthrough/dolnewfile.png';
+import dolps3rules from '@assets/instruments/setup/passthrough/dolps3rules.png';
+import kateps3 from '@assets/instruments/setup/passthrough/kateps3.png';
+import termreloadrules from '@assets/instruments/setup/passthrough/termreloadrules.png';
+import termlsusb from '@assets/instruments/setup/passthrough/termlsusb.png';
+import macgcdl from '@assets/instruments/setup/passthrough/macgcdl.png';
+import macfnddnd from '@assets/instruments/setup/passthrough/macfnddnd.gif';
+import macgcdis from '@assets/instruments/setup/passthrough/macgcdis.png';
+import macsysex from '@assets/instruments/setup/passthrough/macsysex.png';
+import macauth from '@assets/instruments/setup/passthrough/macauth.png';
+import macgcen from '@assets/instruments/setup/passthrough/macgcen.png';
+import DXIcon from '/src/components/DXIcon.astro';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/assets/instruments/logos/crkd.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={crkdsgcontroller} alt="Control" /></center>
+
+<Aside>**Asegúrate que tu guitarra y receptor estén en <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[la firmware mas actual]</a>!**</Aside>
+* Guitarras CRKD SGs pueden ser conectadas por USB o su propio receptor receptor inalámbrico o Bluetooth. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora.
+    * Receptor inalámbrico o cable de USB son los métodos recomendados.
+* <DXIcon size="1em" style="margin-bottom: 0;"/> [Deluxe] Calibración de controles: Inst. Modeados
+
+Hay dos maneras para configurar esta guitarra. Elige depende de cual mástil tienes.
+
+<Tabs>
+  <TabItem label="Mástil 'OG'">
+* Esto es la configuración recomendada para usuarios del mástil "OG".  
+<Image src={ogneck} alt="Un mástil 'OG' para guitarras de CRKD. No hay botones de solo y los botones están extruyendo." />
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+
+#### Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| SDL | Licensed by Sony Computer Entertainment CRKD Guitar LM |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:--------:|:-----------:|
+| Guitarra | Guitar Hero |
+
+<Steps>
+1. Después de conectar tu guitarra, cambia el switch de "Plataforma" a `LM`.  
+    > <Image src={platlm} alt="El selector de plataforma de la Les Paul. Esta puesto en la posición de 'PC'." />
+
+2. Configura tu guitarra.
+</Steps>
+
+#### Mapeo
+**Todo esta configurado bien por defecto. No tienes que remapear nada.**
+
+<center><Image src={gtrcrkdlmsdlmapping} alt="Mapeo" style="width:941px;"/></center>
+</TabItem>
+  <TabItem label="Mástil 'Solo'">
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* Esto es la configuración recomendada para los usuarios del mástil "Solo".  
+<Image src={soloneck} alt="Un mástil 'Solo' para guitarras de CRKD. No hay botones de solo y los botones están extruyendo. Los trastes están al ras del mástil. Tiene botones cercas del cuero y cercas del clavijero." />
+
+<Steps>
+1. Después de conectar tu guitarra, cambia el switch de "Plataforma" a `LM`.
+    > <Image src={platlm} alt="El selector de plataforma de la Les Paul. Esta puesto en la posición de 'LM'." />
+</Steps>
+<Tabs>
+  <TabItem label="Windows">
+<Steps>
+2. ¡Esto es todo! No necesitas configurar nada.
+</Steps>
+  </TabItem>
+  <TabItem label="Linux">
+<Aside>Esto requiere permisos de admin/sudo.</Aside>
+
+<Steps>
+1. Navega a `/etc/udev/` en tu explorador de archivos.  
+    Entra a la carpeta de `rules.d`.  
+    Si no existe, créala.
+    > <Image src={doludev} alt="Un navegador de archivos dentro de la carpeta de 'udev', con el cursor resaltando la carpeta de 'rules.d'." />
+
+2. Crea un archivo nuevo.
+    > <Image src={dolnewfile} alt="Creando un archivo vació nuevo dentro de la carpeta de 'rules.d'." />
+    Nómbralo `99-ps3-peripherals.rules`.  
+    > <Image src={dolps3rules} alt="Nombrando el archivo." />
+
+3. Abre el archivo dentro de un editor de texto.  
+    Agrega la entrada de tu guitarra:  
+      ```
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="12ba", ATTRS{idProduct}=="0200", MODE="0666"
+      ```
+    En este ejemplo, se agrego la Mustang de PS3 y el teclado de PS3.  
+    Cuando termines, guarda tus cambios.
+    > <Image src={kateps3} alt="Un editor de texto mostrando el archivo de 'rules.d' abierto. Hay dos entradas en el archivo." />
+
+4. Ejecuta `sudo udevadm control --reload-rules` en una terminal o reinicia tu sistema.
+    > <Image src={termreloadrules} alt="Una terminal abierta con el comando escrito." />
+
+5. Desconecta el receptor de tu guitarra y reconéctalo.
+
+5. Abre Rock Band 3 en RPCS3 y sincroniza tu guitarra.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu guitarra listo para unirse.  
+</Steps>
+</TabItem>
+  <TabItem label="macOS">
+Por defecto, macOS cargara sus propios controladores cuando intentas tu guitarra con conexión directa en RPCS3.  
+Por suerte, ¡esto es fácil de corregir!
+
+<Steps>
+1. Primero, [[haz click aquí para descargar la versión beta 1.8 de GCAdapterDriver]](https://secretkeys.io/gcadapterdriver/GCAdapterDriver-1.8-beta.app.zip)
+    > <Image src={macgcdl} alt="Un archivo '.zip' de GCAdapterDriver descargando." />
+
+2. Arrastra la aplicación de `GCAdapterDriver-1.8-beta` extraída a la carpeta de `Aplicaciones`.
+    > <Image src={macfnddnd} alt="Arrastrando la aplicación de GCAdapterDriver a la carpeta de Aplicaciones." />
+
+3. En la barra de menús, haz click en el icono de GCAdapterDriver.  
+    Haz click en el control deslizante para intentar activarlo.
+    > <Image src={macgcdis} alt="GCAdapterDriver esta desactivado." />
+
+4. Inicialmente, el sistema va a bloquear la extensión de sistema.  
+    Haz click en `Abrir el panel de preferencias Seguridad`.
+    > <Image src={macsysex} alt="Una alerta que dice que la extensión de GCAdapterDriver fue bloqueada. El cursor esta sobre 'Abrir el panel de preferencias Seguridad'" />
+
+5. Desbloquea la pagina haciendo click al candado hacia abajo en la izquierda.  
+    Haz click en `Permitir` ahora.  
+    No te olvides de bloquear la pagina cuando termines.
+    > <Image src={macauth} alt="La pagina de 'Seguridad y privacidad' dentro de las preferencias del sistema. El candado esta abierto y el cursor esta sobre 'Permitir'" />
+
+6. Ahora, activa el control deslizante de GCAdapterDriver en la barra de menús.
+    > <Image src={macgcen} alt="GCAdapterDriver esta activo." />
+    Abre Rock Band 3 en RPCS3 y conecta tu guitarra.  
+    Deberías de ver que automáticamente se le asigna un número de jugador.  
+    Del mismo modo, en Rock Band 3, verás tu guitarra listo para unirse.  
+</Steps>
+  </TabItem>
+  </Tabs>
+</TabItem>
+</Tabs>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigación para variante SG por <a href="https://www.twitch.tv/itzslicedcorn" target="_blank" rel="noopener noreferrer">[May/ItzSlicedcorn]</a>  
+Investigado por <a href="https://www.youtube.com/@Rulas025" target="_blank" rel="noopener noreferrer">[Rulas25]</a>  
+Anteriormente, investigado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gona]</a>
