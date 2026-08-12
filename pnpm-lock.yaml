@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@astrojs/starlight': dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260
+  '@astrojs/starlight': e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697
 
 importers:
 
@@ -16,13 +16,16 @@ importers:
         version: 7.0.5(@astrojs/markdown-satteri@0.3.5)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
       '@astrojs/starlight':
         specifier: ^0.41.5
-        version: 0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
+        version: 0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
       '@pagefind/default-ui':
         specifier: ^1.5.2
         version: 1.5.2
       astro:
         specifier: ^7.1.6
         version: 7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)
+      astro-contributors:
+        specifier: ^0.9.0
+        version: 0.9.0(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
@@ -37,13 +40,13 @@ importers:
         version: 0.35.3(@types/node@26.1.2)
       starlight-auto-sidebar:
         specifier: ^0.4.0
-        version: 0.4.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
+        version: 0.4.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
       starlight-sidebar-topics:
         specifier: ^0.8.0
-        version: 0.8.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
+        version: 0.8.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
       starlight-sidebar-topics-dropdown:
         specifier: ^0.6.0
-        version: 0.6.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))(starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))))
+        version: 0.6.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))(starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))))
 
 packages:
 
@@ -882,6 +885,12 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
+
+  astro-contributors@0.9.0:
+    resolution: {integrity: sha512-GIDlHJrQFEMEkvWmZaQj7nKIw4db3CXrP9aJ6pvoJ3/kfw/O5aJt07163AlyLLtyh08hdSWOKJu9ChAvkyKtLA==}
+    engines: {node: '>=22.22.3'}
+    peerDependencies:
+      astro: ^5.0.0 || ^6.0.0 || ^7.0.0
 
   astro-expressive-code@0.44.1:
     resolution: {integrity: sha512-DT1LnCqbHasBKlvzJ3m6LR4VI94wwx3W9EV/YbP1te4rqjOHsvsezHYuqb5MeLWLftXms/1FA9QBbwCo43DnJQ==}
@@ -2342,7 +2351,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 4.4.3
 
-  '@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))':
+  '@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))':
     dependencies:
       '@astrojs/markdown-satteri': 0.3.5
       '@astrojs/mdx': 7.0.5(@astrojs/markdown-satteri@0.3.5)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
@@ -2979,6 +2988,10 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.9.0: {}
+
+  astro-contributors@0.9.0(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)):
+    dependencies:
+      astro: 7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)
 
   astro-expressive-code@0.44.1(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)):
     dependencies:
@@ -4642,19 +4655,19 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
-  starlight-auto-sidebar@0.4.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))):
+  starlight-auto-sidebar@0.4.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))):
     dependencies:
-      '@astrojs/starlight': 0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
+      '@astrojs/starlight': 0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
       github-slugger: 2.0.0
 
-  starlight-sidebar-topics-dropdown@0.6.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))(starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))):
+  starlight-sidebar-topics-dropdown@0.6.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))(starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))):
     dependencies:
-      '@astrojs/starlight': 0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
-      starlight-sidebar-topics: 0.8.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
+      '@astrojs/starlight': 0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
+      starlight-sidebar-topics: 0.8.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2)))
 
-  starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))):
+  starlight-sidebar-topics@0.8.0(@astrojs/starlight@0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))):
     dependencies:
-      '@astrojs/starlight': 0.41.6(patch_hash=dacbd9b82bc9d74c4550a4d03cee63ea7d43696cc4c95c93dc387b30dcbad260)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
+      '@astrojs/starlight': 0.41.6(patch_hash=e62939c81915d4d48b786dde08f60e0d892539a5a06b3fc1042858a5b770e697)(@astrojs/markdown-remark@7.2.2)(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.1.2))
       picomatch: 4.0.5
 
   stream-replace-string@2.0.0: {}
