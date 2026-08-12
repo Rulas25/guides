@@ -5,7 +5,6 @@ description: Lo que tienes que hacer con lo que bajaste en la pagina anterior.
 sidebar:
   order: 4
 ---
-import { Aside } from '@astrojs/starlight/components';
 import rpcs3init from '@assets/rb3/rpcs3/intro/rpcs3init.png';
 import rpcs3español from '@assets/rb3/rpcs3/intro/rpcs3español.png';
 import rpcs3fwdnd from '@assets/rb3/rpcs3/intro/rpcs3fwdndes.gif';
@@ -13,17 +12,24 @@ import fwinstall from '@assets/rb3/rpcs3/intro/fwinstalles.png';
 import rpcs3fw from '@assets/rb3/rpcs3/intro/rpcs3fwes.png';
 import rpcs3fwdone from '@assets/rb3/rpcs3/intro/rpcs3fwdonees.png';
 import rpcs3fwcomp from '@assets/rb3/rpcs3/intro/rpcs3fwcompes.png';
-import rpcs3rb3dnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dnd.gif';
+import rpcs3rb3dnd from '@assets/rb3/rpcs3/intro/win-rpcs3rb3dnd.gif';
 import rpcs3refresh from '@assets/rb3/rpcs3/intro/rpcs3refreshes.gif';
-import rb3dxdles from '@assets/rb3/rpcs3/intro/rb3dxdles.png';
-import rb3dxextes from '@assets/rb3/rpcs3/intro/rb3dxextes.png';
+import rb3dxdl from '@assets/rb3/rpcs3/intro/rb3dxdles.png';
+import rb3dxext from '@assets/rb3/rpcs3/intro/win-rb3dxextes.png';
 import rpcs3rb3dxdnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dxdndes.gif';
 import rpcs3gamedataicon from '@assets/rb3/rpcs3/intro/rpcs3gamedataicones.png';
 import rpcs3pkg from '@assets/rb3/rpcs3/intro/rpcs3pkges.png';
 import rpcs3rb3dxicon from '@assets/rb3/rpcs3/intro/rpcs3rb3dxicones.png';
+import nixrpcs3rb3dnd from '@assets/rb3/rpcs3/intro/nix-rpcs3rb3dnd.gif';
+import nixrpcs3config from '@assets/rb3/rpcs3/intro/nix-rpcs3config.png';
+import nixrpcs3rb3dndalt from '@assets/rb3/rpcs3/intro/nix-rpcs3rb3dndalt.gif'
+import rpcs3config from '@assets/rb3/rpcs3/intro/rpcs3configes.png';
+import rpcs3doubleclick from '@assets/rb3/rpcs3/intro/rpcs3doubleclickes.png';
+import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-Ahora, **ve a la carpeta donde extrajiste a RPCS3 y ábrelo.** Deja esta carpeta abierta en el fondo.  
+Ahora, **ve a la carpeta donde pusiste a RPCS3 y ábrelo.** Deja esta carpeta abierta en el fondo.  
 **Activa**:
 * <span title="Crear atajo en el escritorio">"<code>Create desktop shortcut</code>"</span>
 * <span title="Crear atajo en el Menu de Inicio">"<code>Create Start Menu shortcut</code>"</span>
@@ -57,28 +63,45 @@ Comenzará a compilar módulos para cargar la XMB de PS3 en el emulador. Esto pu
 > <Image src={rpcs3fwcomp} alt="RPCS3 compilando módulos PPU con una barra de progreso en 1/4 de finalización." />
 
 ## Rock Band 3
+<Tabs>
+  <TabItem label="Windows">
 Ahora, **en una pantalla de archivos nueva, ve a la carpeta donde tienes tu copia de Rock Band 3 y muévela a un lado.  
 Arrastra la carpeta de Rock Band 3 a la carpeta llamada "`games`" adentro de la carpeta de RPCS3**.  
 De nuevo, no puedo darte una link debido a leyes locales. Usa una PS3 con HEN of CFW para crear una copia o <a href="https://youtu.be/74_A1J1Nmqw" target="_blank" rel="noopener noreferrer"><b>["PS3 Disc Dumper"]</b></a> si no tienes una consola.  
-> <Image src={rpcs3rb3dnd} alt="La carpeta de Rock Band 3 siendo arrastrada a RPCS3, lo que actualiza RPCS3 para mostrar Rock Band 3 en la lista de juegos." />
+> <Image src={rpcs3rb3dnd} alt="La carpeta de Rock Band 3 siendo arrastrada a la carpeta de 'games' de RPCS3." />
+</TabItem>
+  <TabItem label="Linux">
+Después, **vamos a agregar la carpeta de Rock Band 3** a la biblioteca. Hay dos maneras de hacer esto.  
 
+Primero es simplemente arrastrar a la carpeta de Rock Band 3 a la ventana de RPCS3.  
+Esta es la manera mas simple. En el caso que muevas la carpeta de Rock Band 3 por cualquier razón, vas a necesitar agregarla de nuevo.  
+> <Image src={nixrpcs3rb3dnd} alt="Arrastrando 'Rock Band 3 [BLUS30463]' a la ventana de RPCS3." />
+
+La segunda manera es arrastrando tu copia de Rock Band 3 a la carpeta de `~/.config/RPCS3/games`.  
+Esta es la manera mas segura porque es poco probable que vas a moverlo de aquí por accidente.
+
+Primero, navega hacia `~/.config/RPCS3/games` (puede ser diferente depende de tu Distro) en un ventana nueva del navegador de archivos.  
+> <Image src={nixrpcs3config} alt="KDE Dolphin with '~/.config/RPCS3/games' typed into the address bar." />
+
+Luego, en otra ventana de navegador, ve a donde tienes tu copia de Rock Band 3.  
+Arrastra la carpeta de Rock Band 3 hacia la carpeta de `games` dentro de `~/.config/RPCS3/`.
+> <Image src={nixrpcs3rb3dndalt} alt="La carpeta de Rock Band 3 siendo arrastrada a la carpeta de 'games' de RPCS3." />
+</TabItem>
+</Tabs>
 Después de mover la carpeta de Rock Band 3, haz click en `Actualizar` en RPCS3 para actualizar tu biblioteca de juegos. Rock Band 3 debe de aparecer en tu biblioteca de juegos.  
 > <Image src={rpcs3refresh} alt="Presionando el botón de 'Refresh' en RPCS3, que actualiza la lista de juegos para mostrar Rock Band 3." />
 
 ## Rock Band 3 Deluxe
-Ahora, vamos a descargar a <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer"><b>[Rock Band 3 Deluxe]</b></a>.
+Ahora, vamos a descargar la versión de PlayStation 3 de <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer"><b>[Rock Band 3 Deluxe]</b></a>.
 
-Rock Band 3 Deluxe es una modificación que arregla problemas con Rock Band 3 en RPCS3. También incluye <a href="https://rb3dx.milohax.org/es/features" target="_blank" rel="noopener noreferrer"><b>[muchas funciones para mejorar tu juego]</b></a>.
+Rock Band 3 Deluxe es una modificación que arregla problemas con Rock Band 3 en RPCS3. También incluye <a href="https://rb3dx.milohax.org/es/features" target="_blank" rel="noopener noreferrer"><b>[muchas funciones para mejorar tu juego]</b></a>.  
+**<a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer">[Haz click aquí para descargar la versión de PlayStation 3 de Rock Band 3 Deluxe]</a>**.
 
-**<a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer">[Haz click aquí para bajar Rock Band 3 Deluxe]</a>**.
+Elige la versión principal o la versión con personajes custom, depende de lo que quieres.
+> <a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer"><Image src={rb3dxdl} alt="La carpeta .zip de Rock Band 3 Deluxe en la bandeja de descarga de Edge." /></a>
 
-Descarga la versión de PS3.
-> <a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer"><Image src={rb3dxdles} alt="La carpeta .zip de Rock Band 3 Deluxe en la bandeja de descarga de Edge." /></a>
-
-**Cuando se baje, extrae el archivo**.  
-> <Image src={rb3dxextes} alt="El menú contextual de Windows con el cursor en 'Extraer ficheros...') en la categoría de 7-Zip." />
-
-**Cuando termine de extraer, arrastra el archivo PKG a RPCS3 y haz click en <span title="Si">"<code>Yes</code>"</span>** como con el archivo de `PS3UPDAT.PUP`.  
+**Cuando se baje, extrae el archivo y arrastra el archivo PKG a RPCS3.  
+ Haz click en <span title="Si">"<code>Yes</code>"</span>** como con el archivo de `PS3UPDAT.PUP`.  
 > <Image src={rpcs3rb3dxdnd} alt="El archivo PKG siendo arrastrado en RPCS3." />
 
 > <Image src={rpcs3pkg} alt="El Decrypter/Installer de RPCS3 preguntando si el usuario desea instalar el archivo de paquete de Rock Band 3 Deluxe." />
@@ -90,3 +113,11 @@ Si se instalo correctamente, el icono de Rock Band 3 va a cambiar.
 > <Image src={rpcs3rb3dxicon} alt="La biblioteca de RPCS3, enseñando el icono de Rock Band 3 usando un icono nuevo de Rock Band 3 Deluxe." />
 
 Puedes renombrar el juego a "Rock Band 3 Deluxe" si quieres. Solo necesitas hacer click derecho en "Rock Band 3" y selecciona a `Cambiar nombre en la lista de juegos`.
+
+Se recomienda que desactives `Ignorar doble clic en pantalla completa`.  
+Haz click en el botón de `Configurar`.  
+> <Image src={rpcs3config} alt="Haciendo click en el botón de 'Configurar' en RPCS3." />
+
+Cambia a la pestaña de `Emulador` y desactiva `Ignorar doble clic en pantalla completa`.  
+Esto te va a dejar hacer doble click para salir de pantalla completa.  
+> <Image src={rpcs3doubleclick} alt="Desactivando 'Ignorar doble clic en pantalla completa' bajo la pestaña de 'Emulador'." />

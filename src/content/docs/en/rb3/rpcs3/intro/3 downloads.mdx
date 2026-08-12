@@ -2,55 +2,79 @@
 title: Downloads
 slug: "en/rb3pc/intro/downloads"
 description: What you need to download for Rock Band 3 on RPCS3.
+tableOfContents: false
 sidebar:
   order: 3
 ---
-import { Aside } from '@astrojs/starlight/components';
-import dl7zip from '@assets/rb3/rpcs3/intro/7zip.png';
-import mvcpp from '@assets/rb3/rpcs3/intro/mvcpp.png';
-import rpcs3dl from '@assets/rb3/rpcs3/intro/rpcs3dl.png';
-import extractrpcs3 from '@assets/rb3/rpcs3/intro/extractrpcs3.png';
-import extractdir from '@assets/rb3/rpcs3/intro/extractdir.png';
+import windl7zip from '@assets/rb3/rpcs3/intro/win-7zip.png';
+import winmvcpp from '@assets/rb3/rpcs3/intro/win-mvcpp.png';
+import winrpcs3dl from '@assets/rb3/rpcs3/intro/win-rpcs3dl.png';
+import winextractrpcs3 from '@assets/rb3/rpcs3/intro/win-extractrpcs3.png';
+import winextractdir from '@assets/rb3/rpcs3/intro/win-extractdir.png';
+import nixrpcs3dl from '@assets/rb3/rpcs3/intro/nix-rpcs3dl.png';
+import nixrpcs3terminal from '@assets/rb3/rpcs3/intro/nix-rpcs3terminal.png';
+import nixrpcs3chmod from '@assets/rb3/rpcs3/intro/nix-rpcs3chmod.png';
 import fwpage from '@assets/rb3/rpcs3/intro/fwpage.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 Before you begin, **make sure your drivers and operating system are up to date**.
 
-## Prerequisites
+<Aside type="danger">**Do NOT install the emulator to a USB drive or from a synced folder (Dropbox, OneDrive, etc.)!  
+You can move game files to other drives later if needed, but the emulator should always be on an internal drive!**</Aside>
 
+<Tabs>
+  <TabItem label="Windows">
+## Prerequisites
 **Let's start by downloading 7-Zip**, which will open the compressed archives most of these downloads will be stored inside of. **If you already have 7-Zip** or an alternative installed, you can **skip to the next step**.
 
 <a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer"><b>[Click here to go to 7-Zip's download page]</b></a>.  
-<a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer"><Image src={dl7zip} alt="7-zip.org's download page, with a cursor hovering over the 64 bit .exe installer." /></a>
+> <a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer"><Image src={windl7zip} alt="7-zip.org's download page, with a cursor hovering over the 64 bit .exe installer." /></a>
 
 **Now**, **let's** go ahead and **install Microsoft Visual C++ 2019 Redistributable**, which is required by RPCS3. You probably already have this, but it doesn't hurt to double check.  
 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer"><b>[Click here to download Microsoft Visual C++ 2019 Redistributable]</b></a>
 
 **Once it finishes downloading**, open it up and **install it**.  
-<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer"><Image src={mvcpp} alt="Microsoft Visual C++ 2019 Redistributable's installer prompting the user to accept the license terms and conditions and to install." /></a>
+> <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer"><Image src={winmvcpp} alt="Microsoft Visual C++ 2019 Redistributable's installer prompting the user to accept the license terms and conditions and to install." /></a>
 
 ## RPCS3
-
-**Next**, let's **download RPCS3**.
-
+**Next**, let's **download RPCS3**.  
 <a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><b>[Click here to go to RPCS3's download site]</b></a>.
 
 Scroll down a bit and download the Windows version.  
-<a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><Image src={rpcs3dl} alt="RPCS3's download website, with a cursor hovering over the download button for the Windows version." /></a>
+> <a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><Image src={winrpcs3dl} alt="RPCS3's download website, with a cursor hovering over the download button for the Windows version." /></a>
 
+**Once it downloads, extract the `.7z` archive.**  
+> <Image src={winextractrpcs3} alt="The right click menu from Windows Explorer highlighting 'Extract files...' from the 7-Zip category." />
 
-**Once it downloads, extract the .7z file.**  
-<Image src={extractrpcs3} alt="The right click menu from Windows Explorer highlighting 'Extract files...' from the 7-Zip category." />
+It's suggested to extract the files into `C:\Games\RPCS3` or a separate internal drive to avoid permissions issues. Also, untick the box that will create a sub-directory, as shown highlighted in the picture.
 
-It's suggested to extract the files into `C:\Games\RPCS3` or a separate internal drive to avoid permissions issues. Also, untick the box that will create a sub-directory, as shown highlighted in the picture.  
+> <Image src={winextractdir} alt="The Extract window from 7-zip. It shows the 'Extract to' as C:\Games\RPCS3 and the box below it unchecked." />
+</TabItem>
+  <TabItem label="Linux">
+## RPCS3
+**Let's start by downloading RPCS3**.
 
-<Aside type="danger">**Do not use a USB drive or from a synced folder (Dropbox, OneDrive, etc.)! This usually leads to an unstable experience!**</Aside>
+<a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><b>[Click here to go to RPCS3's download site]</b></a>.
 
-<Image src={extractdir} alt="The Extract window from 7-zip. It shows the 'Extract to' as C:\Games\RPCS3 and the box below it unchecked." />
+Scroll down a bit and download the Linux version.  
+> <a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><Image src={nixrpcs3dl} alt="RPCS3's download website, with a cursor hovering over the download button for the Linux version." /></a>
 
+**Once it downloads**, it's suggested to **place the `AppImage` file somewhere convenient**.  
+Now, open a terminal in the folder that contains the RPCS3 `AppImage` executable.  
+> <Image src={nixrpcs3terminal} alt="Opening up a terminal in Plasma." />
+
+Run the following command:
+```bash
+chmod a+x ./rpcs3-*_linux64.AppImage && ./rpcs3-*_linux64.AppImage
+```
+> <Image src={nixrpcs3chmod} alt="A terminal with a chmod command ready to go." />
+
+</TabItem>
+</Tabs>
 ## Firmware
-
-Once that's extracted, <a href="https://www.playstation.com/en-us/support/hardware/ps3/system-software/" target="_blank" rel="noopener noreferrer"><b>[download the PlayStation 3 system software from Sony's website]</b></a>. **Scroll down** until you get **to** "**Update using a computer**." **Click that** to expand, **then click on "Download PS3 Update.**"  
+After that, <a href="https://www.playstation.com/en-us/support/hardware/ps3/system-software/" target="_blank" rel="noopener noreferrer"><b>[download the PlayStation 3 system software from Sony's website]</b></a>. **Scroll down** until you get **to** "**Update using a computer**." **Click that** to expand, **then click on "Download PS3 Update.**"  
   
 _**If you're using a Chromium-based browser like Chrome or Edge, MAKE SURE YOU RIGHT-CLICK AND "Save link as," or your download MAY become stuck.**_  
-<a href="https://www.playstation.com/en-us/support/hardware/ps3/system-software" target="_blank" rel="noopener noreferrer"><Image src={fwpage} alt="Sony's 'How to update PS3 console system software' page with the 'Update using a computer' subcategory expanded." /></a>
+> <a href="https://www.playstation.com/en-us/support/hardware/ps3/system-software" target="_blank" rel="noopener noreferrer"><Image src={fwpage} alt="Sony's 'How to update PS3 console system software' page with the 'Update using a computer' subcategory expanded." /></a>

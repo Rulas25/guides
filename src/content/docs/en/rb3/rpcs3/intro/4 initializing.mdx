@@ -5,24 +5,30 @@ description: What to do with the stuff you downloaded in the previous page.
 sidebar:
   order: 4
 ---
-import { Aside } from '@astrojs/starlight/components';
 import rpcs3init from '@assets/rb3/rpcs3/intro/rpcs3init.png';
 import rpcs3fwdnd from '@assets/rb3/rpcs3/intro/rpcs3fwdnd.gif';
 import fwinstall from '@assets/rb3/rpcs3/intro/fwinstall.png';
 import rpcs3fw from '@assets/rb3/rpcs3/intro/rpcs3fw.png';
 import rpcs3fwdone from '@assets/rb3/rpcs3/intro/rpcs3fwdone.png';
 import rpcs3fwcomp from '@assets/rb3/rpcs3/intro/rpcs3fwcomp.png';
-import rpcs3rb3dnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dnd.gif';
+import rpcs3rb3dnd from '@assets/rb3/rpcs3/intro/win-rpcs3rb3dnd.gif';
 import rpcs3refresh from '@assets/rb3/rpcs3/intro/rpcs3refresh.gif';
 import rb3dxdl from '@assets/rb3/rpcs3/intro/rb3dxdl.png';
-import rb3dxext from '@assets/rb3/rpcs3/intro/rb3dxext.png';
+import rb3dxext from '@assets/rb3/rpcs3/intro/win-rb3dxext.png';
 import rpcs3rb3dxdnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dxdnd.gif';
 import rpcs3gamedataicon from '@assets/rb3/rpcs3/intro/rpcs3gamedataicon.png';
 import rpcs3pkg from '@assets/rb3/rpcs3/intro/rpcs3pkg.png';
 import rpcs3rb3dxicon from '@assets/rb3/rpcs3/intro/rpcs3rb3dxicon.png';
+import nixrpcs3rb3dnd from '@assets/rb3/rpcs3/intro/nix-rpcs3rb3dnd.gif';
+import nixrpcs3config from '@assets/rb3/rpcs3/intro/nix-rpcs3config.png';
+import nixrpcs3rb3dndalt from '@assets/rb3/rpcs3/intro/nix-rpcs3rb3dndalt.gif'
+import rpcs3config from '@assets/rb3/rpcs3/intro/rpcs3config.png';
+import rpcs3doubleclick from '@assets/rb3/rpcs3/intro/rpcs3doubleclick.png';
+import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-Now, **go to the folder where you extracted RPCS3.** Keep this folder open in the background. **Open up RPCS3**.  
+Now, **go to the folder where you put RPCS3.** Keep this folder open in the background. **Open up RPCS3**.  
 **Tick**:
 * `Create desktop shortcut`
 * `Create Start Menu shortcut`
@@ -36,7 +42,6 @@ After that, **click `Continue`.**
 > <Image src={rpcs3init} alt="RPCS3 welcoming the user, with the mouse cursor hovering over 'Continue'." />
 
 ## Firmware
-
 **Drag** the **PS3UPDAT.PUP** file you just downloaded from Sony's website **into RPCS3**.  
 > <Image src={rpcs3fwdnd} alt="PS3UPDAT.PUP being dragged into RPCS3." />
 
@@ -53,27 +58,44 @@ It will start compiling modules to load the PS3 XMB into the emulator, which may
 > <Image src={rpcs3fwcomp} alt="RPCS3 compiling PPU modules with a progress bar at 1/4th completion." />
 
 ## Rock Band 3
+<Tabs>
+  <TabItem label="Windows">
 Next, **open a new file browser window. Now go to the folder where you have your copy of Rock Band 3 stored and drag the folder into RPCS3's "`games`" folder**.  
 Again, you're on your own when it comes to finding a copy. You can use a PS3 with CFW or HEN to create a copy of the game or <a href="https://youtu.be/mRxSKxoYt_g" target="_blank" rel="noopener noreferrer"><b>["PS3 Disc Dumper"]</b></a> if you don't have a console.  
 > <Image src={rpcs3rb3dnd} alt="The dumped folder of Rock Band 3 being dragged into RPCS3's 'games' folder." />
+</TabItem>
+  <TabItem label="Linux">
+Next, **let's add Rock Band 3 to RPCS3**'s library. There's two ways you can do this.  
 
+First is dragging the Rock Band 3 game folder into RPCS3.  
+This is the easiest but if this folder ever gets moved around, RPCS3 will no longer detect it until you re-add it.  
+> <Image src={nixrpcs3rb3dnd} alt="Dragging 'Rock Band 3 [BLUS30463]' into RPCS3." />
+
+Second is by dragging your copy of Rock Band 3 into the `~/.config/RPCS3/games` folder.  
+This is the safest place because you're unlikely to accidentally move it from here.
+
+First, go to `~/.config/RPCS3/games` (may be different depending on your Distro) on one file browser window.  
+> <Image src={nixrpcs3config} alt="KDE Dolphin with '~/.config/RPCS3/games' typed into the address bar." />
+
+Then, on another file browser window, go to where you have your copy of Rock Band 3.  
+Drag Rock Band 3's game folder into the `games` folder in `~/.config/RPCS3/`.
+> <Image src={nixrpcs3rb3dndalt} alt="The dumped folder of Rock Band 3 being dragged into RPCS3's 'games' folder." />
+</TabItem>
+</Tabs>
 After dragging in Rock Band 3, click `Refresh` in RPCS3. Rock Band 3 should appear in your game library.  
 > <Image src={rpcs3refresh} alt="The 'Refresh' button being clicked in RPCS3, which updates it to display Rock Band 3 in the game list." />
 
 ## Rock Band 3 Deluxe
-Finally, let's install <a href="https://rb3dx.milohax.org/" target="_blank" rel="noopener noreferrer"><b>[Rock Band 3 Deluxe]</b></a>.
+Finally, let's install the PlayStation 3 version of <a href="https://rb3dx.milohax.org/" target="_blank" rel="noopener noreferrer"><b>[Rock Band 3 Deluxe]</b></a>.
 
-This is a must-have mod, which also fixes some critical bugs RPCS3 has with Rock Band 3. On top of that, it adds <a href="https://rb3dx.milohax.org/features" target="_blank" rel="noopener noreferrer"><b>[many great features]</b></a>.
+This is a must-have mod, which also fixes some critical bugs RPCS3 has with Rock Band 3. On top of that, it adds <a href="https://rb3dx.milohax.org/features" target="_blank" rel="noopener noreferrer"><b>[many great features]</b></a>.  
+<a href="https://rb3dx.milohax.org/downloads" target="_blank" rel="noopener noreferrer"><b>[Click here to download Rock Band 3 Deluxe for PlayStation 3]</b></a>.
 
-<a href="https://rb3dx.milohax.org/downloads" target="_blank" rel="noopener noreferrer"><b>[Click here to download Rock Band 3 Deluxe]</b></a>.
-
-Download the PS3 version.  
+Download either the "Main Download" option or the "Main + Custom Characters" option depending on what you want.
 > <a href="https://rb3dx.milohax.org/downloads" target="_blank" rel="noopener noreferrer"><Image src={rb3dxdl} alt="Rock Band 3 Deluxe's .zip archive in Edge's download tray." /></a>
 
-**When it's finished downloading, extract the archive**.  
-> <Image src={rb3dxext} alt="Rock Band 3 Deluxe's .zip being extracted with 7-Zip." />
-
-**When it finishes extracting, drag the PKG file into RPCS3 and click `Yes`** on the prompt, just like you did earlier with the PS3UPDAT.PUP file.  
+**When it finishes downloading, extract the archive and drag the PKG file into RPCS3.  
+Click `Yes`** on the prompt, just like you did earlier with the PS3UPDAT.PUP file.  
 > <Image src={rpcs3rb3dxdnd} alt="Rock Band 3 Deluxe's PKG file being dragged into RPCS3." />
 
 > <Image src={rpcs3pkg} alt="RPCS3's Decrypter/ Installer asking if the user wants to install the Rock Band 3 Deluxe package file." />
@@ -85,3 +107,11 @@ If it installed successfully, you should see that the Rock Band 3 icon has chang
 > <Image src={rpcs3rb3dxicon} alt="RPCS3's game library, showing an updated icon for Rock Band 3. It's now using the Rock Band 3 Deluxe icon." />
 
 You can also rename the game in the list to "Rock Band 3 Deluxe" if you wish. To do this, right-click on "Rock Band 3" and select `Rename In Game List`.
+
+It's also recommended to disable `Ignore doubleclicks for Fullscreen`.  
+Click on the `Config` button.  
+> <Image src={rpcs3config} alt="Clicking the 'Config' button in RPCS3." />
+
+Swap to the `Emulator` tab then untick `Ignore doubleclicks for Fullscreen`.  
+This will let you double click to exit fullscreen.
+> <Image src={rpcs3doubleclick} alt="Unticking 'Ignore doubleclicks for Fullscreen' under the 'Emulator' tab." />
