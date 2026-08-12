@@ -29,6 +29,7 @@ import onyxoutpkg from '@assets/rb3/ps3customs/onyxoutpkg.png';
 import onyxmakepackpkg from '@assets/rb3/ps3customs/onyxmakepackpkg.png';
 import savepkg from '@assets/rb3/ps3customs/savepkg.png';
 import onyxcreatedpkg from '@assets/rb3/ps3customs/onyxcreatedpkg.png';
+import DXIcon from '/src/components/DXIcon.astro';
 import { Image } from 'astro:assets';
 
 <Aside type="caution">If you wish to convert official Harmonix Xbox 360 DLC, [[skip to step 6]](#6), otherwise continue reading below:</Aside>
@@ -36,7 +37,6 @@ import { Image } from 'astro:assets';
 #### 1.
 <a href="https://rhythmverse.co/songfiles/game/rb3xbox" target="_blank" rel="noopener noreferrer">[Download the songs of your choice from RhythmVerse]</a>.  
 <a href="https://rhythmverse.co/songfiles/game/rb3xbox" target="_blank" rel="noopener noreferrer"><Image src={rhythmverse} alt="The RhythmVerse website. The cursor is over the Download button." /></a>
-
 
 #### 2.
 Open Nautilus and select `PS3 Converter`.  
@@ -65,7 +65,7 @@ Stay on the `RB quick convert + pack creator` tab.
 You can either drag and drop the files you modified or click on `Add Rock Band Song` to select them.  
 <Image src={onyxdraganddrop} alt="Customs in CON format being dragged and dropped into the 'RB quick convert + pack creator' tab of Onyx." />
 
-<Aside>**This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
+<Aside><DXIcon size="1em" /> **This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
 > * Deluxe users can enable `Author to DTA tag` at the bottom right for use with the song display information.  
 > * Deluxe users can enable `Decrypt MOGGs` at the bottom right, which will make their packs compatible with <a href="https://yarg.in/" target="_blank" rel="noopener noreferrer">[YARG]</a>.  
   Please note that this will make DLC **incompatible** with Rock Band Blitz!  
@@ -87,7 +87,7 @@ It is **much** faster than PKG creation and can create packs larger than 4GB (40
   <TabItem label="Folders (PS3)">
   	<Image src={onyxoutfolder} alt="Onyx's Quick Convert screen. The cursor is selecting 'Folders (PS3)' and 'Encrypted .mid.edat' has been enabled." />
 
-<Aside>**This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
+<Aside><DXIcon size="1em" /> **This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
 > Deluxe users can disable `Encrypt .mid.edat`.  
 > It will convert songs _MUCH_ faster with this disabled and the pack will also be compatible with <a href="https://yarg.in/" target="_blank" rel="noopener noreferrer">[YARG]</a>.  
 > Please note that this will make DLC **incompatible** with Rock Band Blitz!  
@@ -116,7 +116,7 @@ If you're on PS3, you'll have a pack folder ready to transfer to `dev_hdd0/game/
 </TabItem>
   <TabItem label="PKG (PS3)">
   	<Image src={onyxoutpkg} alt="Onyx's Quick Convert screen. The cursor is selecting 'PS3 (PS3)' and 'Encrypted .mid.edat' has been enabled." />  
-<Aside>**This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
+<Aside><DXIcon size="1em" /> **This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
 > Deluxe users can disable `Encrypt .mid.edat`.  
 > It will convert songs _MUCH_ faster with this disabled and the pack will also be compatible with <a href="https://yarg.in/" target="_blank" rel="noopener noreferrer">[YARG]</a>.  
 > Please note that this will make DLC **incompatible** with Rock Band Blitz!  

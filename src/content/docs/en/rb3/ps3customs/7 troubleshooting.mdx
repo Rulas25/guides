@@ -36,10 +36,11 @@ import nautiluscryptdecrypt from '@assets/rb3/ps3customs/nautiluscryptdecrypt.pn
 import nautiluscryptdecryptmogg from '@assets/rb3/ps3customs/nautiluscryptdecryptmogg.gif';
 import findmogg from '@assets/rb3/ps3customs/findmogg.png';
 import moggreplace from '@assets/rb3/ps3customs/moggreplace.gif';
+import DXIcon from '/src/components/DXIcon.astro';
 import { Image } from 'astro:assets';
 
 ## Customs not showing up/working online / Scores not saving
-Rock Band 3 can only remember scores for **unique** numeric song IDs. If you didn't follow [[the main Xbox 360 to PS3 guide]](../360tops3) or have an outdated version of <a href="https://nemosnautilus.com/nautilus" target="_blank" rel="noopener noreferrer">[Nautilus]</a>, chances are you will bump into songs with problematic IDs.  
+Rock Band 3 can only remember scores for **unique** numeric song IDs. If you didn't follow [[the main Xbox 360 to PS3 guide]](../360tops3) or have an outdated version of <a href="https://github.com/NemosNautilus/Nautilus/releases" target="_blank" rel="noopener noreferrer">[Nautilus]</a>, chances are you will bump into songs with problematic IDs.  
 Songs with alphabetic IDs will generate a new ID and wipe your score every time the game starts.
 
 While online, these songs will grey even if you and other players have the same song installed. To avoid this, the song needs to have a numeric ID.
@@ -159,7 +160,7 @@ If it doesn't fix it, read below for further instructions.
 In very rare cases, songs might still have infinite loading, even after following the proper conversion instructions _and_ using Mogg Inspector.
 
 You can fix this with Nautilus' Batch Cryptor.  
-<Aside>**This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an install of the latest Rock Band 3 Deluxe]</a>.**</Aside>
+<Aside><DXIcon size="1em" /> **This requires <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>!**</Aside>
 <Steps>
 1. Open Nautilus and select `Batch Cryptor`.
     > <Image src={nautilushomecrypt} alt="Nautilus' main screen with a cursor hovering over 'Batch Cryptor'." />
@@ -181,7 +182,7 @@ Go back to the song's main folder and replace the old `.mogg` file.
     > <Image src={moggreplace} alt="An animation of a .mogg file within the 'decrypted' folder being cut then pasted in the folder before it. It replaces the old .mogg file." />
 </Steps>
 
-## Songs Stuck Looping at the End
+## Songs stuck looping at the end
 Occasionally certain songs may freeze toward the end of the chart, constantly looping the last bits of the audio endlessly.  
 * **You will need to uninstall the song. Check [[the deletion guide]](../delete) if needed!**
 * **You will need need the original CON file to fix this issue!**
