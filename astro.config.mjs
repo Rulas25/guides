@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 import starlightAutoSidebar from 'starlight-auto-sidebar'
 import starlightSidebarTopics from 'starlight-sidebar-topics'
+import starlightVideos from 'starlight-videos'
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
@@ -34,6 +35,7 @@ export default defineConfig({
         { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@MiloHax' },
       ],
       plugins: [
+        starlightVideos(),
         starlightAutoSidebar(),
         starlightSidebarTopics([
           {
@@ -61,6 +63,14 @@ export default defineConfig({
             link: '/charting/reaper/intro/',
             icon: 'reaper',
             items: [ { autogenerate: { directory: 'charting/reaper', },},]
+          },
+          {
+            label: 
+            {en: 'Modeling',
+            es: 'Modelando'},
+            link: '/modeling/intro',
+            icon: 'blender',
+            items: [ { autogenerate: { directory: 'modeling', },},]
           },
         ], ),
       ],
