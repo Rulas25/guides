@@ -1,5 +1,5 @@
 ---
-title: "REAPER: Problemas y soluciones"
+title: "Problemas y soluciones"
 slug: "es/charting/reaper/troubleshooting"
 description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
 tableOfContents: false
@@ -7,6 +7,7 @@ sidebar:
   order: 6
   label: Problemas y soluciones
 ---
+import errorvenueprev from '@assets/charting/reaper/error-venueprev.png';
 import errorpluginwin from '@assets/charting/reaper/errorplugin-win.png';
 import errordevicewin from '@assets/charting/reaper/errordevice-win.png';
 import errorjackarch from '@assets/charting/reaper/errorjack-arch.png';
@@ -17,6 +18,10 @@ import archpwjack from '@assets/charting/reaper/arch-pwjackes.png';
 import errordevicegnu from '@assets/charting/reaper/errordevicees-gnu.png';
 import { Image } from 'astro:assets';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+* ¡Tengo este error de ReaScript cuando trato de abrir Venue Preview!
+  > <Image src={errorvenueprev} alt="REAPER mostrando un error que dice 'Venue Preview\FCP Venue Preview Lighting Camera.lua:1223: bad argument #1 to 'CountTrackMediaItems' (MediaTrack expected)'." />
+    * Abriste Venue Preview sin una plantilla o proyecto que tenga pistas de CAMERA o LIGHTING.
 
 <Tabs>
   <TabItem label="Windows">

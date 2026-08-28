@@ -1,5 +1,5 @@
 ---
-title: "REAPER: Esencial"
+title: "Esencial"
 slug: "es/charting/reaper/essential"
 description: "Información importante de recordad para chartear."
 sidebar:
@@ -9,53 +9,123 @@ sidebar:
 import chartchotic from '@assets/charting/reaper/plugins-chartchotic.png';
 import encorevox from '@assets/charting/reaper/plugins-encorevox.png';
 import eventstools from '@assets/charting/reaper/plugins-eventstools.png';
+import cat from '@assets/charting/reaper/plugins-cat.png';
 import hopcat from '@assets/charting/reaper/plugins-hopcat.png';
 import prokeyspreview from '@assets/charting/reaper/plugins-prokeyspreview.png';
 import venuegen from '@assets/charting/reaper/plugins-venuegen.png';
 import venuepreview from '@assets/charting/reaper/plugins-venuepreview.png';
+import shortcutbartempo from '@assets/charting/reaper/shortcut-bartempo.gif';
+import shortcutdragtempo from '@assets/charting/reaper/shortcut-dragtempo.gif';
+import shortcuttabtrans from '@assets/charting/reaper/shortcut-tabtrans.gif';
+import reaperactive from '@assets/charting/reaper/reaper-active.png';
 import { Image } from 'astro:assets';
 
-## Atajos importantes
-Los siguiente atajos fueron agregados:
-* F6 - <a href="https://github.com/RaiderGG/EVENTS-Tools" target="_blank" rel="noopener noreferrer">[EVENTS Tools]</a>: Herramientas para la pista de EVENTS. Ayuda con estados de publico y eventos de sección.  
-  > <Image src={eventstools} alt="EVENTS Tools, mostrando utilidades para convertir marcadores a secciones, marcar donde inicia y termina la canción y varios eventos de publico." />
-* F7 - <a href="https://github.com/tposejank/EncoreVocalPreview/" target="_blank" rel="noopener noreferrer">[EncoreVoxPreview]</a>: Visualiza tu chart de vocales. ¡Incluye armonías! Cambia entre pistas con las teclas de `[` y `]`.   
-Ciertos teclados (como los de LATAM) usan `SHIFT` + `{` y `SHIFT` + `}`.  
-  > <Image src={encorevox} alt="Encore Vox Preview mostrando tres partes de vocales. Tienen letras distintas y están separadas por color." />
-* F8 - <a href="https://github.com/Hoph2o/HOPCAT/" target="_blank" rel="noopener noreferrer">[HOPCAT]</a>: Una versión actualizada de CAT. Esto es una utilidad que hace demasiadas cosa y ayuda con varias cosas tediosas.
-  > <Image src={hopcat} alt="HOPCAT mostrando varias utilidades como animaciones automáticas, reducciones y muchas otras cosas." />
-* F9 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Ya no hagas tu Venues con eventos latosos. ¡Usa notas!  
-  > <Image src={venuegen} alt="VenueGen mostrando acciones para copiar o tomar luces y cámaras de VENUE. También hay un botón para generar y otro para generar y sobrescribir." />
-* F10 - <a href="https://github.com/smcconne/Song-Progress-Tracker" target="_blank" rel="noopener noreferrer">[VenuePreview]</a>: Visualiza mas o menos como va tu VENUE. Muestra efectos de post-procesado, luces y cámara. Puedes ver los variantes de Guitarra/Bajo, Guitarra/Teclado y Bajo/Teclado.  
-  > <Image src={venuepreview} alt="Venue Preview mostrando la cámara actual, efecto de post-procesado actual y luces actuales." />
-* K - Crea una entrada (1, 2, 1-2-3-4). Tienes que tener el cursor en el segundo compás de la canción.
-  * Recuerda de mapear el tempo de tu canción primero porque esto mueve todo hacia la derecha!
-* Q - Crea un marcador de tempo de compás, depende de donde está el cursor.
-* SHIFT+Q - Mueve la barra de compás más cercano al cursor mientras lo sostienes.
-* [Editor de MIDI] SHIFT+L - Importa un archivo de letra y lo coloca en las notas elegidas.
-* [Editor de MIDI] CTRL+SHIFT+Desplazar con ratón - Ajusta la velocidad de las notas. Demasiado útil para Guitarra/Bajo PRO.
-* [Editor de MIDI] ALT+SHIFT+S - Divide las notas entre la cuadricula que estas usando. Es muy útil cuando si quieres crear notas semicorchea rápidamente.
-* [Editor de MIDI] NUMPAD 9 - Ajusta la duración de las notas al tamaño de la cuadrícula. Ayuda mucho si quieres ajustar varias notas al mismo tiempo a un tamaño especifico, como reducir notas a una fusa (1/32).
-
-## Otros plugins incluidos
-Estos son otros plugins que están incluidos en la plantilla:
-* <a href="https://github.com/noahbaxter/chartchotic" target="_blank" rel="noopener noreferrer">[ChartChotic]</a> - Un reemplazo para RBN Preview moderno y con código abierto. Esta funciona en varias plataformas así que los de Linux (y Mac) finalmente pueden ver lo que están charteando.  
-Este plugin tiene varias funciones buenas, ¡así que explóralo todo lo que puedas! 
-  > <Image src={chartchotic} alt="ChartChotic demostrando una pista de batería." />
-* <a href="https://github.com/Deevun155/ProKeysPreview" target="_blank" rel="noopener noreferrer">[Pro Keys Preview]</a> - Un plugin que te ayuda ver tus charts de Teclado Pro. Muy útil para ver las limitaciones de rango y los movimientos!  
-  > <Image src={prokeyspreview} alt="Pro Keys Preview mostrando la pista de Teclado Pro en experto." />
+Aquí hay mas cosas para útiles para recordar mientras charteas REAPER. Es recomendado guardar esta pagina para consultarla en el futuro.
 
 ## Descargas adicionales
 ¡Otras cosas importantes que deberías descargar!
-* <a href="https://nemosnautilus.com/magma/" target="_blank" rel="noopener noreferrer">[MAGMA]</a> - Una herramienta para compilar tu custom para poder meterla al juego. Sigue siendo usada y se ha mejorado por los años.  
-* <a href="https://nemosnautilus.com/nautilus/" target="_blank" rel="noopener noreferrer">[Nautilus (antes conocido como C3 CON Tools)]</a> - Un programa que ayuda con varias cosas relacionadas a archivos de Rock Band. Tiene varias herramientas integradas para customs.  
+* <a href="https://github.com/NemosNautilus/magma-rok-on/releases/" target="_blank" rel="noopener noreferrer">[MAGMA]</a> - Una herramienta para compilar tu custom para poder meterla al juego. Sigue siendo usada y se ha mejorado por los años.  
+* <a href="https://github.com/NemosNautilus/Nautilus/releases/" target="_blank" rel="noopener noreferrer">[Nautilus (antes conocido como C3 CON Tools)]</a> - Un programa que ayuda con varias cosas relacionadas a archivos de Rock Band. Tiene varias herramientas integradas para customs.  
 * <a href="https://github.com/mtolly/onyx/releases" target="_blank" rel="noopener noreferrer">[Onyx]</a> - Un programa que necesitas si estás probando con RPCS3, ya que exporta en un formato de PS3 moderno.
 * <a href="https://rentry.co/UVR-SW-Instructions" target="_blank" rel="noopener noreferrer">[Ultimate Vocal Remover GUI]</a> - Contrario al nombre, esto hace mucho mas que eliminar vocales. Esto es un programa que usa IA para separar canciones a partes individuales, ya que eso ayuda inmensamente cuando charteas. La versión en el enlace tiene la habilidad de importar modelos Roformer. Aquí hay modelos que yo uso y recomiendo:
   * Demucs:
     * htdemucs_ft - Separa a cuatro partes.
     * htdemucs_6s - Separa a 6 instrumentos en vez de 4.
   * MDX-NET
-    * <a href="https://huggingface.co/jarredou/BS-ROFO-SW-Fixed/tree/main" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Como htdemucs_6s pero en mejor calidad. Requiere una gráfica buena.
+    * <a href="https://huggingface.co/enerjazzer/BS-ROFO-SW-Fixed/tree/main" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Como htdemucs_6s pero en mejor calidad. Requiere una gráfica con 6 GBs a lo mínimo de VRAM.
     * UVR-MDX-NET INST HQ 3 or 5 - Esencial porque separa vocales mejor que Demucs.
-    * <a href="https://github.com/jarredou/models/releases/tag/aufr33-jarredou_MDX23C_DrumSep_model_v0.1" target="_blank" rel="noopener noreferrer">[Drumsep]</a> - Esencial porque separa pistas de batería a partes individuales. Ayuda demasiado para chartear batería.
-* <a href="https://mvsep.com/en" target="_blank" rel="noopener noreferrer">[Mvsep]</a> - Es como UVR pero en vez de correr en tu computadora, corre en un servidor. Estas restringido a calidad de MP3 y hay cola. Puedes pagar para evitar esto.
+    * <a href="https://huggingface.co/noblebarkrr/mvsepless_resources/blob/main/mdx23c/mdx23c_drumsep_5stem_aufr33_jarredou.ckpt" target="_blank" rel="noopener noreferrer">[Drumsep]</a> - Esencial porque separa pistas de batería a partes individuales. Ayuda demasiado para chartear batería.
+      * * [[Descarga el `.yaml`]](https://huggingface.co/noblebarkrr/mvsepless_resources/blob/main/mdx23c/mdx23c_drumsep_5stem_aufr33_jarredou_config.yaml) aqui.
+* <a href="https://mvsep.com/es" target="_blank" rel="noopener noreferrer">[Mvsep]</a> - Es como UVR pero en vez de correr en tu computadora, corre en un servidor. Estas restringido a calidad de MP3 y hay cola. Puedes pagar para evitar esto.
+
+## Atajos de plugins
+Usa las teclas para abrir estos plugins rápidamente:
+* F6 - <a href="https://github.com/RaiderGG/EVENTS-Tools" target="_blank" rel="noopener noreferrer">[EVENTS Tools]</a>: Herramientas para la pista de EVENTS. Ayuda con estados de publico y eventos de sección.  
+  > <Image src={eventstools} alt="EVENTS Tools, mostrando utilidades para convertir marcadores a secciones, marcar donde inicia y termina la canción y varios eventos de publico." />
+* F7 - <a href="https://github.com/tposejank/EncoreVocalPreview/" target="_blank" rel="noopener noreferrer">[EncoreVoxPreview]</a>: Visualiza tu chart de vocales. ¡Incluye armonías! Cambia entre pistas con las teclas de `[` y `]`.   
+Ciertos teclados (como los de LATAM) usan `Mayús/SHIFT` + `{` y `Mayús/SHIFT` + `}`.  
+  > <Image src={encorevox} alt="Encore Vox Preview mostrando tres partes de vocales. Tienen letras distintas y están separadas por color." />
+* F8 - <a href="https://github.com/Hoph2o/HOPCAT/" target="_blank" rel="noopener noreferrer">[HOPCAT]</a>: Una versión actualizada de CAT. Esto es una utilidad que hace demasiadas cosa y ayuda con varias cosas tediosas.
+  > <Image src={hopcat} alt="HOPCAT mostrando varias utilidades como animaciones automáticas, reducciones y muchas otras cosas." />
+* Mayús/SHIFT+F8 - <a href="https://github.com/poliwhirlge/CAT/" target="_blank" rel="noopener noreferrer">[CAT [Legado]]</a>: Una versión anterior de CAT porteada a Python 3. Tiene funciones similares a HOPCAT pero también alternativas, como CARV.
+  > <Image src={cat} alt="CAT mostrando varias utilidades como animaciones automáticas, reducciones y muchas otras cosas." />
+* F9 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Ya no hagas tu Venues con eventos latosos. ¡Usa notas!  
+  > <Image src={venuegen} alt="VenueGen mostrando acciones para copiar o tomar luces y cámaras de VENUE. También hay un botón para generar y otro para generar y sobrescribir." />
+* F10 - <a href="https://github.com/smcconne/RB3-Venue-Preview" target="_blank" rel="noopener noreferrer">[VenuePreview]</a>: Visualiza mas o menos como va tu VENUE. Muestra efectos de post-procesado, luces y cámara. Puedes ver los variantes de Guitarra/Bajo, Guitarra/Teclado y Bajo/Teclado.  
+  > <Image src={venuepreview} alt="Venue Preview mostrando la cámara actual, efecto de post-procesado actual y luces actuales." />
+
+## Atajos comunes
+Aprende estos atajos para usar REAPER con eficiencia.
+### Pantalla principal
+| Tecla | Acción |
+|:-:|:-:|
+| Espacio | Reproducir/pausar (el cursor permanecerá donde pare) |
+| CTRL+Espacio | Reproducir/pausar (el cursor regresara donde empezó la reproducción) |
+| Entrar/Intro/Enter | Reproducir desde principio del proyecto |
+| Click derecho arrastrado | Crear selección |
+| Mayús/SHIFT+Desplazar con ratón | Desplazar horizontalmente |
+| CTRL+Desplazar con ratón | Zoom vertical |
+| ALT+Desplazar con ratón | Zoom horizontal |
+| CTRL+Flecha derecha | Mover cursor una cuadrícula a la derecha |
+| CTRL+Flecha izquierda | Mover cursor una cuadrícula a la izquierda |
+| Flecha arriba | Mueve evento de audio una pista hacia arriba |
+| Flecha abajo | Mueve evento de audio una pista hacia abajo |
+| Flecha derecha | Mueve evento de audio una pista espacio de cuadrícula hacia la derecha  |
+| Flecha izquierda | Mueve evento de audio una pista espacio de cuadrícula hacia la izquierda |
+| Mayús/SHIFT+Flecha izquierda | Mover cursor hacia la izquierda, creando una selección de tiempo |
+| Mayús/SHIFT+Flecha derecha | Mover cursor hacia la derecha, creando una selección de tiempo |
+| L | Mover cursor a la izquierda de seleccionado |
+| CTRL+Click izquierdo arrastrado | Copiar/arrastrar seleccionado |
+| Tab | Brinca al siguiente impulso en el clip elegido.<br></br>Esto mueve el cursor de editor al siguiente impulso, lo cual es un sonido corto con un ataque fuerte, como una tarola o bombo.<br></br>Si la canción tiene un bombo en el primer golpe de cada compás, puedes combinar esto con `Q` y mapear el tempo muy rápido<br></br><Image src={shortcuttabtrans} alt="Brincando al siguiente impulso." /> |
+| Mayús/SHIFT+Tab | Move cursor to previous transient in selected object |
+| ALT+Mayús/SHIFT+C | Crea un compás de la selección de tiempo (calcula el tempo) |
+| Q | Crea un marcador de tempo de compás, depende de donde está el cursor.<br></br>Usa esto donde debe de estar el primer golpe de un compás para mapear por compás.<br></br><Image src={shortcutbartempo} alt="Colocando un marcador de tempo donde esta el primer golpe de un compás." /> |
+| Mayús/SHIFT+Q | Mueve la barra de compás más cercano al cursor mientras lo sostienes<br></br><Image src={shortcutdragtempo} alt="Arrastrando un marcador de tempo." /> |
+| T | Establecer tempo del compás y cambiar la indicación de compás  |
+| Mayús/SHIFT+K | Crea una entrada (1, 2, 1-2-3-4).<br></br>Tienes que tener el cursor en el segundo compás de la canción.<br></br>¡Recuerda de mapear el tempo de tu canción primero porque esto mueve todo hacia la derecha! |
+| S | Separa el evento de audio por el cursor |
+| CTRL+ALT+E | Abre las pistas(s) elegidas en el editor de MIDI |
+
+### Editor MIDI
+| Tecla | Acción |
+|:-:|:-:|
+| ALT+Espacio | Reproducir desde el principio de las notas MIDI seleccionadas |
+| Doble click izquierdo | Escribe una sola nota MIDI de la longitud del marcador de cuadrícula más pequeño (i.e. si la cuadrícula está configurada en 1/16, el comando escribirá una nota de 1/16) |
+| Click izquierda arrastrado | Escribe nota MIDI |
+| Click derecho arrastrado | Elige notas MIDI |
+| Flecha arriba | Mueve notas seleccionadas hacia arriba un semitono |
+| Flecha abajo | Mueve notas seleccionadas hacia abajo un semitono |
+| Flecha derecha | Mueve notas hacia un espacio de cuadrícula hacia la derecha |
+| Flecha izquierda | Mueve notas hacia un espacio de cuadrícula hacia la izquierda |
+| NUMPAD 9 | Ajusta la duración de las notas al tamaño de la cuadrícula.<br></br>Ayuda mucho si quieres ajustar varias notas al mismo tiempo a un tamaño especifico, como reducir notas a una fusa (1/32 |
+| CTRL+Mayús/SHIFT+A | Toma todas las notas entre la primera y ultima nota seleccionadas y hace que sus tiempos de inicios sean equidistante, con la ultima nota siendo una ancla.<br></br>Ayuda mucho con secciones donde una parte están tenga notas a un cuadrícula que no sea fácilmente accesible con REAPER.<br></br>Por ejemplo, cuando hay 15 notas en vez de 16, puedes elegir las 15 notas, ejecutar el atajo y las notas se ajustaran a una cuadrícula de 1/15 | |
+| J | Unir notas |
+| Mayús/SHIFT+D | Borra notas dobles en selección |
+| ALT+C | Duplica notas seleccionadas una octava/dificultad mas abajo |
+| Mayús/SHIFT+C | Copia las notas seleccionadas de Expert a LH Animations |
+| Mayús/SHIFT+L | Importar la letra a las notas seleccionadas desde un archivo `.txt` |
+| Mayús/SHIFT+A | Alinea todos los eventos de texto (letra) con las notas seleccionadas |
+| Mayús/SHIFT+> | Desplaza todos los eventos de texto (letra) una nota hacia adelante seleccionada |
+| Mayús/SHIFT+< | Desplaza todos los eventos de texto (letra) una nota hacia atrás seleccionada |
+| Mayús/SHIFT+Desplazar con ratón | Desplazar horizontalmente |
+| CTRL+Desplazar con ratón | Zoom vertical |
+| ALT+Desplazar con ratón | Zoom horizontal |
+| CTRL+Flecha derecha | Mover cursor una cuadrícula a la derecha |
+| CTRL+Flecha izquierda | Mover cursor una cuadrícula a la izquierda |
+| L | Mover cursor a la izquierda de seleccionado |
+| CTRL+Click izquierdo arrastrado | Copiar/arrastrar seleccionado |
+| S | Separa la nota por el cursor |
+| ALT+Mayús/SHIFT+S | Divide las notas entre la cuadricula actual.<br></br>Es muy útil cuando si quieres crear notas semicorchea (1/16) rápidamente |
+| ALT+N | Alternar entre pistas de MIDI activas.<br></br>Usa el icono del ojo para activar las pistas.<br></br><Image src={reaperactive} alt="Los iconos de ojo a la derecha de las pistas MIDI." /> |
+| U | Crear unisono entre pistas activa |
+| CTRL+Mayús/SHIFT+Mouse scroll | Ajusta la velocidad de las notas. Demasiado útil para Guitarra/Bajo PRO |
+| ALT+Mayús/SHIFT+4 | Cambia las notas seleccionadas al canal de MIDI 4 (mute para guitarra/bajo PRO) |
+
+
+## Otros plugins incluidos
+Estos son otros plugins que están incluidos en la plantilla:
+* <a href="https://github.com/noahbaxter/chartchotic" target="_blank" rel="noopener noreferrer">[Chartchotic]</a> - Un reemplazo para RBN Preview moderno y con código abierto. Esta funciona en varias plataformas así que los de Linux (y Mac) finalmente pueden ver lo que están charteando.  
+Este plugin tiene varias funciones buenas, ¡así que explóralo todo lo que puedas! 
+  > <Image src={chartchotic} alt="ChartChotic demostrando una pista de batería." />
+* <a href="https://github.com/Deevun155/ProKeysPreview" target="_blank" rel="noopener noreferrer">[Pro Keys Preview]</a> - Un plugin que te ayuda ver tus charts de Teclado Pro. Muy útil para ver las limitaciones de rango y los movimientos!  
+  > <Image src={prokeyspreview} alt="Pro Keys Preview mostrando la pista de Teclado Pro en experto." />

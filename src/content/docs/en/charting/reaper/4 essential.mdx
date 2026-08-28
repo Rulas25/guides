@@ -1,5 +1,5 @@
 ---
-title: "REAPER: Essentials"
+title: "Essentials"
 slug: "en/charting/reaper/essential"
 description: "Some information to keep in mind for charting."
 sidebar:
@@ -9,14 +9,37 @@ sidebar:
 import chartchotic from '@assets/charting/reaper/plugins-chartchotic.png';
 import encorevox from '@assets/charting/reaper/plugins-encorevox.png';
 import eventstools from '@assets/charting/reaper/plugins-eventstools.png';
+import cat from '@assets/charting/reaper/plugins-cat.png';
 import hopcat from '@assets/charting/reaper/plugins-hopcat.png';
 import prokeyspreview from '@assets/charting/reaper/plugins-prokeyspreview.png';
 import venuegen from '@assets/charting/reaper/plugins-venuegen.png';
 import venuepreview from '@assets/charting/reaper/plugins-venuepreview.png';
+import shortcutbartempo from '@assets/charting/reaper/shortcut-bartempo.gif';
+import shortcutdragtempo from '@assets/charting/reaper/shortcut-dragtempo.gif';
+import shortcuttabtrans from '@assets/charting/reaper/shortcut-tabtrans.gif';
+import reaperactive from '@assets/charting/reaper/reaper-active.png';
 import { Image } from 'astro:assets';
 
-## Important keybinds
-The following shortcuts have been added:
+Here's some other great stuff to keep in mind while working with REAPER for charting. It's recommended to keep this page handy for future reference.
+
+## Additional Downloads
+It's worth checking this stuff out and downloading it!
+* <a href="https://github.com/NemosNautilus/magma-rok-on/releases/" target="_blank" rel="noopener noreferrer">[MAGMA]</a> - A tool to compile your custom so it can go in the game. It’s still in use and has been improved over the years.  
+* <a href="https://github.com/NemosNautilus/Nautilus/releases/" target="_blank" rel="noopener noreferrer">[Nautilus (formerly known as C3 CON Tools)]</a> - The Swiss army knife of Rock Band stuff. Lots of great and specific tools for customs.  
+* <a href="https://github.com/mtolly/onyx/releases" target="_blank" rel="noopener noreferrer">[Onyx]</a> - A must have tool if you’re testing on RPCS3 as it can export into a modern PS3 format.
+* <a href="https://rentry.co/UVR-SW-Instructions" target="_blank" rel="noopener noreferrer">[Ultimate Vocal Remover GUI]</a> - Contrary to what the name is, this does a lot more than just remove vocals. This is (local non-gen) open source AI stem separation software that can greatly help in separating a song into separate elements to help with charting. The version linked is a beta version that includes the ability to import Roformer models. Here are the suggested models:
+  * Demucs:
+    * htdemucs_ft - Lightweight model that separates into four instruments.
+    * htdemucs_6s - Similar as the above but gives you six instruments instead of the usual four.
+  * MDX-NET
+    * <a href="https://huggingface.co/enerjazzer/BS-ROFO-SW-Fixed/tree/main" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Like htdemucs_6s but with monumentally superior quality. Requires at least 6 GBs of VRAM!
+    * UVR-MDX-NET INST HQ 3 or 5 - Essential as it usually gives better vocal isolation than Demucs.
+    * <a href="https://huggingface.co/noblebarkrr/mvsepless_resources/blob/main/mdx23c/mdx23c_drumsep_5stem_aufr33_jarredou.ckpt" target="_blank" rel="noopener noreferrer">[Drumsep]</a> - Essential as it separates a stereo drum track into various elements. Helps a ton with drum charting.
+      * [[Download `.yaml`]](https://huggingface.co/noblebarkrr/mvsepless_resources/blob/main/mdx23c/mdx23c_drumsep_5stem_aufr33_jarredou_config.yaml) here.
+* <a href="https://mvsep.com/en" target="_blank" rel="noopener noreferrer">[Mvsep]</a> - Like UVR but it runs on a server. You are restricted to MP3 quality and there is a queue. You can pay to avoid this.
+
+## Plugin Shortcuts
+Use the following keys to quickly access these plugins:
 * F6 - <a href="https://github.com/RaiderGG/EVENTS-Tools" target="_blank" rel="noopener noreferrer">[EVENTS Tools]</a>: Tools for the EVENTS track. Helps simplify dealing with crowd states and section events.  
   > <Image src={eventstools} alt="EVENTS Tools, showing utilites to send markers to sections, add music start and end events, and various crowd events." /> 
 * F7 - <a href="https://github.com/tposejank/EncoreVocalPreview/" target="_blank" rel="noopener noreferrer">[EncoreVoxPreview]</a>: See your vocal chart in real time. Includes harmonies as well!  
@@ -24,38 +47,84 @@ Swap between tracks with `[` and `]` keys.
   > <Image src={encorevox} alt="Encore Vox Preview showing three vocal parts. They each have different lyrics and are separated by color." />
 * F8 - <a href="https://github.com/Hoph2o/HOPCAT/" target="_blank" rel="noopener noreferrer">[HOPCAT]</a>: A cleaned up and updated version of CAT. This is a utility that does an astounding amount of things and helps with tedious tasks.
   > <Image src={hopcat} alt="HOPCAT showing various utilites like automatic animations, reductions, and many other things." />
-* F9 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Avoid the headache having to make events with clunky events. Make them with notes!  
+* SHIFT+F8 - <a href="https://github.com/poliwhirlge/CAT/" target="_blank" rel="noopener noreferrer">[CAT [Legacy]]</a>: An older version of CAT but ported to Python3. It's similar to one above but offers some alternative options, like CARV.
+  > <Image src={cat} alt="CAT showing various utilites like automatic animations, reductions, and many other things." />
+* F9 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Avoid the headache having to make events with clunky events. Make them with notes!
   > <Image src={venuegen} alt="VenueGen showing options to apply or pull lighting and camera from VENUE. There's also bottones to generate and generate and overwrite." />
-* F10 - <a href="https://github.com/smcconne/Song-Progress-Tracker" target="_blank" rel="noopener noreferrer">[VenuePreview]</a>: Get a very good estimate of what your venue looks like. Check how your post-procs, lighting, and camera choices are. Also shows Guitar/Bass, Guitar/Keys, and Bass/Keys variants.  
+* F10 - <a href="https://github.com/smcconne/RB3-Venue-Preview" target="_blank" rel="noopener noreferrer">[VenuePreview]</a>: Get a very good estimate of what your venue looks like. Check how your post-procs, lighting, and camera choices are. Also shows Guitar/Bass, Guitar/Keys, and Bass/Keys variants.  
   > <Image src={venuepreview} alt="Venue Preview showing the current camera, current post-proc effect, and lighting." />
-* K - Makes a count off. You have to click on bar 2 before pressing this.
-  * Reminder to tempo map first then chart because the count in will shift everything right!
-* Q - Sets tempo by bar depending on where your cursor is.
-* SHIFT+Q - Move closest grid line to mouse cursor while holding.
-* [MIDI Editor] SHIFT+L - Import lyrics for selected notes from file.
-* [MIDI Editor] CTRL+SHIFT+Mousewheel - Adjust note velocities. Extremely handy for Pro Guitar/Bass.
-* [MIDI Editor] ALT+SHIFT+S - Splits a long note along the current grid. Great for quickly creating things like 16th note patterns.
-* [MIDI Editor] NUMPAD 9 - Set note lengths to grid size. Helpful if you want to adjust lots of notes to a specific size, like shrinking down to 32nd notes.
+
+## Common Shorcuts
+Learn these to quickly move around REAPER.
+### Main Workspace
+| Key | Action |
+|:-:|:-:|
+| Spacebar | Play/Pause (cursor will remain where it is stopped) |
+| CTRL+Spacebar | Play/Stop (cursor will return to where it began playing) |
+| Enter/Return | Play from beginning of project |
+| Right Click Drag | Select box |
+| SHIFT+Mousewheel | Scroll horizontally |
+| CTRL+Mousewheel | Zooms vertically |
+| ALT+Mousewheel | Zooms horizontally |
+| CTRL+Right Arrow | Moves cursor right one grid unit |
+| CTRL+Left Arrow | Moves cursor left one grid unit |
+| Up Arrow | Move selected audio up a track |
+| Down Arrow | Move selected audio down one track |
+| Right Arrow | Move selected audio right one grid unit |
+| Left Arrow | Move selected audio left one grid unit |
+| SHIFT+Left | Move cursor left, creating time selection |
+| SHIFT+Right | Move cursor right creating time selection |
+| L | Move cursor to left of selected |
+| CTRL+Left Drag | Copy/Drag Selected |
+| Tab | Skips to the next transient in selected clip.<br></br>This moves the edit cursor to the next transient, which is a short sound with a loud attack, such as a snare or a kick drum.<br></br>If the song has a kick on the first beat of every measure, you can combine this with `Q` and tempo map extremely quickly.<br></br><Image src={shortcuttabtrans} alt="Tabbing to the next transient." /> |
+| SHIFT+Tab | Move cursor to previous transient in selected object |
+| ALT+SHIFT+C | Create measure from time selection (detects tempo) |
+| Q | Sets tempo by measure depending on where your cursor is.<br></br>Use this where the first beat of a measure should be to tempo map by measure.<br></br><Image src={shortcutbartempo} alt="Setting a new tempo marker where the beginning of a measure should be." /> |
+| SHIFT+Q | Drag the closest grid line to the mouse cursor while holding<br></br><Image src={shortcutdragtempo} alt="Dragging a tempo marker around." /> |
+| T | Set tempo by measure and change time signature |
+| SHIFT+K | Makes a count off (1, 2, 1-2-3-4).<br></br>You have to click on measure 2 before pressing this.<br></br>Reminder to tempo map first then chart because the count in will shift everything right! |
+| S | Splice audio at cursor |
+| CTRL+ALT+E | Open selected item(s) in MIDI Editor |
+
+### MIDI Editor
+| Key | Action |
+|:-:|:-:|
+| ALT+Spacebar | Play from beginning of selected MIDI notes |
+| Double Left Click | Writes single MIDI note the length of the smallest grid marker (i.e. grid set to 1/16, command will write 1/16 note) |
+| Left Click Drag | Writes MIDI note |
+| Right Click Drag | Select notes |
+| Up Arrow | Move selected notes up a semitone |
+| Down Arrow | Move selected notes up a semitone |
+| Right Arrow | Move selected notes right one grid unit |
+| Left Arrow | Move selected notes left one grid unit |
+| NUMPAD 9 | Set note lengths to grid size.<br></br>Helpful if you want to adjust lots of notes to a specific size, like shrinking down to 32nd notes |
+| CTRL+SHIFT+A | Takes every note between the first and last selected note and makes their start times equidistant from each other, with the last note serving as an anchor.<br></br>Helpful for sections where a part is played on a grid that REAPER doesn't have easy access to.<br></br>For example, if you have 15 notes instead of 16, you can select the 15 notes, use the shortcut, and the notes will move notes into a 1/15 grid | |
+| J | Joins selected notes |
+| SHIFT+D | Delete double notes within selection |
+| ALT+C | Copy selected notes down one octave/difficulty |
+| SHIFT+C | Copy selected notes from Expert down to LH Animations |
+| SHIFT+L | Import lyrics for selected notes from a `.txt` file |
+| SHIFT+A | Align all text (lyric) events with selected notes |
+| SHIFT+> | SHIFT all text (lyric) events forward one selected note |
+| SHIFT+< | SHIFT all text (lyric) events back one selected note |
+| SHIFT+Mousewheel | Scroll horizontally |
+| CTRL+Mousewheel | Zooms vertically |
+| ALT+Mousewheel | Zooms horizontally |
+| CTRL+Right Arrow | Moves cursor right one grid unit |
+| CTRL+Left Arrow | Moves cursor left one grid unit |
+| L | Move cursor to left of selected |
+| CTRL+Left Drag | Copy/Drag Selected |
+| S | Splice note at cursor |
+| ALT+SHIFT+S | Splits a long note along the current grid.<br></br>Great for quickly creating things like 16th note patterns |
+| ALT+N | Cycles through active MIDI Items.<br></br>Use the eye icon to activate MIDI items.<br></br><Image src={reaperactive} alt="The eye icon to the right of the MIDI tracks." /> |
+| U | Create unison across active MIDI items |
+| CTRL+SHIFT+Mouse scroll | Adjust note velocities. Extremely handy for Pro Guitar/Bass |
+| ALT+SHIFT+4 | Sets selected notes to MIDI Channel 4 (Pro Guitar/Bass Mute) |
 
 ## Other included plugins
 These are some other plugins included in the template:
-* <a href="https://github.com/noahbaxter/chartchotic" target="_blank" rel="noopener noreferrer">[ChartChotic]</a> - An open source and modernized replacement for RBN Preview. This one is cross-platform so Linux (and Mac) users can finally see what they're charting.  
+* <a href="https://github.com/noahbaxter/chartchotic" target="_blank" rel="noopener noreferrer">[Chartchotic]</a> - An open source and modernized replacement for RBN Preview. This one is cross-platform so Linux (and Mac) users can finally see what they're charting.  
 There's a lot of other cool features so make sure you explore this one! 
   > <Image src={chartchotic} alt="ChartChotic showing a drum track." />
 * <a href="https://github.com/Deevun155/ProKeysPreview" target="_blank" rel="noopener noreferrer">[Pro Keys Preview]</a> - A plugin to help see your Pro Keys charts. Very helpful to spot range limitations and shifts!  
   > <Image src={prokeyspreview} alt="Venue Preview showing the current camera, current post-proc effect, and lighting." />
-
-## Additional downloads
-It's worth checking this stuff out and downloading it!
-* <a href="https://nemosnautilus.com/magma/" target="_blank" rel="noopener noreferrer">[MAGMA]</a> - A tool to compile your custom so it can go in the game. It’s still in use and has been improved over the years.  
-* <a href="https://nemosnautilus.com/nautilus/" target="_blank" rel="noopener noreferrer">[Nautilus (formerly known as C3 CON Tools)]</a> - The Swiss army knife of Rock Band stuff. Lots of great and specific tools for customs.  
-* <a href="https://github.com/mtolly/onyx/releases" target="_blank" rel="noopener noreferrer">[Onyx]</a> - A must have tool if you’re testing on RPCS3 as it can export into a modern PS3 format.
-* <a href="https://rentry.co/UVR-SW-Instructions" target="_blank" rel="noopener noreferrer">[Ultimate Vocal Remover GUI]</a> - Contrary to what the name is, this does a lot more than just remove vocals. This is AI stem separation software that can greatly help in separating a song into separate elements to help with charting. The version linked is a beta version that includes the ability to import Roformer models. Here are the suggested models:
-  * Demucs:
-    * htdemucs_ft - Separates into four instruments.
-    * htdemucs_6s - Gives you six instruments instead of the usual four.
-  * MDX-NET
-    * <a href="https://huggingface.co/jarredou/BS-ROFO-SW-Fixed/tree/main" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Like htdemucs_6s but with monumentally superior quality. Requires a beefy graphics card!
-    * UVR-MDX-NET INST HQ 3 or 5 - Essential as it usually gives better vocal isolation than Demucs.
-    * <a href="https://github.com/jarredou/models/releases/tag/aufr33-jarredou_MDX23C_DrumSep_model_v0.1" target="_blank" rel="noopener noreferrer">[Drumsep]</a> - Essential as it separates a stereo drum track into various elements. Helps a ton with drum charting.
-* <a href="https://mvsep.com/en" target="_blank" rel="noopener noreferrer">[Mvsep]</a> - Like UVR but it runs on a server. You are restricted to MP3 quality and there is a queue. You can pay to avoid this.
