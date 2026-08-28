@@ -64,14 +64,6 @@ export default defineConfig({
             icon: 'reaper',
             items: [ { autogenerate: { directory: 'charting/reaper', },},]
           },
-          {
-            label: 
-            {en: 'Modeling',
-            es: 'Modelando'},
-            link: '/modeling/intro',
-            icon: 'blender',
-            items: [ { autogenerate: { directory: 'modeling', },},]
-          },
         ], ),
       ],
 
